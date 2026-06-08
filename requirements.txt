@@ -1,0 +1,13 @@
+# LLM 调用(DeepSeek,OpenAI 兼容接口)
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# 图数据库
+neo4j>=5.0.0
+
+# 向量检索(Phase 2)
+sentence-transformers>=2.2.0
+chromadb>=0.4.0
+
+# 工具
+tqdm>=4.0.0

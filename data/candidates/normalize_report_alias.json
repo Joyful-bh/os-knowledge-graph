@@ -1,0 +1,6782 @@
+{
+  "input_count": 1728,
+  "output_count": 1518,
+  "candidates": [
+    {
+      "idx_a": 5,
+      "idx_b": 96,
+      "name_a": "用户与计算机硬件系统之间的接口",
+      "name_b": "用户接口",
+      "def_a": "操作系统作为用户与硬件之间的中介，提供命令和系统调用方便用户使用计算机。",
+      "def_b": "提供给用户使用的接口，用户通过该接口取得操作系统的服务。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "用户接口",
+      "decision": {
+        "merge": true,
+        "canonical": "用户接口",
+        "reason": "概念A是用户接口的定义描述，概念B是简称，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 10,
+      "idx_b": 100,
+      "name_a": "图形用户界面",
+      "name_b": "图形用户接口",
+      "def_a": "通过窗口、图标等图形元素与操作系统交互的用户接口。",
+      "def_b": "采用图形化操作界面，通过图标、菜单和对话框实现操作，无需记忆命令。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "gui",
+      "decision": {
+        "merge": true,
+        "canonical": "图形用户界面",
+        "reason": "图形用户界面与图形用户接口是同义词，规范名选较长的中文名称。"
+      }
+    },
+    {
+      "idx_a": 10,
+      "idx_b": 678,
+      "name_a": "图形用户界面",
+      "name_b": "图形化用户界面",
+      "def_a": "通过窗口、图标等图形元素与操作系统交互的用户接口。",
+      "def_b": "通过图形元素（如窗口、图标）与用户交互的界面，提供直观操作方式。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "gui",
+      "decision": {
+        "merge": true,
+        "canonical": "图形用户界面",
+        "reason": "图形用户界面与图形化用户界面是同义词，规范名选较长的中文名称。"
+      }
+    },
+    {
+      "idx_a": 100,
+      "idx_b": 678,
+      "name_a": "图形用户接口",
+      "name_b": "图形化用户界面",
+      "def_a": "采用图形化操作界面，通过图标、菜单和对话框实现操作，无需记忆命令。",
+      "def_b": "通过图形元素（如窗口、图标）与用户交互的界面，提供直观操作方式。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "gui",
+      "decision": {
+        "merge": true,
+        "canonical": "图形用户界面",
+        "reason": "图形用户接口与图形化用户界面是同义词，规范名选较长的中文名称。"
+      }
+    },
+    {
+      "idx_a": 12,
+      "idx_b": 36,
+      "name_a": "存储器管理",
+      "name_b": "内存管理",
+      "def_a": "操作系统对内存资源进行分配、回收和保护的功能。",
+      "def_b": "操作系统对内存空间分配、保护和回收的管理功能，确保多道程序互不干扰。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内存管理",
+      "decision": {
+        "merge": true,
+        "canonical": "存储器管理",
+        "reason": "存储器管理与内存管理是同义词，规范名选较完整的中文名称。"
+      }
+    },
+    {
+      "idx_a": 12,
+      "idx_b": 1258,
+      "name_a": "存储器管理",
+      "name_b": "存储管理",
+      "def_a": "操作系统对内存资源进行分配、回收和保护的功能。",
+      "def_b": "操作系统对内存的分配、回收、地址变换、共享保护和扩充等功能的管理。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内存管理",
+      "decision": {
+        "merge": true,
+        "canonical": "存储器管理",
+        "reason": "存储器管理与存储管理是同义词，规范名选较完整的中文名称。"
+      }
+    },
+    {
+      "idx_a": 36,
+      "idx_b": 1258,
+      "name_a": "内存管理",
+      "name_b": "存储管理",
+      "def_a": "操作系统对内存空间分配、保护和回收的管理功能，确保多道程序互不干扰。",
+      "def_b": "操作系统对内存的分配、回收、地址变换、共享保护和扩充等功能的管理。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内存管理",
+      "decision": {
+        "merge": true,
+        "canonical": "存储器管理",
+        "reason": "内存管理与存储管理是同义词，规范名选较完整的中文名称。"
+      }
+    },
+    {
+      "idx_a": 13,
+      "idx_b": 84,
+      "name_a": "I/O设备管理",
+      "name_b": "设备管理",
+      "def_a": "操作系统对输入输出设备进行分配和操纵的功能。",
+      "def_b": "管理计算机外围设备，完成I/O请求、分配设备、提高利用率。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "设备管理",
+      "decision": {
+        "merge": true,
+        "canonical": "设备管理",
+        "reason": "I/O设备管理与设备管理是同义词，规范名选较简短的中文名称。"
+      }
+    },
+    {
+      "idx_a": 17,
+      "idx_b": 1197,
+      "name_a": "扩充机器",
+      "name_b": "虚拟机",
+      "def_a": "覆盖了操作系统软件的计算机，提供比裸机更强的功能和更方便的使用。",
+      "def_b": "通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的计算机系统。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "虚拟机",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "扩充机器指操作系统覆盖的计算机，虚拟机指软件模拟的完整系统，概念不同。"
+      }
+    },
+    {
+      "idx_a": 18,
+      "idx_b": 1177,
+      "name_a": "多道批处理系统",
+      "name_b": "批处理系统",
+      "def_a": "自动对一批作业进行多道处理的系统，提高资源利用率。",
+      "def_b": "一种操作系统类型，将作业成批输入并处理，减少人工干预，提高资源利用率。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "批处理系统",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "多道批处理系统是批处理系统的子类，包含关系不合并。"
+      }
+    },
+    {
+      "idx_a": 19,
+      "idx_b": 497,
+      "name_a": "SPOOLing系统",
+      "name_b": "Spooling系统",
+      "def_a": "通过输入输出井实现外围设备联机操作，提高I/O设备利用率。",
+      "def_b": "通过共享设备模拟独占设备，实现虚拟设备功能的系统，运行于内核之外。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "spooling系统",
+      "decision": {
+        "merge": true,
+        "canonical": "SPOOLing系统",
+        "reason": "SPOOLing系统与Spooling系统是同一概念的不同大小写写法。"
+      }
+    },
+    {
+      "idx_a": 19,
+      "idx_b": 487,
+      "name_a": "SPOOLing系统",
+      "name_b": "Spooling",
+      "def_a": "通过输入输出井实现外围设备联机操作，提高I/O设备利用率。",
+      "def_b": "通过共享设备模拟独占设备的技术，实现多用户同时访问独占设备。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "spooling",
+      "decision": {
+        "merge": true,
+        "canonical": "SPOOLing系统",
+        "reason": "SPOOLing系统与Spooling是同一概念的不同写法，规范名选较完整名称。"
+      }
+    },
+    {
+      "idx_a": 20,
+      "idx_b": 386,
+      "name_a": "虚拟存储器技术",
+      "name_b": "虚拟存储器",
+      "def_a": "通过将内存和外存结合，提供比实际内存更大的地址空间。",
+      "def_b": "通过逻辑扩充内存容量，使作业部分装入即可运行，利用虚拟地址空间的技术。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "虚拟内存",
+      "decision": {
+        "merge": true,
+        "canonical": "虚拟存储器",
+        "reason": "虚拟存储器技术与虚拟存储器是同一概念的不同表述，规范名选较完整名称。"
+      }
+    },
+    {
+      "idx_a": 20,
+      "idx_b": 1194,
+      "name_a": "虚拟存储器技术",
+      "name_b": "虚拟内存",
+      "def_a": "通过将内存和外存结合，提供比实际内存更大的地址空间。",
+      "def_b": "一种内存管理技术，使应用程序认为拥有连续可用的内存空间，而实际物理内存可能不连续，甚至部分数据在磁盘上。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "虚拟内存",
+      "decision": {
+        "merge": true,
+        "canonical": "虚拟存储器",
+        "reason": "虚拟存储器技术与虚拟内存是同一概念的不同表述，规范名选较完整中文名称。"
+      }
+    },
+    {
+      "idx_a": 386,
+      "idx_b": 1194,
+      "name_a": "虚拟存储器",
+      "name_b": "虚拟内存",
+      "def_a": "通过逻辑扩充内存容量，使作业部分装入即可运行，利用虚拟地址空间的技术。",
+      "def_b": "一种内存管理技术，使应用程序认为拥有连续可用的内存空间，而实际物理内存可能不连续，甚至部分数据在磁盘上。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "虚拟内存",
+      "decision": {
+        "merge": true,
+        "canonical": "虚拟存储器",
+        "reason": "虚拟存储器与虚拟内存是同义词，规范名选较完整的中文名称。"
+      }
+    },
+    {
+      "idx_a": 27,
+      "idx_b": 185,
+      "name_a": "监督程序",
+      "name_b": "管程",
+      "def_a": "早期批处理系统中控制作业自动连续调入内存并运行的管理程序。",
+      "def_b": "一种高级同步机制，将共享数据结构及其操作封装在一个模块中，确保每次只有一个进程进入管程访问共享资源。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "monitor",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "监督程序是早期批处理系统的管理程序，管程是高级同步机制，两者语义完全不同。"
+      }
+    },
+    {
+      "idx_a": 29,
+      "idx_b": 432,
+      "name_a": "通道技术",
+      "name_b": "I/O通道",
+      "def_a": "通过专用处理器控制I/O操作，减轻CPU负担的硬件机制。",
+      "def_b": "一种特殊的处理器，负责管理I/O操作，使CPU从繁重的I/O工作中解脱。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "通道",
+      "decision": {
+        "merge": true,
+        "canonical": "通道技术",
+        "reason": "通道技术和I/O通道是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 30,
+      "idx_b": 444,
+      "name_a": "缓冲技术",
+      "name_b": "数据缓冲",
+      "def_a": "在内存中开辟缓冲区以缓解CPU与I/O设备速度不匹配的机制。",
+      "def_b": "在设备控制器中设置缓冲器，暂存数据以匹配CPU与I/O设备之间的速率差异。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "缓冲",
+      "decision": {
+        "merge": true,
+        "canonical": "缓冲技术",
+        "reason": "缓冲技术和数据缓冲均指通过缓冲区缓解速度不匹配的机制，语义等价。"
+      }
+    },
+    {
+      "idx_a": 30,
+      "idx_b": 465,
+      "name_a": "缓冲技术",
+      "name_b": "缓冲",
+      "def_a": "在内存中开辟缓冲区以缓解CPU与I/O设备速度不匹配的机制。",
+      "def_b": "在内存中开辟的临时存储区域，用于缓和CPU与I/O设备速度不匹配的矛盾，减少中断频率，提高并行性。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "缓冲",
+      "decision": {
+        "merge": true,
+        "canonical": "缓冲技术",
+        "reason": "缓冲技术和缓冲是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 444,
+      "idx_b": 465,
+      "name_a": "数据缓冲",
+      "name_b": "缓冲",
+      "def_a": "在设备控制器中设置缓冲器，暂存数据以匹配CPU与I/O设备之间的速率差异。",
+      "def_b": "在内存中开辟的临时存储区域，用于缓和CPU与I/O设备速度不匹配的矛盾，减少中断频率，提高并行性。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "缓冲",
+      "decision": {
+        "merge": true,
+        "canonical": "缓冲",
+        "reason": "数据缓冲和缓冲均指暂存数据以匹配速率差异，语义等价。"
+      }
+    },
+    {
+      "idx_a": 31,
+      "idx_b": 1179,
+      "name_a": "多道程序设计技术",
+      "name_b": "多道程序设计",
+      "def_a": "在内存中同时装入多道程序并允许它们并发执行，以提高CPU和I/O设备利用率的技术。",
+      "def_b": "一种技术，允许多个程序同时驻留内存并交替执行，提高CPU利用率。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "multiprogramming",
+      "decision": {
+        "merge": true,
+        "canonical": "多道程序设计技术",
+        "reason": "多道程序设计技术和多道程序设计是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 31,
+      "idx_b": 1198,
+      "name_a": "多道程序设计技术",
+      "name_b": "多道程序",
+      "def_a": "在内存中同时装入多道程序并允许它们并发执行，以提高CPU和I/O设备利用率的技术。",
+      "def_b": "一种允许同时将多个程序装入内存并交替执行的计算机技术。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "multiprogramming",
+      "decision": {
+        "merge": true,
+        "canonical": "多道程序设计技术",
+        "reason": "多道程序设计技术和多道程序是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1179,
+      "idx_b": 1198,
+      "name_a": "多道程序设计",
+      "name_b": "多道程序",
+      "def_a": "一种技术，允许多个程序同时驻留内存并交替执行，提高CPU利用率。",
+      "def_b": "一种允许同时将多个程序装入内存并交替执行的计算机技术。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "multiprogramming",
+      "decision": {
+        "merge": true,
+        "canonical": "多道程序设计",
+        "reason": "多道程序设计和多道程序是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 35,
+      "idx_b": 257,
+      "name_a": "作业周转时间",
+      "name_b": "周转时间",
+      "def_a": "从作业进入系统开始到完成并退出系统所经历的时间。",
+      "def_b": "从作业提交到完成所经历的时间，包括等待、执行和I/O时间。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "周转时间",
+      "decision": {
+        "merge": true,
+        "canonical": "作业周转时间",
+        "reason": "作业周转时间和周转时间是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 38,
+      "idx_b": 1190,
+      "name_a": "时间片",
+      "name_b": "分时技术",
+      "def_a": "分时系统中分配给每个作业运行的一个很短的时间单位，通常为0.1秒。",
+      "def_b": "将处理机运行时间分成很短的时间片，按时间片轮流分配给各联机作业使用的技术。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "时间片轮转",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "时间片是分时系统中的时间单位，分时技术是使用时间片的技术，两者是不同概念。"
+      }
+    },
+    {
+      "idx_a": 39,
+      "idx_b": 1179,
+      "name_a": "多道程序技术",
+      "name_b": "多道程序设计",
+      "def_a": "允许多个程序同时进入内存并交替执行，以提高资源利用率和系统吞吐量的技术。",
+      "def_b": "一种技术，允许多个程序同时驻留内存并交替执行，提高CPU利用率。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "多道程序设计",
+      "decision": {
+        "merge": true,
+        "canonical": "多道程序设计",
+        "reason": "多道程序技术和多道程序设计是同一概念的不同表述，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 49,
+      "idx_b": 1178,
+      "name_a": "MS-DOS",
+      "name_b": "分布式操作系统",
+      "def_a": "微软公司开发的单用户单任务磁盘操作系统，曾是16位微机操作系统标准。",
+      "def_b": "一种操作系统类型，管理多台独立计算机组成的系统，使其表现为单一系统。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dos",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "MS-DOS是具体操作系统，分布式操作系统是另一类型，两者完全不同。"
+      }
+    },
+    {
+      "idx_a": 54,
+      "idx_b": 232,
+      "name_a": "线程",
+      "name_b": "轻型进程",
+      "def_a": "比进程更小的独立运行和调度基本单位，基本不拥有系统资源，共享进程资源。",
+      "def_b": "一种内核控制线程，作为用户级线程与内核之间的中间层，每个LWP有自己的TCB。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "轻型进程",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "线程是基本调度单位，轻型进程是内核级线程的一种实现，两者不等价。"
+      }
+    },
+    {
+      "idx_a": 55,
+      "idx_b": 377,
+      "name_a": "资源共享",
+      "name_b": "信息共享",
+      "def_a": "系统中资源可供内存中多个并发执行的进程或线程共同使用。",
+      "def_b": "多个进程或用户共同访问同一段程序或数据，以节省内存和便于协作，分段存储管理支持以段为单位的共享。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "sharing",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "资源共享是广义概念，信息共享是资源共享的一种具体形式，两者是包含关系。"
+      }
+    },
+    {
+      "idx_a": 55,
+      "idx_b": 1180,
+      "name_a": "资源共享",
+      "name_b": "资源复用",
+      "def_a": "系统中资源可供内存中多个并发执行的进程或线程共同使用。",
+      "def_b": "操作系统通过时间或空间维度共享硬件资源，如CPU分时复用、内存空间复用。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "资源复用",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "资源共享是概念，资源复用是实现机制，两者是相关关系而非等价。"
+      }
+    },
+    {
+      "idx_a": 62,
+      "idx_b": 508,
+      "name_a": "虚拟设备技术",
+      "name_b": "SPOOLing技术",
+      "def_a": "将一台物理I/O设备虚拟为多台逻辑I/O设备，使临界资源变为共享设备。",
+      "def_b": "SPOOLing技术是一种通过磁盘模拟低速I/O设备，实现虚拟设备功能的技术，允许多个用户共享独占设备。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "虚拟设备技术",
+      "decision": {
+        "merge": true,
+        "canonical": "SPOOLing技术",
+        "reason": "虚拟设备技术是SPOOLing技术的别名，两者定义完全一致。"
+      }
+    },
+    {
+      "idx_a": 68,
+      "idx_b": 1427,
+      "name_a": "进程互斥",
+      "name_b": "互斥",
+      "def_a": "多个进程对临界资源访问时采用互斥方式，一次只允许一个进程进入。",
+      "def_b": "确保同一时刻只有一个进程进入临界区的同步机制。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "mutual exclusion",
+      "decision": {
+        "merge": true,
+        "canonical": "进程互斥",
+        "reason": "进程互斥是互斥的具体应用，定义等价。"
+      }
+    },
+    {
+      "idx_a": 69,
+      "idx_b": 1715,
+      "name_a": "进程同步",
+      "name_b": "同步",
+      "def_a": "相互合作的进程间通过同步机构协调执行次序，共同完成任务。",
+      "def_b": "多个进程按特定顺序协调执行，保证数据一致性。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "同步",
+      "decision": {
+        "merge": true,
+        "canonical": "进程同步",
+        "reason": "进程同步是同步的具体应用，定义等价。"
+      }
+    },
+    {
+      "idx_a": 70,
+      "idx_b": 173,
+      "name_a": "信号量机制",
+      "name_b": "信号量",
+      "def_a": "利用信号量实现进程同步和互斥的常用机制，包括P、V操作。",
+      "def_b": "用于进程同步与互斥的机制，包含整型变量和等待队列，支持P/V操作。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "semaphore",
+      "decision": {
+        "merge": true,
+        "canonical": "信号量机制",
+        "reason": "信号量机制与信号量定义完全一致，信号量是简称。"
+      }
+    },
+    {
+      "idx_a": 70,
+      "idx_b": 174,
+      "name_a": "信号量机制",
+      "name_b": "记录型信号量",
+      "def_a": "利用信号量实现进程同步和互斥的常用机制，包括P、V操作。",
+      "def_b": "信号量的一种，包含整型变量和等待队列，遵循让权等待准则。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "semaphore",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "信号量机制是通用概念，记录型信号量是其一种具体实现，不等价。"
+      }
+    },
+    {
+      "idx_a": 173,
+      "idx_b": 174,
+      "name_a": "信号量",
+      "name_b": "记录型信号量",
+      "def_a": "用于进程同步与互斥的机制，包含整型变量和等待队列，支持P/V操作。",
+      "def_b": "信号量的一种，包含整型变量和等待队列，遵循让权等待准则。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "semaphore",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "信号量是通用概念，记录型信号量是其一种具体实现，不等价。"
+      }
+    },
+    {
+      "idx_a": 70,
+      "idx_b": 180,
+      "name_a": "信号量机制",
+      "name_b": "信号量集",
+      "def_a": "利用信号量实现进程同步和互斥的常用机制，包括P、V操作。",
+      "def_b": "一种同步机制，允许一次申请多个资源并设置资源下限，通过Swait和Ssignal操作实现。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "信号量集",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "信号量机制是通用概念，信号量集是扩展机制，不等价。"
+      }
+    },
+    {
+      "idx_a": 70,
+      "idx_b": 191,
+      "name_a": "信号量机制",
+      "name_b": "信号量集机制",
+      "def_a": "利用信号量实现进程同步和互斥的常用机制，包括P、V操作。",
+      "def_b": "一种扩展的信号量机制，允许同时管理多个信号量，支持更复杂的同步控制。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "信号量集",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "信号量机制是通用概念，信号量集机制是扩展机制，不等价。"
+      }
+    },
+    {
+      "idx_a": 180,
+      "idx_b": 191,
+      "name_a": "信号量集",
+      "name_b": "信号量集机制",
+      "def_a": "一种同步机制，允许一次申请多个资源并设置资源下限，通过Swait和Ssignal操作实现。",
+      "def_b": "一种扩展的信号量机制，允许同时管理多个信号量，支持更复杂的同步控制。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "信号量集",
+      "decision": {
+        "merge": true,
+        "canonical": "信号量集机制",
+        "reason": "信号量集与信号量集机制定义完全一致，后者更完整。"
+      }
+    },
+    {
+      "idx_a": 71,
+      "idx_b": 748,
+      "name_a": "进程通信",
+      "name_b": "进程间通信",
+      "def_a": "实现相互合作的进程之间交换信息的机制。",
+      "def_b": "操作系统提供的用于进程之间交换信息和同步的机制。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "ipc",
+      "decision": {
+        "merge": true,
+        "canonical": "进程通信",
+        "reason": "进程通信与进程间通信定义完全一致，后者是完整名称。"
+      }
+    },
+    {
+      "idx_a": 72,
+      "idx_b": 238,
+      "name_a": "作业调度",
+      "name_b": "高级调度",
+      "def_a": "从后备队列中按算法选择作业，分配资源并创建进程。",
+      "def_b": "根据某种算法把外存上后备队列中的作业调入内存的调度，又称作业调度或长程调度。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "作业调度",
+      "decision": {
+        "merge": true,
+        "canonical": "作业调度",
+        "reason": "作业调度与高级调度定义完全一致，高级调度是别名。"
+      }
+    },
+    {
+      "idx_a": 73,
+      "idx_b": 239,
+      "name_a": "进程调度",
+      "name_b": "低级调度",
+      "def_a": "从就绪队列中按算法选择进程，分配处理机并设置运行现场。",
+      "def_b": "从就绪队列中选取进程分配处理机的调度，又称进程调度或短程调度。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "进程调度",
+      "decision": {
+        "merge": true,
+        "canonical": "进程调度",
+        "reason": "进程调度与低级调度定义完全一致，低级调度是别名。"
+      }
+    },
+    {
+      "idx_a": 77,
+      "idx_b": 1284,
+      "name_a": "内存保护",
+      "name_b": "存储保护",
+      "def_a": "确保各程序在各自内存空间运行，互不干扰。",
+      "def_b": "防止一个作业有意或无意地破坏操作系统或其他作业的机制，常用界限寄存器和存储保护键方法。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "memory protection",
+      "decision": {
+        "merge": true,
+        "canonical": "内存保护",
+        "reason": "内存保护与存储保护定义完全一致，内存保护更常用。"
+      }
+    },
+    {
+      "idx_a": 78,
+      "idx_b": 1259,
+      "name_a": "地址映射",
+      "name_b": "地址变换",
+      "def_a": "将程序中的逻辑地址转换为物理地址的过程。",
+      "def_b": "将程序中的逻辑地址转换为物理地址的过程，包括链接、重定位和运行时转换。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "地址转换",
+      "decision": {
+        "merge": true,
+        "canonical": "地址映射",
+        "reason": "地址映射与地址变换定义完全一致，地址映射更简洁。"
+      }
+    },
+    {
+      "idx_a": 78,
+      "idx_b": 1705,
+      "name_a": "地址映射",
+      "name_b": "地址转换",
+      "def_a": "将程序中的逻辑地址转换为物理地址的过程。",
+      "def_b": "将程序中的逻辑地址转换为物理地址的过程，包括静态和动态重定位。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "地址转换",
+      "decision": {
+        "merge": true,
+        "canonical": "地址映射",
+        "reason": "地址映射与地址转换定义完全一致，地址映射更简洁。"
+      }
+    },
+    {
+      "idx_a": 1259,
+      "idx_b": 1705,
+      "name_a": "地址变换",
+      "name_b": "地址转换",
+      "def_a": "将程序中的逻辑地址转换为物理地址的过程，包括链接、重定位和运行时转换。",
+      "def_b": "将程序中的逻辑地址转换为物理地址的过程，包括静态和动态重定位。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "地址转换",
+      "decision": {
+        "merge": true,
+        "canonical": "地址转换",
+        "reason": "两者语义完全等价，均为逻辑地址到物理地址的转换过程。"
+      }
+    },
+    {
+      "idx_a": 83,
+      "idx_b": 391,
+      "name_a": "置换功能",
+      "name_b": "页面置换",
+      "def_a": "内存不足时将暂时不用的程序和数据调出，腾出空间装入所需部分。",
+      "def_b": "当内存已满时，将内存中暂时不用的页面调至外存，腾出空间以装入所需页面的功能。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "页面置换",
+      "decision": {
+        "merge": true,
+        "canonical": "页面置换",
+        "reason": "置换功能即页面置换，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 90,
+      "idx_b": 485,
+      "name_a": "设备处理",
+      "name_b": "设备驱动程序",
+      "def_a": "实现CPU与设备控制器通信，包括发送命令和处理中断。",
+      "def_b": "与硬件直接相关的I/O软件层，负责具体实现系统对设备发出的操作指令。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "设备驱动程序",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "设备处理是更广泛的概念，设备驱动程序是具体实现，不等价。"
+      }
+    },
+    {
+      "idx_a": 97,
+      "idx_b": 1058,
+      "name_a": "程序接口",
+      "name_b": "应用程序接口",
+      "def_a": "提供给程序员编程时使用的接口，是用户程序取得操作系统服务的唯一途径。",
+      "def_b": "操作系统为应用程序提供的编程接口标准，用于实现不同UNIX系统间的兼容性。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "api",
+      "decision": {
+        "merge": true,
+        "canonical": "应用程序接口",
+        "reason": "程序接口即应用程序接口，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 117,
+      "idx_b": 123,
+      "name_a": "微内核",
+      "name_b": "微内核操作系统",
+      "def_a": "操作系统内核中只保留最基本核心功能（如硬件相关处理、基本功能、通信）的结构。",
+      "def_b": "一种操作系统结构，将核心功能压缩到最小内核，其他服务以用户态服务器形式运行，通过消息传递通信。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "微内核",
+      "decision": {
+        "merge": true,
+        "canonical": "微内核",
+        "reason": "微内核与微内核操作系统语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 117,
+      "idx_b": 1221,
+      "name_a": "微内核",
+      "name_b": "微内核结构",
+      "def_a": "操作系统内核中只保留最基本核心功能（如硬件相关处理、基本功能、通信）的结构。",
+      "def_b": "操作系统结构的一种，将核心功能最小化，其他服务以用户态进程运行。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "microkernel",
+      "decision": {
+        "merge": true,
+        "canonical": "微内核结构",
+        "reason": "微内核与微内核结构语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 118,
+      "idx_b": 1223,
+      "name_a": "机制与策略分离",
+      "name_b": "机制与策略分开",
+      "def_a": "一种设计原理，将功能的执行机构（机制）与优化决策（策略）分开，提高灵活性。",
+      "def_b": "操作系统设计原则，将实现机制与决策策略分离，以提高灵活性和可扩展性。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "mechanism and policy separation",
+      "decision": {
+        "merge": true,
+        "canonical": "机制与策略分离",
+        "reason": "两者语义完全等价，均为同一设计原理。"
+      }
+    },
+    {
+      "idx_a": 119,
+      "idx_b": 218,
+      "name_a": "消息传递通信机制",
+      "name_b": "消息缓冲通信",
+      "def_a": "一种进程间通信方式，通过发送和接收消息实现信息交换，常用于微内核系统。",
+      "def_b": "一种进程间通信机制，通过消息缓冲区在进程间传递消息，实现数据交换。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "message passing",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "消息传递通信机制是更广义的通信方式，消息缓冲通信是其中一种具体实现，不等价。"
+      }
+    },
+    {
+      "idx_a": 119,
+      "idx_b": 1455,
+      "name_a": "消息传递通信机制",
+      "name_b": "消息传递",
+      "def_a": "一种进程间通信方式，通过发送和接收消息实现信息交换，常用于微内核系统。",
+      "def_b": "一种进程间通信方式，通过send和receive原语传递消息，支持阻塞和非阻塞调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "message passing",
+      "decision": {
+        "merge": true,
+        "canonical": "消息传递",
+        "reason": "消息传递通信机制与消息传递语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 218,
+      "idx_b": 1455,
+      "name_a": "消息缓冲通信",
+      "name_b": "消息传递",
+      "def_a": "一种进程间通信机制，通过消息缓冲区在进程间传递消息，实现数据交换。",
+      "def_b": "一种进程间通信方式，通过send和receive原语传递消息，支持阻塞和非阻塞调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "message passing",
+      "decision": {
+        "merge": true,
+        "canonical": "消息传递",
+        "reason": "消息缓冲通信是消息传递的一种具体形式，但此处定义均指消息传递机制，语义等价。"
+      }
+    },
+    {
+      "idx_a": 121,
+      "idx_b": 369,
+      "name_a": "地址变换机制",
+      "name_b": "地址变换机构",
+      "def_a": "一种将逻辑地址映射为物理地址的硬件机制，常与页表机制配合使用。",
+      "def_b": "实现从逻辑地址到物理地址转换的硬件机构，核心任务是将页号转换为物理块号。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "address translation mechanism",
+      "decision": {
+        "merge": true,
+        "canonical": "地址变换机构",
+        "reason": "地址变换机制与地址变换机构语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 124,
+      "idx_b": 218,
+      "name_a": "消息传递机制",
+      "name_b": "消息缓冲通信",
+      "def_a": "微内核中进程间通信的方式，通过发送和接收消息实现客户与服务器之间的交互。",
+      "def_b": "一种进程间通信机制，通过消息缓冲区在进程间传递消息，实现数据交换。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "消息传递",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "消息传递机制是广义概念，消息缓冲通信是具体实现，不等价。"
+      }
+    },
+    {
+      "idx_a": 124,
+      "idx_b": 1455,
+      "name_a": "消息传递机制",
+      "name_b": "消息传递",
+      "def_a": "微内核中进程间通信的方式，通过发送和接收消息实现客户与服务器之间的交互。",
+      "def_b": "一种进程间通信方式，通过send和receive原语传递消息，支持阻塞和非阻塞调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "消息传递",
+      "decision": {
+        "merge": true,
+        "canonical": "消息传递",
+        "reason": "消息传递机制与消息传递语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 125,
+      "idx_b": 1091,
+      "name_a": "上下文切换",
+      "name_b": "进程上下文切换",
+      "def_a": "CPU从一种运行模式（用户态/系统态）切换到另一种模式，或从一个进程切换到另一个进程的过程。",
+      "def_b": "内核将当前进程的CPU状态保存起来并恢复被调度进程的CPU状态的过程",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "上下文切换",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "上下文切换包含模式切换和进程切换，进程上下文切换仅指进程切换，不等价。"
+      }
+    },
+    {
+      "idx_a": 126,
+      "idx_b": 1075,
+      "name_a": "用户态",
+      "name_b": "用户态执行",
+      "def_a": "CPU的一种运行模式，应用程序在此模式下运行，权限受限，不能直接访问硬件。",
+      "def_b": "进程在用户态下执行，访问受限，处理机可被抢占。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "用户态",
+      "decision": {
+        "merge": true,
+        "canonical": "用户态",
+        "reason": "用户态与用户态执行语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 127,
+      "idx_b": 1076,
+      "name_a": "系统态",
+      "name_b": "核心态执行",
+      "def_a": "CPU的一种运行模式，操作系统内核在此模式下运行，具有最高权限，可执行特权指令。",
+      "def_b": "进程在核心态下执行，可访问所有内存和对象，处理机不可被抢占。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内核态",
+      "decision": {
+        "merge": true,
+        "canonical": "系统态",
+        "reason": "系统态、核心态执行、内核态均指CPU的特权模式，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 127,
+      "idx_b": 1704,
+      "name_a": "系统态",
+      "name_b": "内核态",
+      "def_a": "CPU的一种运行模式，操作系统内核在此模式下运行，具有最高权限，可执行特权指令。",
+      "def_b": "操作系统内核运行的特权模式，可执行所有指令和访问所有硬件资源。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内核态",
+      "decision": {
+        "merge": true,
+        "canonical": "系统态",
+        "reason": "系统态与内核态是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 1076,
+      "idx_b": 1704,
+      "name_a": "核心态执行",
+      "name_b": "内核态",
+      "def_a": "进程在核心态下执行，可访问所有内存和对象，处理机不可被抢占。",
+      "def_b": "操作系统内核运行的特权模式，可执行所有指令和访问所有硬件资源。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内核态",
+      "decision": {
+        "merge": true,
+        "canonical": "系统态",
+        "reason": "核心态执行与内核态均指操作系统内核运行的特权模式。"
+      }
+    },
+    {
+      "idx_a": 130,
+      "idx_b": 648,
+      "name_a": "前趋图",
+      "name_b": "有向非循环图",
+      "def_a": "一个有向无循环图，用于描述进程或程序段之间的前趋关系。",
+      "def_b": "一种图结构，用于表示包含共享文件的目录结构，允许一个文件有多个父目录。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dag",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "前趋图用于描述进程前趋关系，有向非循环图用于文件目录结构，语义不同。"
+      }
+    },
+    {
+      "idx_a": 133,
+      "idx_b": 1406,
+      "name_a": "进程状态",
+      "name_b": "进程状态转换",
+      "def_a": "进程状态指进程在其生命周期中可能处于的就绪、执行、阻塞等基本状态。",
+      "def_b": "进程状态转换指进程在就绪、运行、阻塞等状态之间的切换过程。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "进程状态转换",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "进程状态是静态概念，进程状态转换是动态机制，二者不同。"
+      }
+    },
+    {
+      "idx_a": 135,
+      "idx_b": 1403,
+      "name_a": "执行状态",
+      "name_b": "运行状态",
+      "def_a": "进程已获得CPU并正在执行指令的状态。",
+      "def_b": "运行状态是指进程已获得CPU并正在执行的状态。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "running",
+      "decision": {
+        "merge": true,
+        "canonical": "运行状态",
+        "reason": "执行状态与运行状态均指进程获得CPU并执行的状态。"
+      }
+    },
+    {
+      "idx_a": 149,
+      "idx_b": 1495,
+      "name_a": "进程优先级",
+      "name_b": "优先级",
+      "def_a": "描述进程使用处理机的优先级别的整数，优先级高的进程优先获得处理机。",
+      "def_b": "进程的优先级反映了进程相对于其他进程的可选择度，系统每次允许进程运行的时间。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "priority",
+      "decision": {
+        "merge": true,
+        "canonical": "进程优先级",
+        "reason": "进程优先级与优先级在进程调度上下文中同义。"
+      }
+    },
+    {
+      "idx_a": 150,
+      "idx_b": 1408,
+      "name_a": "进程控制块的组织方式",
+      "name_b": "PCB组织方式",
+      "def_a": "将系统中多个PCB有效组织起来的方式，包括链接方式和索引方式。",
+      "def_b": "操作系统管理进程控制块的方式，包括线性表、链接方式和索引方式。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "pcb组织方式",
+      "decision": {
+        "merge": true,
+        "canonical": "进程控制块的组织方式",
+        "reason": "两者描述同一概念，PCB组织方式为简称。"
+      }
+    },
+    {
+      "idx_a": 152,
+      "idx_b": 1647,
+      "name_a": "索引方式",
+      "name_b": "索引表",
+      "def_a": "系统根据进程状态建立索引表，通过索引表查找PCB的组织方式。",
+      "def_b": "记录文件逻辑块号与物理块号对应关系的数据结构，用于索引文件。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "索引表",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "索引方式（PCB组织）与索引表（文件系统）属于不同领域。"
+      }
+    },
+    {
+      "idx_a": 156,
+      "idx_b": 1090,
+      "name_a": "进程图",
+      "name_b": "进程树",
+      "def_a": "描述进程家族关系的有向树，结点代表进程，边表示父子关系。",
+      "def_b": "通过fork系统调用形成的进程层次结构，根为1进程。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "进程树",
+      "decision": {
+        "merge": true,
+        "canonical": "进程树",
+        "reason": "进程图与进程树均描述进程家族关系，进程树更常用。"
+      }
+    },
+    {
+      "idx_a": 162,
+      "idx_b": 1445,
+      "name_a": "唤醒原语",
+      "name_b": "Wakeup原语",
+      "def_a": "由其他进程调用以将等待某事件的阻塞进程转为就绪状态的系统原语，通常为wakeup。",
+      "def_b": "唤醒指定阻塞进程的同步原语。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "wakeup",
+      "decision": {
+        "merge": true,
+        "canonical": "唤醒原语",
+        "reason": "唤醒原语与Wakeup原语是同一机制的中英文名称。"
+      }
+    },
+    {
+      "idx_a": 171,
+      "idx_b": 1457,
+      "name_a": "P操作",
+      "name_b": "PV操作",
+      "def_a": "信号量机制中的wait操作，用于申请资源，若资源不足则进程等待。",
+      "def_b": "信号量的两个原子操作，P操作申请资源，V操作释放资源。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "p操作",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "P操作是PV操作的一部分，两者是部分与整体的关系。"
+      }
+    },
+    {
+      "idx_a": 171,
+      "idx_b": 736,
+      "name_a": "P操作",
+      "name_b": "wait",
+      "def_a": "信号量机制中的wait操作，用于申请资源，若资源不足则进程等待。",
+      "def_b": "UNIX系统调用，用于将调用进程挂起直至其某一子进程终止，实现父子进程同步。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "wait",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "P操作是信号量操作，wait是UNIX系统调用，语义不同。"
+      }
+    },
+    {
+      "idx_a": 736,
+      "idx_b": 1457,
+      "name_a": "wait",
+      "name_b": "PV操作",
+      "def_a": "UNIX系统调用，用于将调用进程挂起直至其某一子进程终止，实现父子进程同步。",
+      "def_b": "信号量的两个原子操作，P操作申请资源，V操作释放资源。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "wait",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "wait是UNIX系统调用，PV操作是信号量操作，不同概念。"
+      }
+    },
+    {
+      "idx_a": 172,
+      "idx_b": 1457,
+      "name_a": "V操作",
+      "name_b": "PV操作",
+      "def_a": "信号量机制中的signal操作，用于释放资源，唤醒等待进程。",
+      "def_b": "信号量的两个原子操作，P操作申请资源，V操作释放资源。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "v操作",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "V操作是PV操作的一部分，两者是部分与整体的关系。"
+      }
+    },
+    {
+      "idx_a": 172,
+      "idx_b": 1093,
+      "name_a": "V操作",
+      "name_b": "信号",
+      "def_a": "信号量机制中的signal操作，用于释放资源，唤醒等待进程。",
+      "def_b": "UNIX系统中用于进程间通信和同步的软中断机制",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "signal",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "V操作是信号量机制中的具体操作，而信号是UNIX中的软中断机制，两者语义不同。"
+      }
+    },
+    {
+      "idx_a": 1093,
+      "idx_b": 1457,
+      "name_a": "信号",
+      "name_b": "PV操作",
+      "def_a": "UNIX系统中用于进程间通信和同步的软中断机制",
+      "def_b": "信号量的两个原子操作，P操作申请资源，V操作释放资源。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "signal",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "信号是UNIX软中断机制，PV操作是信号量的原子操作，两者概念不同。"
+      }
+    },
+    {
+      "idx_a": 175,
+      "idx_b": 189,
+      "name_a": "AND型信号量",
+      "name_b": "AND信号量",
+      "def_a": "信号量的一种，支持一次申请多个资源，避免死锁。",
+      "def_b": "一种信号量扩展，允许同时申请多个资源，避免死锁。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "and型信号量",
+      "decision": {
+        "merge": true,
+        "canonical": "AND型信号量",
+        "reason": "两者是同一概念的不同表述，AND型信号量更完整。"
+      }
+    },
+    {
+      "idx_a": 175,
+      "idx_b": 1458,
+      "name_a": "AND型信号量",
+      "name_b": "AND信号量集",
+      "def_a": "信号量的一种，支持一次申请多个资源，避免死锁。",
+      "def_b": "一种信号量扩展，允许一次申请多个资源，避免死锁。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "and型信号量",
+      "decision": {
+        "merge": true,
+        "canonical": "AND型信号量",
+        "reason": "AND型信号量和AND信号量集是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 189,
+      "idx_b": 1458,
+      "name_a": "AND信号量",
+      "name_b": "AND信号量集",
+      "def_a": "一种信号量扩展，允许同时申请多个资源，避免死锁。",
+      "def_b": "一种信号量扩展，允许一次申请多个资源，避免死锁。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "and型信号量",
+      "decision": {
+        "merge": true,
+        "canonical": "AND信号量",
+        "reason": "AND信号量和AND信号量集是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 177,
+      "idx_b": 1208,
+      "name_a": "忙等",
+      "name_b": "忙等待",
+      "def_a": "进程在等待资源时不断测试条件，占用CPU但不做有效工作。",
+      "def_b": "CPU不断循环检查设备状态直到完成操作，浪费CPU时间的I/O方式。",
+      "role_a": "问题",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "忙等",
+      "decision": {
+        "merge": true,
+        "canonical": "忙等",
+        "reason": "忙等和忙等待是同一概念的不同表述。"
+      }
+    },
+    {
+      "idx_a": 178,
+      "idx_b": 183,
+      "name_a": "互斥信号量",
+      "name_b": "信号量实现进程互斥",
+      "def_a": "初值为1的信号量，用于实现进程互斥访问临界资源。",
+      "def_b": "利用互斥信号量（初始值为1）和wait/signal操作，确保多个进程互斥访问临界资源。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "互斥信号量",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "互斥信号量是具体概念，信号量实现进程互斥是机制，两者不等价。"
+      }
+    },
+    {
+      "idx_a": 188,
+      "idx_b": 1426,
+      "name_a": "哲学家进餐问题",
+      "name_b": "哲学家就餐问题",
+      "def_a": "经典的进程同步问题，描述多个哲学家共享有限资源（筷子）时可能发生的死锁和饥饿问题。",
+      "def_b": "经典的同步互斥问题，描述哲学家共享筷子就餐，易导致死锁。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dining philosophers problem",
+      "decision": {
+        "merge": true,
+        "canonical": "哲学家进餐问题",
+        "reason": "两者是同一经典问题的不同译名。"
+      }
+    },
+    {
+      "idx_a": 190,
+      "idx_b": 1458,
+      "name_a": "AND信号量机制",
+      "name_b": "AND信号量集",
+      "def_a": "一种信号量扩展，允许进程同时获取多个资源，避免死锁。",
+      "def_b": "一种信号量扩展，允许一次申请多个资源，避免死锁。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "同时信号量",
+      "decision": {
+        "merge": true,
+        "canonical": "AND信号量机制",
+        "reason": "AND信号量机制和AND信号量集是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 200,
+      "idx_b": 707,
+      "name_a": "间接通信方式",
+      "name_b": "信箱通信",
+      "def_a": "通过共享实体（如信箱）间接传递消息，无需显式指定对方。",
+      "def_b": "通过共享信箱实现非交互式进程间通信的方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "信箱通信",
+      "decision": {
+        "merge": true,
+        "canonical": "间接通信方式",
+        "reason": "间接通信方式包括信箱通信，但此处两者语义等价。"
+      }
+    },
+    {
+      "idx_a": 219,
+      "idx_b": 1487,
+      "name_a": "对称多处理机",
+      "name_b": "对称式多处理系统",
+      "def_a": "一种多处理机系统结构，所有处理器对称平等，共享内存和I/O，需要多处理机OS支持。",
+      "def_b": "多处理器系统中各处理器地位相同，可采用集中或分散控制的调度算法。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "smp",
+      "decision": {
+        "merge": true,
+        "canonical": "对称多处理机",
+        "reason": "两者是同一概念的不同表述。"
+      }
+    },
+    {
+      "idx_a": 229,
+      "idx_b": 1409,
+      "name_a": "内核支持线程",
+      "name_b": "内核级线程",
+      "def_a": "在内核支持下运行，创建、撤销和切换在内核空间实现的线程实现方式。",
+      "def_b": "由操作系统内核支持，内核可感知的线程。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内核级线程",
+      "decision": {
+        "merge": true,
+        "canonical": "内核支持线程",
+        "reason": "内核支持线程和内核级线程是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 236,
+      "idx_b": 1413,
+      "name_a": "多对多模型",
+      "name_b": "多对多线程模型",
+      "def_a": "多个用户线程映射到多个内核线程的线程模型，结合一对一和多对一优点。",
+      "def_b": "多个用户级线程映射到多个内核级线程，结合前两种模型的优点。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "many-to-many model",
+      "decision": {
+        "merge": true,
+        "canonical": "多对多模型",
+        "reason": "两者是同一线程模型的不同表述。"
+      }
+    },
+    {
+      "idx_a": 237,
+      "idx_b": 1464,
+      "name_a": "处理机调度",
+      "name_b": "CPU调度",
+      "def_a": "按某种算法动态地把处理机分配给就绪队列中的一个进程使之执行的过程。",
+      "def_b": "控制、协调多个进程对CPU的竞争，按一定策略从就绪队列中选择进程并分配CPU。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "处理机调度",
+      "decision": {
+        "merge": true,
+        "canonical": "处理机调度",
+        "reason": "处理机调度和CPU调度是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 240,
+      "idx_b": 1096,
+      "name_a": "中级调度",
+      "name_b": "进程对换",
+      "def_a": "为提高内存利用率而设置的调度，又称中程调度，负责进程在内存和外存之间的交换。",
+      "def_b": "UNIX系统中的中级调度，将进程在内存和外存之间交换以调节内存负载",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "中级调度",
+      "decision": {
+        "merge": true,
+        "canonical": "中级调度",
+        "reason": "中级调度和进程对换是同一概念的不同名称。"
+      }
+    },
+    {
+      "idx_a": 246,
+      "idx_b": 500,
+      "name_a": "先来先服务调度算法",
+      "name_b": "先来先服务",
+      "def_a": "按照作业到达外存的先后顺序进行调度的算法，最早到达的作业最先被调入内存。",
+      "def_b": "按进程提出I/O请求的先后次序分配设备的算法。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fcfs",
+      "decision": {
+        "merge": true,
+        "canonical": "先来先服务调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 246,
+      "idx_b": 1588,
+      "name_a": "先来先服务调度算法",
+      "name_b": "先来先服务算法",
+      "def_a": "按照作业到达外存的先后顺序进行调度的算法，最早到达的作业最先被调入内存。",
+      "def_b": "按请求到达顺序依次服务的磁盘调度算法。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fcfs",
+      "decision": {
+        "merge": true,
+        "canonical": "先来先服务调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 500,
+      "idx_b": 1588,
+      "name_a": "先来先服务",
+      "name_b": "先来先服务算法",
+      "def_a": "按进程提出I/O请求的先后次序分配设备的算法。",
+      "def_b": "按请求到达顺序依次服务的磁盘调度算法。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fcfs",
+      "decision": {
+        "merge": true,
+        "canonical": "先来先服务调度算法",
+        "reason": "简称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 246,
+      "idx_b": 1506,
+      "name_a": "先来先服务调度算法",
+      "name_b": "FCFS调度",
+      "def_a": "按照作业到达外存的先后顺序进行调度的算法，最早到达的作业最先被调入内存。",
+      "def_b": "先来先服务调度算法，按进程到达顺序分配CPU，非抢占式。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "first-come first-served",
+      "decision": {
+        "merge": true,
+        "canonical": "先来先服务调度算法",
+        "reason": "中文全称与英文缩写关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 247,
+      "idx_b": 1473,
+      "name_a": "短作业优先调度算法",
+      "name_b": "短作业优先",
+      "def_a": "优先调度估计运行时间最短的作业，以最小化平均周转时间。",
+      "def_b": "优先调度预计执行时间短的作业，非抢占式，旨在减少平均周转时间",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "sjf",
+      "decision": {
+        "merge": true,
+        "canonical": "短作业优先调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 247,
+      "idx_b": 1507,
+      "name_a": "短作业优先调度算法",
+      "name_b": "SJF调度",
+      "def_a": "优先调度估计运行时间最短的作业，以最小化平均周转时间。",
+      "def_b": "最短作业优先调度算法，选择预计执行时间最短的进程执行，可抢占或非抢占。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "shortest job first",
+      "decision": {
+        "merge": true,
+        "canonical": "短作业优先调度算法",
+        "reason": "中文全称与英文缩写关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 1473,
+      "idx_b": 1507,
+      "name_a": "短作业优先",
+      "name_b": "SJF调度",
+      "def_a": "优先调度预计执行时间短的作业，非抢占式，旨在减少平均周转时间",
+      "def_b": "最短作业优先调度算法，选择预计执行时间最短的进程执行，可抢占或非抢占。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "shortest job first",
+      "decision": {
+        "merge": true,
+        "canonical": "短作业优先调度算法",
+        "reason": "简称与英文缩写关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 248,
+      "idx_b": 263,
+      "name_a": "优先级调度算法",
+      "name_b": "最高优先权优先调度算法",
+      "def_a": "根据作业的优先级进行调度，优先级高的作业优先获得处理机。",
+      "def_b": "每次调度选择就绪队列中优先权最高的进程分配CPU。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "priority scheduling",
+      "decision": {
+        "merge": true,
+        "canonical": "优先级调度算法",
+        "reason": "不同表述但语义等价，均为优先级调度。"
+      }
+    },
+    {
+      "idx_a": 248,
+      "idx_b": 1510,
+      "name_a": "优先级调度算法",
+      "name_b": "优先级调度",
+      "def_a": "根据作业的优先级进行调度，优先级高的作业优先获得处理机。",
+      "def_b": "根据进程优先级分配CPU，优先级高的先执行，可抢占或非抢占。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "priority scheduling",
+      "decision": {
+        "merge": true,
+        "canonical": "优先级调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 263,
+      "idx_b": 1510,
+      "name_a": "最高优先权优先调度算法",
+      "name_b": "优先级调度",
+      "def_a": "每次调度选择就绪队列中优先权最高的进程分配CPU。",
+      "def_b": "根据进程优先级分配CPU，优先级高的先执行，可抢占或非抢占。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "priority scheduling",
+      "decision": {
+        "merge": true,
+        "canonical": "优先级调度算法",
+        "reason": "不同表述但语义等价，均为优先级调度。"
+      }
+    },
+    {
+      "idx_a": 249,
+      "idx_b": 1718,
+      "name_a": "高响应比优先调度算法",
+      "name_b": "最高响应比优先调度算法",
+      "def_a": "综合考虑作业等待时间和估计运行时间，响应比=(等待时间+估计运行时间)/估计运行时间，优先调度响应比高的作业。",
+      "def_b": "选择响应比（(等待时间+服务时间)/服务时间）最高的进程调度，兼顾长短作业。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "hrrn",
+      "decision": {
+        "merge": true,
+        "canonical": "高响应比优先调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 249,
+      "idx_b": 1475,
+      "name_a": "高响应比优先调度算法",
+      "name_b": "最高响应比优先",
+      "def_a": "综合考虑作业等待时间和估计运行时间，响应比=(等待时间+估计运行时间)/估计运行时间，优先调度响应比高的作业。",
+      "def_b": "计算每个作业的响应比（1+等待时间/运行时间），选择最高者运行",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "最高响应比优先",
+      "decision": {
+        "merge": true,
+        "canonical": "高响应比优先调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 262,
+      "idx_b": 1717,
+      "name_a": "时间片轮转调度算法",
+      "name_b": "轮转调度算法",
+      "def_a": "将CPU时间分成时间片，按FIFO顺序轮流分配给就绪队列中的每个进程。",
+      "def_b": "将CPU时间划分为时间片，按就绪队列顺序轮流分配，保证响应时间。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "rr",
+      "decision": {
+        "merge": true,
+        "canonical": "时间片轮转调度算法",
+        "reason": "全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 262,
+      "idx_b": 1508,
+      "name_a": "时间片轮转调度算法",
+      "name_b": "RR调度",
+      "def_a": "将CPU时间分成时间片，按FIFO顺序轮流分配给就绪队列中的每个进程。",
+      "def_b": "时间片轮转调度算法，每个进程分配一个时间片，轮流执行，抢占式。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "round robin",
+      "decision": {
+        "merge": true,
+        "canonical": "时间片轮转调度算法",
+        "reason": "中文全称与英文缩写关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 263,
+      "idx_b": 267,
+      "name_a": "最高优先权优先调度算法",
+      "name_b": "高优先权优先调度算法",
+      "def_a": "每次调度选择就绪队列中优先权最高的进程分配CPU。",
+      "def_b": "根据进程的优先权决定调度顺序，优先权高的进程优先获得处理机。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "hpf",
+      "decision": {
+        "merge": true,
+        "canonical": "最高优先权优先调度算法",
+        "reason": "不同表述但语义等价，均为最高优先权优先。"
+      }
+    },
+    {
+      "idx_a": 270,
+      "idx_b": 1465,
+      "name_a": "静态优先权",
+      "name_b": "静态优先级",
+      "def_a": "进程创建时确定优先权，运行期间保持不变，简单但可能导致低优先权进程长期不被调度。",
+      "def_b": "进程创建时指定优先级，运行过程中不再改变。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "静态优先级",
+      "decision": {
+        "merge": true,
+        "canonical": "静态优先级",
+        "reason": "两者语义完全等价，均为进程创建时确定且运行期间不变的优先级，'优先权'与'优先级'是同义词。"
+      }
+    },
+    {
+      "idx_a": 271,
+      "idx_b": 1466,
+      "name_a": "动态优先权",
+      "name_b": "动态优先级",
+      "def_a": "进程的优先权随进程推进或等待时间增加而改变，以获得更好的调度性能。",
+      "def_b": "进程创建时指定一个优先级，运行过程中可根据情况动态调整，如等待时间较长可提升优先级。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "动态优先级",
+      "decision": {
+        "merge": true,
+        "canonical": "动态优先级",
+        "reason": "两者语义完全等价，均为运行过程中可动态调整的优先级，'优先权'与'优先级'是同义词。"
+      }
+    },
+    {
+      "idx_a": 277,
+      "idx_b": 285,
+      "name_a": "非抢占式优先调度算法",
+      "name_b": "非抢占式优先权调度算法",
+      "def_a": "为实时任务赋予优先级，高优先级任务到达时排在就绪队列队首，等待当前任务完成。",
+      "def_b": "一种调度算法，进程一旦获得CPU，除非进程主动放弃，否则不会被其他更高优先级的进程抢占。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "non-preemptive priority scheduling",
+      "decision": {
+        "merge": true,
+        "canonical": "非抢占式优先权调度算法",
+        "reason": "两者语义完全等价，均为非抢占式优先级调度算法，'优先'与'优先权'是同义词。"
+      }
+    },
+    {
+      "idx_a": 284,
+      "idx_b": 1484,
+      "name_a": "最早截止时间优先算法",
+      "name_b": "最早截止时间优先",
+      "def_a": "一种根据任务开始截止时间确定优先级的实时调度算法，截止时间越早优先级越高，调度时选择就绪队列中最早截止时间的任务。",
+      "def_b": "根据任务绝对截止时间动态分配优先级，截止时间越早优先级越高的实时调度算法",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "edf",
+      "decision": {
+        "merge": true,
+        "canonical": "最早截止时间优先算法",
+        "reason": "两者语义完全等价，均为根据截止时间越早优先级越高的实时调度算法。"
+      }
+    },
+    {
+      "idx_a": 313,
+      "idx_b": 1720,
+      "name_a": "资源分配图",
+      "name_b": "进程-资源图",
+      "def_a": "用有向图描述进程与资源之间的请求和分配关系，用于死锁检测。",
+      "def_b": "有向图，描述进程和资源之间的请求和分配关系，用于死锁检测。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "资源分配图",
+      "decision": {
+        "merge": true,
+        "canonical": "资源分配图",
+        "reason": "两者语义完全等价，均为描述进程与资源请求分配关系的有向图，用于死锁检测。"
+      }
+    },
+    {
+      "idx_a": 318,
+      "idx_b": 1255,
+      "name_a": "存储器层次结构",
+      "name_b": "存储层次结构",
+      "def_a": "将存储部件按速度、容量和价格组织成多层结构，以平衡性能与成本。",
+      "def_b": "按速度、容量和价格组织的多级存储器体系，如寄存器-缓存-内存-外存。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "存储层次",
+      "decision": {
+        "merge": true,
+        "canonical": "存储器层次结构",
+        "reason": "两者语义完全等价，均为按速度、容量和价格组织的多级存储体系。"
+      }
+    },
+    {
+      "idx_a": 325,
+      "idx_b": 387,
+      "name_a": "程序局部性原理",
+      "name_b": "局部性原理",
+      "def_a": "程序执行时在短时间内仅局限于某个部分，为高速缓存提供理论依据。",
+      "def_b": "程序执行时在一较短时间段内仅局限于某个部分，访问的存储空间也局限于某个区域。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "局部性原理",
+      "decision": {
+        "merge": true,
+        "canonical": "程序局部性原理",
+        "reason": "两者语义完全等价，均为程序执行时局限于某部分区域的现象。"
+      }
+    },
+    {
+      "idx_a": 328,
+      "idx_b": 746,
+      "name_a": "链接",
+      "name_b": "文件连接",
+      "def_a": "将目标模块和库函数链接在一起形成完整的装入模块的过程。",
+      "def_b": "建立用户进程与文件之间的连接，增加文件链接计数。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "link",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "两者概念不同：'链接'指编译链接过程，'文件连接'指建立用户与文件的连接，属于不同层次。"
+      }
+    },
+    {
+      "idx_a": 331,
+      "idx_b": 1261,
+      "name_a": "可重定位装入方式",
+      "name_b": "静态重定位",
+      "def_a": "装入时根据内存起始地址对指令和数据进行地址修改，实现静态重定位。",
+      "def_b": "在程序装入时一次性完成地址转换，运行期间不再改变地址映射的方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "静态重定位",
+      "decision": {
+        "merge": true,
+        "canonical": "静态重定位",
+        "reason": "两者语义完全等价，均为程序装入时一次性完成地址转换的方式。"
+      }
+    },
+    {
+      "idx_a": 343,
+      "idx_b": 1278,
+      "name_a": "循环首次适应算法",
+      "name_b": "下次适应算法",
+      "def_a": "从上次找到的空闲分区下一个开始循环查找，直至找到满足要求的空闲分区。",
+      "def_b": "从上次查找结束位置开始循环查找，选择第一个满足大小的空闲分区。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nf",
+      "decision": {
+        "merge": true,
+        "canonical": "循环首次适应算法",
+        "reason": "两者语义完全等价，均为从上次查找位置开始循环查找空闲分区的算法。"
+      }
+    },
+    {
+      "idx_a": 349,
+      "idx_b": 1271,
+      "name_a": "固定分区",
+      "name_b": "固定式分区",
+      "def_a": "内存分区大小固定，每个分区只能容纳一个进程，限制了并发度。",
+      "def_b": "将内存划分为若干个固定大小的分区，每个分区只能容纳一道作业。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "固定分区",
+      "decision": {
+        "merge": true,
+        "canonical": "固定分区",
+        "reason": "两者语义完全等价，均为将内存划分为固定大小分区的机制。"
+      }
+    },
+    {
+      "idx_a": 352,
+      "idx_b": 1281,
+      "name_a": "紧凑",
+      "name_b": "紧凑技术",
+      "def_a": "通过移动内存中作业的位置，将多个分散的小分区拼接成大分区的方法。",
+      "def_b": "通过移动作业将多个分散的小空闲分区拼接成一个大分区的方法，用于消除外部碎片。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "拼接",
+      "decision": {
+        "merge": true,
+        "canonical": "紧凑",
+        "reason": "两者语义完全等价，均为通过移动作业合并空闲分区以消除外部碎片的技术。"
+      }
+    },
+    {
+      "idx_a": 356,
+      "idx_b": 1288,
+      "name_a": "对换",
+      "name_b": "交换",
+      "def_a": "将内存中暂时不能运行的进程或数据调出到外存，再将具备运行条件的进程或数据调入内存的技术。",
+      "def_b": "将暂时不用的程序或数据从主存移到辅存，再读入指定程序或数据的技术。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "交换",
+      "decision": {
+        "merge": true,
+        "canonical": "对换",
+        "reason": "两者语义完全等价，均为将进程在内存与外存之间交换的技术。"
+      }
+    },
+    {
+      "idx_a": 357,
+      "idx_b": 1096,
+      "name_a": "整体对换",
+      "name_b": "进程对换",
+      "def_a": "以整个进程为单位的对换方式，用于分时系统解决内存紧张问题。",
+      "def_b": "UNIX系统中的中级调度，将进程在内存和外存之间交换以调节内存负载",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "进程对换",
+      "decision": {
+        "merge": true,
+        "canonical": "整体对换",
+        "reason": "两者语义完全等价，均为以整个进程为单位的对换方式。"
+      }
+    },
+    {
+      "idx_a": 362,
+      "idx_b": 383,
+      "name_a": "分页存储管理方式",
+      "name_b": "分页系统",
+      "def_a": "将进程的逻辑地址空间分成大小相等的页，并离散装入内存中不相邻的物理块的内存管理方式。",
+      "def_b": "将内存和逻辑地址空间划分为固定大小的页，通过页表实现地址映射的存储管理方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分页系统",
+      "decision": {
+        "merge": true,
+        "canonical": "分页存储管理方式",
+        "reason": "两者语义完全等价，均为将内存和逻辑地址空间划分为固定大小页的存储管理方式。"
+      }
+    },
+    {
+      "idx_a": 362,
+      "idx_b": 1315,
+      "name_a": "分页存储管理方式",
+      "name_b": "分页存储管理",
+      "def_a": "将进程的逻辑地址空间分成大小相等的页，并离散装入内存中不相邻的物理块的内存管理方式。",
+      "def_b": "将进程的逻辑地址空间分成大小相等的页，并将内存分成同样大小的块，允许进程的页分散存放在不连续的内存块中。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分页系统",
+      "decision": {
+        "merge": true,
+        "canonical": "分页存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 383,
+      "idx_b": 1315,
+      "name_a": "分页系统",
+      "name_b": "分页存储管理",
+      "def_a": "将内存和逻辑地址空间划分为固定大小的页，通过页表实现地址映射的存储管理方式。",
+      "def_b": "将进程的逻辑地址空间分成大小相等的页，并将内存分成同样大小的块，允许进程的页分散存放在不连续的内存块中。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分页系统",
+      "decision": {
+        "merge": true,
+        "canonical": "分页存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 363,
+      "idx_b": 384,
+      "name_a": "分段存储管理方式",
+      "name_b": "分段系统",
+      "def_a": "将进程的逻辑地址空间分成大小不等的段，并离散装入内存中不相邻的物理块的内存管理方式。",
+      "def_b": "按逻辑段划分地址空间，每个段有独立基址和长度，通过段表实现地址映射的存储管理方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分段系统",
+      "decision": {
+        "merge": true,
+        "canonical": "分段存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 365,
+      "idx_b": 1316,
+      "name_a": "页面",
+      "name_b": "页",
+      "def_a": "分页存储管理中将进程逻辑地址空间分成的大小相等的片，是离散分配的基本单位。",
+      "def_b": "在分页存储管理中，将进程地址空间划分成的大小相等的片，是逻辑地址空间的基本单位。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "页面",
+      "decision": {
+        "merge": true,
+        "canonical": "页",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 366,
+      "idx_b": 1317,
+      "name_a": "物理块",
+      "name_b": "页框",
+      "def_a": "内存空间分成与页面大小相同的存储块，用于存放进程的页面。",
+      "def_b": "在分页存储管理中，将内存空间划分成与页大小相等的片，也称为存储块，是物理内存的基本单位。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "frame",
+      "decision": {
+        "merge": true,
+        "canonical": "页框",
+        "reason": "同义词，物理块即页框。"
+      }
+    },
+    {
+      "idx_a": 366,
+      "idx_b": 605,
+      "name_a": "物理块",
+      "name_b": "簇",
+      "def_a": "内存空间分成与页面大小相同的存储块，用于存放进程的页面。",
+      "def_b": "一组连续的扇区，作为文件分配的基本单位，可减少指针开销但增加内部碎片。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "簇",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "物理块是内存概念，簇是磁盘概念，不同领域。"
+      }
+    },
+    {
+      "idx_a": 367,
+      "idx_b": 612,
+      "name_a": "页内碎片",
+      "name_b": "簇内零头",
+      "def_a": "进程最后一页装不满一块而形成的不可利用的碎片。",
+      "def_b": "由于簇大小大于文件实际数据量导致的磁盘空间浪费，类似于内存页内碎片。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内部碎片",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "页内碎片是内存概念，簇内零头是磁盘概念，不同领域。"
+      }
+    },
+    {
+      "idx_a": 367,
+      "idx_b": 1273,
+      "name_a": "页内碎片",
+      "name_b": "内碎片",
+      "def_a": "进程最后一页装不满一块而形成的不可利用的碎片。",
+      "def_b": "分配给进程的内存块中未被利用的部分，因分区固定或分配粒度导致。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内部碎片",
+      "decision": {
+        "merge": true,
+        "canonical": "内部碎片",
+        "reason": "同义词，内碎片即内部碎片。"
+      }
+    },
+    {
+      "idx_a": 367,
+      "idx_b": 1279,
+      "name_a": "页内碎片",
+      "name_b": "内部碎片",
+      "def_a": "进程最后一页装不满一块而形成的不可利用的碎片。",
+      "def_b": "分配给作业的存储空间中未被利用的部分，如固定分区中存在的碎片。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内部碎片",
+      "decision": {
+        "merge": true,
+        "canonical": "内部碎片",
+        "reason": "同义词，页内碎片是内部碎片的一种。"
+      }
+    },
+    {
+      "idx_a": 612,
+      "idx_b": 1273,
+      "name_a": "簇内零头",
+      "name_b": "内碎片",
+      "def_a": "由于簇大小大于文件实际数据量导致的磁盘空间浪费，类似于内存页内碎片。",
+      "def_b": "分配给进程的内存块中未被利用的部分，因分区固定或分配粒度导致。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内部碎片",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "簇内零头是磁盘概念，内碎片是内存概念，不同领域。"
+      }
+    },
+    {
+      "idx_a": 612,
+      "idx_b": 1279,
+      "name_a": "簇内零头",
+      "name_b": "内部碎片",
+      "def_a": "由于簇大小大于文件实际数据量导致的磁盘空间浪费，类似于内存页内碎片。",
+      "def_b": "分配给作业的存储空间中未被利用的部分，如固定分区中存在的碎片。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内部碎片",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "簇内零头是磁盘概念，内部碎片是内存概念，不同领域。"
+      }
+    },
+    {
+      "idx_a": 1273,
+      "idx_b": 1279,
+      "name_a": "内碎片",
+      "name_b": "内部碎片",
+      "def_a": "分配给进程的内存块中未被利用的部分，因分区固定或分配粒度导致。",
+      "def_b": "分配给作业的存储空间中未被利用的部分，如固定分区中存在的碎片。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内部碎片",
+      "decision": {
+        "merge": true,
+        "canonical": "内部碎片",
+        "reason": "同义词，内碎片即内部碎片。"
+      }
+    },
+    {
+      "idx_a": 369,
+      "idx_b": 1322,
+      "name_a": "地址变换机构",
+      "name_b": "内存管理单元",
+      "def_a": "实现从逻辑地址到物理地址转换的硬件机构，核心任务是将页号转换为物理块号。",
+      "def_b": "硬件部件，负责将虚拟地址转换为物理地址，支持分页等内存管理功能。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "mmu",
+      "decision": {
+        "merge": true,
+        "canonical": "内存管理单元",
+        "reason": "同义词，地址变换机构即MMU。"
+      }
+    },
+    {
+      "idx_a": 372,
+      "idx_b": 373,
+      "name_a": "两级页表",
+      "name_b": "多级页表",
+      "def_a": "将页表分页并建立外层页表，以离散存放页表并支持大逻辑地址空间",
+      "def_b": "通过多级页表结构进一步减少页表占用连续内存空间，支持更大地址空间",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "两级页表",
+      "decision": {
+        "merge": true,
+        "canonical": "多级页表",
+        "reason": "两级页表是多级页表的特例，但语义等价。"
+      }
+    },
+    {
+      "idx_a": 375,
+      "idx_b": 384,
+      "name_a": "分段存储管理",
+      "name_b": "分段系统",
+      "def_a": "将作业的地址空间按逻辑关系划分为若干段，每段有独立地址空间，以段为单位进行存储分配和管理的存储管理方式。",
+      "def_b": "按逻辑段划分地址空间，每个段有独立基址和长度，通过段表实现地址映射的存储管理方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分段存储管理",
+      "decision": {
+        "merge": true,
+        "canonical": "分段存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 375,
+      "idx_b": 1329,
+      "name_a": "分段存储管理",
+      "name_b": "段式存储管理",
+      "def_a": "将作业的地址空间按逻辑关系划分为若干段，每段有独立地址空间，以段为单位进行存储分配和管理的存储管理方式。",
+      "def_b": "以段为单位分配内存，每个段对应一个逻辑信息单元，地址空间二维。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分段存储管理",
+      "decision": {
+        "merge": true,
+        "canonical": "分段存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 384,
+      "idx_b": 1329,
+      "name_a": "分段系统",
+      "name_b": "段式存储管理",
+      "def_a": "按逻辑段划分地址空间，每个段有独立基址和长度，通过段表实现地址映射的存储管理方式。",
+      "def_b": "以段为单位分配内存，每个段对应一个逻辑信息单元，地址空间二维。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分段存储管理",
+      "decision": {
+        "merge": true,
+        "canonical": "段式存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 375,
+      "idx_b": 1346,
+      "name_a": "分段存储管理",
+      "name_b": "段式内存管理",
+      "def_a": "将作业的地址空间按逻辑关系划分为若干段，每段有独立地址空间，以段为单位进行存储分配和管理的存储管理方式。",
+      "def_b": "将内存按逻辑段划分，以段为单位进行分配和管理的存储管理方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "segmentation",
+      "decision": {
+        "merge": true,
+        "canonical": "分段存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 377,
+      "idx_b": 1330,
+      "name_a": "信息共享",
+      "name_b": "段共享",
+      "def_a": "多个进程或用户共同访问同一段程序或数据，以节省内存和便于协作，分段存储管理支持以段为单位的共享。",
+      "def_b": "多个进程共享同一个逻辑段，通过段表项指向同一内存区域实现。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "段共享",
+      "decision": {
+        "merge": true,
+        "canonical": "段共享",
+        "reason": "概念A是段共享的广义描述，语义等价。"
+      }
+    },
+    {
+      "idx_a": 383,
+      "idx_b": 1707,
+      "name_a": "分页系统",
+      "name_b": "页式存储管理",
+      "def_a": "将内存和逻辑地址空间划分为固定大小的页，通过页表实现地址映射的存储管理方式。",
+      "def_b": "将内存划分为固定大小的页框，进程的虚拟地址空间按页划分，通过页表实现地址映射。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分页存储管理",
+      "decision": {
+        "merge": true,
+        "canonical": "页式存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1315,
+      "idx_b": 1707,
+      "name_a": "分页存储管理",
+      "name_b": "页式存储管理",
+      "def_a": "将进程的逻辑地址空间分成大小相等的页，并将内存分成同样大小的块，允许进程的页分散存放在不连续的内存块中。",
+      "def_b": "将内存划分为固定大小的页框，进程的虚拟地址空间按页划分，通过页表实现地址映射。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分页存储管理",
+      "decision": {
+        "merge": true,
+        "canonical": "页式存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 385,
+      "idx_b": 1069,
+      "name_a": "段页式系统",
+      "name_b": "段页式存储管理",
+      "def_a": "结合分段和分页原理，将用户程序先分段再分页，通过段表和页表实现地址映射的存储管理方式。",
+      "def_b": "结合分段和分页的存储管理方式，将进程地址空间分为多个段（区），每个段再分为若干页。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "段页式存储管理",
+      "decision": {
+        "merge": true,
+        "canonical": "段页式存储管理",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 388,
+      "idx_b": 1343,
+      "name_a": "时间局限性",
+      "name_b": "时间局部性",
+      "def_a": "如果某条指令或数据被访问，不久后可能再次被访问，典型原因是循环操作。",
+      "def_b": "被访问过的存储单元在不久后可能再次被访问的特性。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "时间局部性",
+      "decision": {
+        "merge": true,
+        "canonical": "时间局部性",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 389,
+      "idx_b": 1344,
+      "name_a": "空间局限性",
+      "name_b": "空间局部性",
+      "def_a": "一旦访问某个存储单元，不久后其附近的存储单元也将被访问，典型情况是顺序执行。",
+      "def_b": "被访问的存储单元附近的单元在不久后可能被访问的特性。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "空间局部性",
+      "decision": {
+        "merge": true,
+        "canonical": "空间局部性",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 390,
+      "idx_b": 409,
+      "name_a": "请求调页",
+      "name_b": "请求调页策略",
+      "def_a": "当程序访问的页面尚未调入内存时，由操作系统将所缺页面调入内存的功能。",
+      "def_b": "当进程运行中发生缺页时才将所缺页面调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求调页",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 390,
+      "idx_b": 1105,
+      "name_a": "请求调页",
+      "name_b": "请求调页存储管理",
+      "def_a": "当程序访问的页面尚未调入内存时，由操作系统将所缺页面调入内存的功能。",
+      "def_b": "一种虚拟存储管理方式，仅将进程需要的部分页面调入内存，以页为单位进行分配和回收。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "请求调页是具体机制，请求调页存储管理是包含该机制的管理方式，非等价。"
+      }
+    },
+    {
+      "idx_a": 390,
+      "idx_b": 1345,
+      "name_a": "请求调页",
+      "name_b": "请求式分页",
+      "def_a": "当程序访问的页面尚未调入内存时，由操作系统将所缺页面调入内存的功能。",
+      "def_b": "一种虚拟存储技术，仅在需要时才将页面调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 390,
+      "idx_b": 1352,
+      "name_a": "请求调页",
+      "name_b": "请求分页系统",
+      "def_a": "当程序访问的页面尚未调入内存时，由操作系统将所缺页面调入内存的功能。",
+      "def_b": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "请求调页是具体机制，请求分页系统是包含该机制的系统，非等价。"
+      }
+    },
+    {
+      "idx_a": 390,
+      "idx_b": 1361,
+      "name_a": "请求调页",
+      "name_b": "按需调页",
+      "def_a": "当程序访问的页面尚未调入内存时，由操作系统将所缺页面调入内存的功能。",
+      "def_b": "一种调入策略，仅当页面被访问时才将其从磁盘调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 409,
+      "idx_b": 1105,
+      "name_a": "请求调页策略",
+      "name_b": "请求调页存储管理",
+      "def_a": "当进程运行中发生缺页时才将所缺页面调入内存。",
+      "def_b": "一种虚拟存储管理方式，仅将进程需要的部分页面调入内存，以页为单位进行分配和回收。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "请求调页策略是具体策略，请求调页存储管理是管理方式，非等价。"
+      }
+    },
+    {
+      "idx_a": 409,
+      "idx_b": 1345,
+      "name_a": "请求调页策略",
+      "name_b": "请求式分页",
+      "def_a": "当进程运行中发生缺页时才将所缺页面调入内存。",
+      "def_b": "一种虚拟存储技术，仅在需要时才将页面调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页策略",
+        "reason": "请求调页策略、请求式分页、按需调页语义完全等价，均为缺页时调入页面。"
+      }
+    },
+    {
+      "idx_a": 409,
+      "idx_b": 1352,
+      "name_a": "请求调页策略",
+      "name_b": "请求分页系统",
+      "def_a": "当进程运行中发生缺页时才将所缺页面调入内存。",
+      "def_b": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页系统",
+        "reason": "请求调页策略是请求分页系统的核心机制，但请求分页系统包含页面置换功能，范围更广，不合并。"
+      }
+    },
+    {
+      "idx_a": 409,
+      "idx_b": 1361,
+      "name_a": "请求调页策略",
+      "name_b": "按需调页",
+      "def_a": "当进程运行中发生缺页时才将所缺页面调入内存。",
+      "def_b": "一种调入策略，仅当页面被访问时才将其从磁盘调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页策略",
+        "reason": "请求调页策略与按需调页完全同义。"
+      }
+    },
+    {
+      "idx_a": 1105,
+      "idx_b": 1345,
+      "name_a": "请求调页存储管理",
+      "name_b": "请求式分页",
+      "def_a": "一种虚拟存储管理方式，仅将进程需要的部分页面调入内存，以页为单位进行分配和回收。",
+      "def_b": "一种虚拟存储技术，仅在需要时才将页面调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页存储管理",
+        "reason": "请求调页存储管理与请求式分页完全等价。"
+      }
+    },
+    {
+      "idx_a": 1105,
+      "idx_b": 1352,
+      "name_a": "请求调页存储管理",
+      "name_b": "请求分页系统",
+      "def_a": "一种虚拟存储管理方式，仅将进程需要的部分页面调入内存，以页为单位进行分配和回收。",
+      "def_b": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页系统",
+        "reason": "请求调页存储管理是请求分页系统的组成部分，但后者包含页面置换，不合并。"
+      }
+    },
+    {
+      "idx_a": 1105,
+      "idx_b": 1361,
+      "name_a": "请求调页存储管理",
+      "name_b": "按需调页",
+      "def_a": "一种虚拟存储管理方式，仅将进程需要的部分页面调入内存，以页为单位进行分配和回收。",
+      "def_b": "一种调入策略，仅当页面被访问时才将其从磁盘调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求调页存储管理",
+        "reason": "请求调页存储管理与按需调页完全等价。"
+      }
+    },
+    {
+      "idx_a": 1345,
+      "idx_b": 1352,
+      "name_a": "请求式分页",
+      "name_b": "请求分页系统",
+      "def_a": "一种虚拟存储技术，仅在需要时才将页面调入内存。",
+      "def_b": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页系统",
+        "reason": "请求式分页是请求分页系统的核心，但后者包含页面置换，不合并。"
+      }
+    },
+    {
+      "idx_a": 1345,
+      "idx_b": 1361,
+      "name_a": "请求式分页",
+      "name_b": "按需调页",
+      "def_a": "一种虚拟存储技术，仅在需要时才将页面调入内存。",
+      "def_b": "一种调入策略，仅当页面被访问时才将其从磁盘调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求式分页",
+        "reason": "请求式分页与按需调页完全同义。"
+      }
+    },
+    {
+      "idx_a": 1352,
+      "idx_b": 1361,
+      "name_a": "请求分页系统",
+      "name_b": "按需调页",
+      "def_a": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "def_b": "一种调入策略，仅当页面被访问时才将其从磁盘调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "demand paging",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页系统",
+        "reason": "请求分页系统包含按需调页机制，但范围更大，不合并。"
+      }
+    },
+    {
+      "idx_a": 392,
+      "idx_b": 400,
+      "name_a": "分页请求系统",
+      "name_b": "请求分页存储管理方式",
+      "def_a": "在分页系统基础上增加请求调页和页面置换功能所形成的页式虚拟存储系统。",
+      "def_b": "在基本分页基础上增加请求调页和页面置换功能，以支持虚拟存储器的存储管理方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求分页系统",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页存储管理方式",
+        "reason": "分页请求系统与请求分页存储管理方式完全等价。"
+      }
+    },
+    {
+      "idx_a": 392,
+      "idx_b": 1352,
+      "name_a": "分页请求系统",
+      "name_b": "请求分页系统",
+      "def_a": "在分页系统基础上增加请求调页和页面置换功能所形成的页式虚拟存储系统。",
+      "def_b": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求分页系统",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页系统",
+        "reason": "分页请求系统与请求分页系统完全等价。"
+      }
+    },
+    {
+      "idx_a": 400,
+      "idx_b": 1352,
+      "name_a": "请求分页存储管理方式",
+      "name_b": "请求分页系统",
+      "def_a": "在基本分页基础上增加请求调页和页面置换功能，以支持虚拟存储器的存储管理方式。",
+      "def_b": "在分页系统基础上，增加请求调页和页面置换功能，允许只装入部分页面即可运行的虚拟存储器系统。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求分页系统",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分页系统",
+        "reason": "请求分页存储管理方式与请求分页系统完全等价。"
+      }
+    },
+    {
+      "idx_a": 393,
+      "idx_b": 420,
+      "name_a": "请求分段系统",
+      "name_b": "请求分段存储管理方式",
+      "def_a": "在分段系统基础上增加请求调段和分段置换功能所形成的段式虚拟存储系统。",
+      "def_b": "一种存储管理方式，允许程序运行时只调入部分分段，通过缺段中断机制将所需分段调入内存。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求分段系统",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分段系统",
+        "reason": "请求分段系统与请求分段存储管理方式完全等价。"
+      }
+    },
+    {
+      "idx_a": 393,
+      "idx_b": 423,
+      "name_a": "请求分段系统",
+      "name_b": "请求分段存储管理",
+      "def_a": "在分段系统基础上增加请求调段和分段置换功能所形成的段式虚拟存储系统。",
+      "def_b": "一种虚拟存储管理方式，允许进程运行时只将部分段装入内存，通过缺段中断调入所需段。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求分段系统",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分段系统",
+        "reason": "请求分段系统与请求分段存储管理完全等价。"
+      }
+    },
+    {
+      "idx_a": 420,
+      "idx_b": 423,
+      "name_a": "请求分段存储管理方式",
+      "name_b": "请求分段存储管理",
+      "def_a": "一种存储管理方式，允许程序运行时只调入部分分段，通过缺段中断机制将所需分段调入内存。",
+      "def_b": "一种虚拟存储管理方式，允许进程运行时只将部分段装入内存，通过缺段中断调入所需段。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "请求分段系统",
+      "decision": {
+        "merge": true,
+        "canonical": "请求分段存储管理方式",
+        "reason": "请求分段存储管理方式与请求分段存储管理完全等价。"
+      }
+    },
+    {
+      "idx_a": 394,
+      "idx_b": 417,
+      "name_a": "缺页中断",
+      "name_b": "缺页",
+      "def_a": "当程序访问的页面尚未调入内存时产生的中断，用于请求操作系统将所缺页面调入内存。",
+      "def_b": "进程访问的页面不在内存中，需要从外存调入的现象。",
+      "role_a": "机制",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "缺页中断",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "一个是中断机制，一个是现象问题，语义不等价。"
+      }
+    },
+    {
+      "idx_a": 394,
+      "idx_b": 1362,
+      "name_a": "缺页中断",
+      "name_b": "缺页错误",
+      "def_a": "当程序访问的页面尚未调入内存时产生的中断，用于请求操作系统将所缺页面调入内存。",
+      "def_b": "当程序访问的页面不在物理内存中时引发的异常，由操作系统处理页面调入。",
+      "role_a": "机制",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "page fault",
+      "decision": {
+        "merge": true,
+        "canonical": "缺页中断",
+        "reason": "缺页错误与缺页中断是同义术语，均指页面不在内存时引发的异常。"
+      }
+    },
+    {
+      "idx_a": 408,
+      "idx_b": 1360,
+      "name_a": "预调页策略",
+      "name_b": "预调页",
+      "def_a": "基于预测将预计不久会被访问的页面预先调入内存，主要用于进程首次调入。",
+      "def_b": "一种调入策略，在需要之前预先将页面调入内存以减少缺页错误。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "prepaging",
+      "decision": {
+        "merge": true,
+        "canonical": "预调页策略",
+        "reason": "预调页策略与预调页是同义术语，均指预先调入页面的策略。"
+      }
+    },
+    {
+      "idx_a": 411,
+      "idx_b": 1364,
+      "name_a": "最佳置换算法",
+      "name_b": "最优置换算法",
+      "def_a": "选择以后永不使用或最长时间内不再被访问的页面作为淘汰页面的理想化算法。",
+      "def_b": "置换未来最长时间不被使用的页面，理论上页错误率最低但无法实现。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "opt",
+      "decision": {
+        "merge": true,
+        "canonical": "最佳置换算法",
+        "reason": "最佳置换算法与最优置换算法是同义术语，均指理想化的置换算法。"
+      }
+    },
+    {
+      "idx_a": 412,
+      "idx_b": 413,
+      "name_a": "先进先出页面置换算法",
+      "name_b": "先进先出置换算法",
+      "def_a": "淘汰最先进入内存的页面，即选择在内存中驻留时间最久的页面予以淘汰的算法。",
+      "def_b": "选择最先进入内存的页面予以淘汰的页面置换算法。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fifo",
+      "decision": {
+        "merge": true,
+        "canonical": "先进先出页面置换算法",
+        "reason": "两者名称略有差异但语义完全等价，均指FIFO页面置换算法。"
+      }
+    },
+    {
+      "idx_a": 412,
+      "idx_b": 1100,
+      "name_a": "先进先出页面置换算法",
+      "name_b": "有名管道",
+      "def_a": "淘汰最先进入内存的页面，即选择在内存中驻留时间最久的页面予以淘汰的算法。",
+      "def_b": "一种长期存在的管道文件，通过mknod系统调用创建，具有路径名，可被多个进程访问。",
+      "role_a": "算法",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fifo",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "一个是页面置换算法，一个是进程间通信机制，语义完全不同。"
+      }
+    },
+    {
+      "idx_a": 413,
+      "idx_b": 1100,
+      "name_a": "先进先出置换算法",
+      "name_b": "有名管道",
+      "def_a": "选择最先进入内存的页面予以淘汰的页面置换算法。",
+      "def_b": "一种长期存在的管道文件，通过mknod系统调用创建，具有路径名，可被多个进程访问。",
+      "role_a": "算法",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fifo",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "一个是页面置换算法，一个是进程间通信机制，语义完全不同。"
+      }
+    },
+    {
+      "idx_a": 414,
+      "idx_b": 540,
+      "name_a": "最近最久未使用置换算法",
+      "name_b": "最近最久未使用算法",
+      "def_a": "选择最近最久未使用的页面予以淘汰的页面置换算法。",
+      "def_b": "一种置换算法，选择最近最久未被访问的盘块数据换出高速缓存。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lru",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "一个用于页面置换，一个用于盘块缓存置换，应用场景不同。"
+      }
+    },
+    {
+      "idx_a": 414,
+      "idx_b": 1368,
+      "name_a": "最近最久未使用置换算法",
+      "name_b": "最近最少使用页面置换算法",
+      "def_a": "选择最近最久未使用的页面予以淘汰的页面置换算法。",
+      "def_b": "一种页面置换算法，淘汰最长时间未被访问的页面，基于局部性原理。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lru",
+      "decision": {
+        "merge": true,
+        "canonical": "最近最久未使用置换算法",
+        "reason": "两者均指LRU页面置换算法，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 414,
+      "idx_b": 1709,
+      "name_a": "最近最久未使用置换算法",
+      "name_b": "最近最少使用置换算法",
+      "def_a": "选择最近最久未使用的页面予以淘汰的页面置换算法。",
+      "def_b": "置换最长时间未被访问的页面，利用局部性原理，性能较好。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lru",
+      "decision": {
+        "merge": true,
+        "canonical": "最近最久未使用置换算法",
+        "reason": "两者均指LRU页面置换算法，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 540,
+      "idx_b": 1368,
+      "name_a": "最近最久未使用算法",
+      "name_b": "最近最少使用页面置换算法",
+      "def_a": "一种置换算法，选择最近最久未被访问的盘块数据换出高速缓存。",
+      "def_b": "一种页面置换算法，淘汰最长时间未被访问的页面，基于局部性原理。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lru",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "一个用于盘块缓存置换，一个用于页面置换，应用场景不同。"
+      }
+    },
+    {
+      "idx_a": 540,
+      "idx_b": 1709,
+      "name_a": "最近最久未使用算法",
+      "name_b": "最近最少使用置换算法",
+      "def_a": "一种置换算法，选择最近最久未被访问的盘块数据换出高速缓存。",
+      "def_b": "置换最长时间未被访问的页面，利用局部性原理，性能较好。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lru",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "一个用于盘块缓存置换，一个用于页面置换，应用场景不同。"
+      }
+    },
+    {
+      "idx_a": 1368,
+      "idx_b": 1709,
+      "name_a": "最近最少使用页面置换算法",
+      "name_b": "最近最少使用置换算法",
+      "def_a": "一种页面置换算法，淘汰最长时间未被访问的页面，基于局部性原理。",
+      "def_b": "置换最长时间未被访问的页面，利用局部性原理，性能较好。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lru",
+      "decision": {
+        "merge": true,
+        "canonical": "最近最少使用页面置换算法",
+        "reason": "两者均指LRU页面置换算法，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 415,
+      "idx_b": 541,
+      "name_a": "Clock置换算法",
+      "name_b": "最近未使用算法",
+      "def_a": "一种LRU近似算法，通过循环检查页面的访问位来决定淘汰页面。",
+      "def_b": "一种置换算法，选择最近未被使用的盘块数据换出高速缓存。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nru",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "Clock算法是LRU近似算法，而最近未使用算法是另一种算法，不等价。"
+      }
+    },
+    {
+      "idx_a": 415,
+      "idx_b": 1367,
+      "name_a": "Clock置换算法",
+      "name_b": "时钟页面置换算法",
+      "def_a": "一种LRU近似算法，通过循环检查页面的访问位来决定淘汰页面。",
+      "def_b": "第二次机会算法的环形队列实现，通过循环扫描页面并检查访问位来淘汰页面。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nru",
+      "decision": {
+        "merge": true,
+        "canonical": "Clock置换算法",
+        "reason": "Clock置换算法与时钟页面置换算法是同义术语，均指该算法。"
+      }
+    },
+    {
+      "idx_a": 541,
+      "idx_b": 1367,
+      "name_a": "最近未使用算法",
+      "name_b": "时钟页面置换算法",
+      "def_a": "一种置换算法，选择最近未被使用的盘块数据换出高速缓存。",
+      "def_b": "第二次机会算法的环形队列实现，通过循环扫描页面并检查访问位来淘汰页面。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nru",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "最近未使用算法和时钟页面置换算法是不同算法，前者基于最近未使用，后者基于环形队列和访问位。"
+      }
+    },
+    {
+      "idx_a": 418,
+      "idx_b": 542,
+      "name_a": "最少使用置换算法",
+      "name_b": "最少使用算法",
+      "def_a": "一种页面置换算法，选择在最近时期使用最少的页面作为淘汰页，通过移位寄存器记录访问频率。",
+      "def_b": "一种置换算法，选择使用次数最少的盘块数据换出高速缓存。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lfu",
+      "decision": {
+        "merge": true,
+        "canonical": "最少使用置换算法",
+        "reason": "两者均指选择使用次数最少的页面进行置换，语义等价。"
+      }
+    },
+    {
+      "idx_a": 418,
+      "idx_b": 1710,
+      "name_a": "最少使用置换算法",
+      "name_b": "最不频繁使用置换算法",
+      "def_a": "一种页面置换算法，选择在最近时期使用最少的页面作为淘汰页，通过移位寄存器记录访问频率。",
+      "def_b": "置换访问次数最少的页面，基于访问频率，但实现复杂。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lfu",
+      "decision": {
+        "merge": true,
+        "canonical": "最少使用置换算法",
+        "reason": "两者均指置换访问次数最少的页面，语义等价。"
+      }
+    },
+    {
+      "idx_a": 542,
+      "idx_b": 1710,
+      "name_a": "最少使用算法",
+      "name_b": "最不频繁使用置换算法",
+      "def_a": "一种置换算法，选择使用次数最少的盘块数据换出高速缓存。",
+      "def_b": "置换访问次数最少的页面，基于访问频率，但实现复杂。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lfu",
+      "decision": {
+        "merge": true,
+        "canonical": "最少使用算法",
+        "reason": "两者均指置换使用次数最少的页面，语义等价。"
+      }
+    },
+    {
+      "idx_a": 424,
+      "idx_b": 1330,
+      "name_a": "分段共享",
+      "name_b": "段共享",
+      "def_a": "多个进程共享同一内存段，通过共享段表管理，减少内存重复占用。",
+      "def_b": "多个进程共享同一个逻辑段，通过段表项指向同一内存区域实现。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "分段共享",
+      "decision": {
+        "merge": true,
+        "canonical": "分段共享",
+        "reason": "两者均指多个进程共享同一内存段，语义等价。"
+      }
+    },
+    {
+      "idx_a": 429,
+      "idx_b": 1387,
+      "name_a": "环保护机构",
+      "name_b": "环保护",
+      "def_a": "一种分层保护机制，低编号环具有高特权，程序可访问同环或低特权环数据，调用同环或高特权环服务。",
+      "def_b": "将处理器状态分为多个特权环，不同环具有不同访问权限，内环可访问外环数据。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "环保护",
+      "decision": {
+        "merge": true,
+        "canonical": "环保护机构",
+        "reason": "两者均指分层特权环保护机制，语义等价。"
+      }
+    },
+    {
+      "idx_a": 440,
+      "idx_b": 477,
+      "name_a": "设备独立性",
+      "name_b": "设备无关性",
+      "def_a": "用户程序独立于具体使用的物理设备，由操作系统实现设备重定向。",
+      "def_b": "操作系统通过抽象逻辑设备屏蔽具体物理设备细节，提高可移植性和易适应性的特性。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "设备独立性",
+      "decision": {
+        "merge": true,
+        "canonical": "设备独立性",
+        "reason": "两者均指用户程序独立于具体物理设备，语义等价。"
+      }
+    },
+    {
+      "idx_a": 442,
+      "idx_b": 461,
+      "name_a": "DMA方式",
+      "name_b": "直接存储器访问方式",
+      "def_a": "直接存储器访问方式，允许设备直接与内存交换数据，无需CPU干预。",
+      "def_b": "DMA控制器直接控制数据在设备和内存间传输，仅在开始和结束时中断CPU。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma方式",
+      "decision": {
+        "merge": true,
+        "canonical": "DMA方式",
+        "reason": "DMA方式与直接存储器访问方式为全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 442,
+      "idx_b": 458,
+      "name_a": "DMA方式",
+      "name_b": "DMA控制方式",
+      "def_a": "直接存储器访问方式，允许设备直接与内存交换数据，无需CPU干预。",
+      "def_b": "利用DMA控制器实现以数据块为单位的传输，无需CPU干预，改善块设备I/O性能。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "直接存储器访问",
+      "decision": {
+        "merge": true,
+        "canonical": "DMA方式",
+        "reason": "DMA方式与DMA控制方式均指直接存储器访问，语义等价。"
+      }
+    },
+    {
+      "idx_a": 442,
+      "idx_b": 1207,
+      "name_a": "DMA方式",
+      "name_b": "直接存储器访问",
+      "def_a": "直接存储器访问方式，允许设备直接与内存交换数据，无需CPU干预。",
+      "def_b": "一种允许I/O设备直接读写内存而无需CPU干预的数据传输方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "直接存储器访问",
+      "decision": {
+        "merge": true,
+        "canonical": "DMA方式",
+        "reason": "DMA方式与直接存储器访问为全称与简称关系，语义等价。"
+      }
+    },
+    {
+      "idx_a": 458,
+      "idx_b": 1207,
+      "name_a": "DMA控制方式",
+      "name_b": "直接存储器访问",
+      "def_a": "利用DMA控制器实现以数据块为单位的传输，无需CPU干预，改善块设备I/O性能。",
+      "def_b": "一种允许I/O设备直接读写内存而无需CPU干预的数据传输方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "直接存储器访问",
+      "decision": {
+        "merge": true,
+        "canonical": "DMA控制方式",
+        "reason": "DMA控制方式与直接存储器访问均指同一数据传输方式，语义等价。"
+      }
+    },
+    {
+      "idx_a": 443,
+      "idx_b": 460,
+      "name_a": "中断驱动方式",
+      "name_b": "中断驱动I/O控制方式",
+      "def_a": "设备通过中断通知CPU完成I/O操作，CPU在等待期间可执行其他任务。",
+      "def_b": "CPU发出I/O命令后继续执行，设备完成时通过中断通知CPU，实现CPU与I/O并行。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "中断驱动方式",
+      "decision": {
+        "merge": true,
+        "canonical": "中断驱动方式",
+        "reason": "两者均指设备通过中断通知CPU完成I/O，语义等价。"
+      }
+    },
+    {
+      "idx_a": 443,
+      "idx_b": 1535,
+      "name_a": "中断驱动方式",
+      "name_b": "中断驱动I/O",
+      "def_a": "设备通过中断通知CPU完成I/O操作，CPU在等待期间可执行其他任务。",
+      "def_b": "设备完成I/O操作后主动向CPU发中断，CPU暂停当前工作处理中断的I/O控制方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "中断驱动方式",
+      "decision": {
+        "merge": true,
+        "canonical": "中断驱动方式",
+        "reason": "两者均指设备完成I/O后发中断通知CPU，语义等价。"
+      }
+    },
+    {
+      "idx_a": 460,
+      "idx_b": 1535,
+      "name_a": "中断驱动I/O控制方式",
+      "name_b": "中断驱动I/O",
+      "def_a": "CPU发出I/O命令后继续执行，设备完成时通过中断通知CPU，实现CPU与I/O并行。",
+      "def_b": "设备完成I/O操作后主动向CPU发中断，CPU暂停当前工作处理中断的I/O控制方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "中断驱动方式",
+      "decision": {
+        "merge": true,
+        "canonical": "中断驱动I/O控制方式",
+        "reason": "两者均指CPU发出I/O命令后继续执行，设备完成时中断通知CPU，语义等价。"
+      }
+    },
+    {
+      "idx_a": 457,
+      "idx_b": 1534,
+      "name_a": "程序I/O方式",
+      "name_b": "程序控制I/O",
+      "def_a": "处理机通过循环测试设备状态寄存器忙/闲标志来控制I/O，又称忙-等待方式。",
+      "def_b": "CPU通过轮询设备状态，在I/O操作完成前忙等的一种I/O控制方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "程序查询方式",
+      "decision": {
+        "merge": true,
+        "canonical": "程序I/O方式",
+        "reason": "两者均指CPU通过轮询设备状态进行I/O，语义等价。"
+      }
+    },
+    {
+      "idx_a": 459,
+      "idx_b": 463,
+      "name_a": "通道控制方式",
+      "name_b": "I/O通道控制方式",
+      "def_a": "通过通道独立组织I/O操作和数据传送，无需CPU干预，实现I/O与CPU并行。",
+      "def_b": "通过执行通道程序来控制I/O设备，进一步减少CPU干预，实现CPU、通道和I/O设备并行操作。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "通道控制方式",
+      "decision": {
+        "merge": true,
+        "canonical": "通道控制方式",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 461,
+      "idx_b": 1207,
+      "name_a": "直接存储器访问方式",
+      "name_b": "直接存储器访问",
+      "def_a": "DMA控制器直接控制数据在设备和内存间传输，仅在开始和结束时中断CPU。",
+      "def_b": "一种允许I/O设备直接读写内存而无需CPU干预的数据传输方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma",
+      "decision": {
+        "merge": true,
+        "canonical": "直接存储器访问方式",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 461,
+      "idx_b": 1536,
+      "name_a": "直接存储器访问方式",
+      "name_b": "直接存储访问方式",
+      "def_a": "DMA控制器直接控制数据在设备和内存间传输，仅在开始和结束时中断CPU。",
+      "def_b": "一种由DMA控制器控制数据在内存和I/O设备之间直接传输的I/O控制方式，仅在开始和结束时需要CPU干预。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma",
+      "decision": {
+        "merge": true,
+        "canonical": "直接存储器访问方式",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 461,
+      "idx_b": 1722,
+      "name_a": "直接存储器访问方式",
+      "name_b": "直接内存访问",
+      "def_a": "DMA控制器直接控制数据在设备和内存间传输，仅在开始和结束时中断CPU。",
+      "def_b": "DMA控制器直接在外设和内存间传输数据，无需CPU干预。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma",
+      "decision": {
+        "merge": true,
+        "canonical": "直接存储器访问方式",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1207,
+      "idx_b": 1536,
+      "name_a": "直接存储器访问",
+      "name_b": "直接存储访问方式",
+      "def_a": "一种允许I/O设备直接读写内存而无需CPU干预的数据传输方式。",
+      "def_b": "一种由DMA控制器控制数据在内存和I/O设备之间直接传输的I/O控制方式，仅在开始和结束时需要CPU干预。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma",
+      "decision": {
+        "merge": true,
+        "canonical": "直接存储器访问",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1207,
+      "idx_b": 1722,
+      "name_a": "直接存储器访问",
+      "name_b": "直接内存访问",
+      "def_a": "一种允许I/O设备直接读写内存而无需CPU干预的数据传输方式。",
+      "def_b": "DMA控制器直接在外设和内存间传输数据，无需CPU干预。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma",
+      "decision": {
+        "merge": true,
+        "canonical": "直接存储器访问",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1536,
+      "idx_b": 1722,
+      "name_a": "直接存储访问方式",
+      "name_b": "直接内存访问",
+      "def_a": "一种由DMA控制器控制数据在内存和I/O设备之间直接传输的I/O控制方式，仅在开始和结束时需要CPU干预。",
+      "def_b": "DMA控制器直接在外设和内存间传输数据，无需CPU干预。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dma",
+      "decision": {
+        "merge": true,
+        "canonical": "直接存储访问方式",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 468,
+      "idx_b": 1538,
+      "name_a": "循环缓冲",
+      "name_b": "环形缓冲",
+      "def_a": "将多个缓冲区组织成循环队列，用于解决生产者和消费者速度不匹配问题。",
+      "def_b": "将多个缓冲区组织成循环形式，通过指针管理，适用于速度差较大的场景。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "循环缓冲",
+      "decision": {
+        "merge": true,
+        "canonical": "循环缓冲",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 469,
+      "idx_b": 697,
+      "name_a": "缓冲池",
+      "name_b": "公用缓冲池方式",
+      "def_a": "一组可供多个进程共享的缓冲区，分为空、输入、输出队列，提高缓冲区利用率。",
+      "def_b": "系统设置一个由多个相同大小缓冲区构成的缓冲池，动态分配和回收缓冲区。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "缓冲池",
+      "decision": {
+        "merge": true,
+        "canonical": "缓冲池",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 476,
+      "idx_b": 482,
+      "name_a": "I/O软件层次结构",
+      "name_b": "层次式I/O软件",
+      "def_a": "将I/O软件组织成多层，低层处理硬件细节，高层提供统一接口的设计方法。",
+      "def_b": "将I/O软件组织成多个层次，每层利用下层服务完成子功能并屏蔽细节，提高可移植性。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "i/o软件层次结构",
+      "decision": {
+        "merge": true,
+        "canonical": "I/O软件层次结构",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 486,
+      "idx_b": 1573,
+      "name_a": "中断处理程序",
+      "name_b": "中断服务例程",
+      "def_a": "用于保存被中断进程CPU环境、转入中断处理、恢复现场并返回的软件层。",
+      "def_b": "设备中断时调用的例程，要求快速简单。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "isr",
+      "decision": {
+        "merge": true,
+        "canonical": "中断处理程序",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 486,
+      "idx_b": 1529,
+      "name_a": "中断处理程序",
+      "name_b": "中断服务程序",
+      "def_a": "用于保存被中断进程CPU环境、转入中断处理、恢复现场并返回的软件层。",
+      "def_b": "处理设备中断请求的程序，在设备完成I/O操作后向CPU发信号。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "中断服务程序",
+      "decision": {
+        "merge": true,
+        "canonical": "中断处理程序",
+        "reason": "同义词，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 487,
+      "idx_b": 508,
+      "name_a": "Spooling",
+      "name_b": "SPOOLing技术",
+      "def_a": "通过共享设备模拟独占设备的技术，实现多用户同时访问独占设备。",
+      "def_b": "SPOOLing技术是一种通过磁盘模拟低速I/O设备，实现虚拟设备功能的技术，允许多个用户共享独占设备。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "假脱机技术",
+      "decision": {
+        "merge": true,
+        "canonical": "SPOOLing技术",
+        "reason": "大小写差异，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 487,
+      "idx_b": 1530,
+      "name_a": "Spooling",
+      "name_b": "Spooling技术",
+      "def_a": "通过共享设备模拟独占设备的技术，实现多用户同时访问独占设备。",
+      "def_b": "用共享设备模拟独占设备的技术，如将打印机虚拟化为共享设备。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "假脱机技术",
+      "decision": {
+        "merge": true,
+        "canonical": "Spooling",
+        "reason": "全称与简称关系，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 508,
+      "idx_b": 1530,
+      "name_a": "SPOOLing技术",
+      "name_b": "Spooling技术",
+      "def_a": "SPOOLing技术是一种通过磁盘模拟低速I/O设备，实现虚拟设备功能的技术，允许多个用户共享独占设备。",
+      "def_b": "用共享设备模拟独占设备的技术，如将打印机虚拟化为共享设备。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "假脱机技术",
+      "decision": {
+        "merge": true,
+        "canonical": "SPOOLing技术",
+        "reason": "大小写差异，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 491,
+      "idx_b": 689,
+      "name_a": "I/O重定向",
+      "name_b": "输入输出重定向",
+      "def_a": "在不修改应用程序的情况下更换I/O操作所使用的设备，通过修改逻辑设备表实现。",
+      "def_b": "将命令的输入或输出从标准设备改向到指定文件或设备，使用重定向符“>”和“<”。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "i/o重定向",
+      "decision": {
+        "merge": true,
+        "canonical": "输入输出重定向",
+        "reason": "I/O重定向是输入输出重定向的缩写，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 491,
+      "idx_b": 705,
+      "name_a": "I/O重定向",
+      "name_b": "重定向",
+      "def_a": "在不修改应用程序的情况下更换I/O操作所使用的设备，通过修改逻辑设备表实现。",
+      "def_b": "改变标准输入输出设备，将输入输出指向指定文件或设备的机制。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "i/o重定向",
+      "decision": {
+        "merge": true,
+        "canonical": "输入输出重定向",
+        "reason": "重定向是输入输出重定向的简称，语义等价。"
+      }
+    },
+    {
+      "idx_a": 689,
+      "idx_b": 705,
+      "name_a": "输入输出重定向",
+      "name_b": "重定向",
+      "def_a": "将命令的输入或输出从标准设备改向到指定文件或设备，使用重定向符“>”和“<”。",
+      "def_b": "改变标准输入输出设备，将输入输出指向指定文件或设备的机制。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "i/o重定向",
+      "decision": {
+        "merge": true,
+        "canonical": "输入输出重定向",
+        "reason": "重定向是输入输出重定向的简称，语义等价。"
+      }
+    },
+    {
+      "idx_a": 501,
+      "idx_b": 1510,
+      "name_a": "优先级高者优先",
+      "name_b": "优先级调度",
+      "def_a": "优先权高的进程优先获得设备，相同优先级按先来先服务。",
+      "def_b": "根据进程优先级分配CPU，优先级高的先执行，可抢占或非抢占。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "优先级调度",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "优先级高者优先是设备分配算法，优先级调度是CPU调度算法，概念不同。"
+      }
+    },
+    {
+      "idx_a": 521,
+      "idx_b": 1239,
+      "name_a": "主引导记录",
+      "name_b": "MBR",
+      "def_a": "磁盘0扇区中记录分区表并标记活动分区的引导记录。",
+      "def_b": "主引导记录，位于磁盘第一个扇区，包含启动加载器和分区表，用于引导操作系统。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "mbr",
+      "decision": {
+        "merge": true,
+        "canonical": "主引导记录",
+        "reason": "MBR是主引导记录的英文缩写，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 528,
+      "idx_b": 1578,
+      "name_a": "磁盘调度",
+      "name_b": "磁盘调度算法",
+      "def_a": "对多个磁盘I/O请求进行排序以优化寻道时间的机制。",
+      "def_b": "用于优化磁盘访问顺序以减少寻道时间的算法。",
+      "role_a": "机制",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "磁盘调度",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "磁盘调度是机制，磁盘调度算法是具体算法，属于包含关系，不合并。"
+      }
+    },
+    {
+      "idx_a": 529,
+      "idx_b": 532,
+      "name_a": "最短寻道时间优先",
+      "name_b": "最短寻道时间优先算法",
+      "def_a": "选择与当前磁头距离最近的磁道请求进行调度的算法。",
+      "def_b": "选择与当前磁头距离最近的请求优先服务的磁盘调度算法。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "sstf",
+      "decision": {
+        "merge": true,
+        "canonical": "最短寻道时间优先",
+        "reason": "两者名称和定义完全一致，只是后者多了“算法”二字，语义等价。"
+      }
+    },
+    {
+      "idx_a": 531,
+      "idx_b": 1515,
+      "name_a": "进程饥饿",
+      "name_b": "饥饿",
+      "def_a": "进程因调度策略而长期得不到所需资源的现象。",
+      "def_b": "进程因资源分配策略不公平而长时间等待，导致推进明显延迟。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "starvation",
+      "decision": {
+        "merge": true,
+        "canonical": "进程饥饿",
+        "reason": "饥饿是进程饥饿的简称，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 537,
+      "idx_b": 1672,
+      "name_a": "磁盘高速缓存",
+      "name_b": "块高速缓存",
+      "def_a": "利用内存空间暂存磁盘盘块信息，以提高磁盘I/O速度的技术。",
+      "def_b": "在内存中为磁盘块设置的缓冲区，保存磁盘块副本以减少磁盘I/O次数。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "disk cache",
+      "decision": {
+        "merge": true,
+        "canonical": "磁盘高速缓存",
+        "reason": "块高速缓存是磁盘高速缓存的另一种称呼，语义等价。"
+      }
+    },
+    {
+      "idx_a": 547,
+      "idx_b": 1141,
+      "name_a": "延迟写",
+      "name_b": "延迟写方式",
+      "def_a": "将本应立即写回磁盘的数据暂缓写入，挂在空闲缓冲区队列末尾，待缓冲区被重新分配时再写回。",
+      "def_b": "不立即启动磁盘写，仅设置延迟写标志，待缓冲区被重新分配时才写入磁盘。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "delayed write",
+      "decision": {
+        "merge": true,
+        "canonical": "延迟写",
+        "reason": "延迟写方式与延迟写定义完全一致，语义等价。"
+      }
+    },
+    {
+      "idx_a": 550,
+      "idx_b": 1579,
+      "name_a": "廉价磁盘冗余阵列",
+      "name_b": "RAID",
+      "def_a": "利用磁盘阵列控制器统一管理多台磁盘驱动器，组成高可靠、快速的大容量磁盘系统。",
+      "def_b": "独立磁盘冗余阵列，通过组合多个磁盘提高性能或可靠性。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "raid",
+      "decision": {
+        "merge": true,
+        "canonical": "廉价磁盘冗余阵列",
+        "reason": "RAID是廉价磁盘冗余阵列的英文缩写，语义等价。"
+      }
+    },
+    {
+      "idx_a": 550,
+      "idx_b": 1598,
+      "name_a": "廉价磁盘冗余阵列",
+      "name_b": "廉价冗余磁盘阵列",
+      "def_a": "利用磁盘阵列控制器统一管理多台磁盘驱动器，组成高可靠、快速的大容量磁盘系统。",
+      "def_b": "将多个相对便宜的硬盘组合成一个阵列组，使性能达到或超过单个昂贵硬盘的存储技术。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "raid",
+      "decision": {
+        "merge": true,
+        "canonical": "廉价磁盘冗余阵列",
+        "reason": "两者名称和定义完全一致，只是词序略有不同，语义等价。"
+      }
+    },
+    {
+      "idx_a": 1579,
+      "idx_b": 1598,
+      "name_a": "RAID",
+      "name_b": "廉价冗余磁盘阵列",
+      "def_a": "独立磁盘冗余阵列，通过组合多个磁盘提高性能或可靠性。",
+      "def_b": "将多个相对便宜的硬盘组合成一个阵列组，使性能达到或超过单个昂贵硬盘的存储技术。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "raid",
+      "decision": {
+        "merge": true,
+        "canonical": "廉价磁盘冗余阵列",
+        "reason": "RAID是廉价冗余磁盘阵列的英文缩写，语义等价。"
+      }
+    },
+    {
+      "idx_a": 555,
+      "idx_b": 1608,
+      "name_a": "RAID 5级",
+      "name_b": "RAID 5",
+      "def_a": "具有独立传送功能，校验信息散布在所有数据盘上，常用于I/O频繁的事务处理。",
+      "def_b": "一种RAID级别，使用分布式奇偶校验，适合小数据块和随机读写，有写损失。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "raid 5",
+      "decision": {
+        "merge": true,
+        "canonical": "RAID 5级",
+        "reason": "RAID 5级与RAID 5定义一致，语义等价。"
+      }
+    },
+    {
+      "idx_a": 556,
+      "idx_b": 1609,
+      "name_a": "RAID 6级",
+      "name_b": "RAID 6",
+      "def_a": "强化RAID，设置专用异步校验盘，性能优于RAID 3和5，但价格昂贵。",
+      "def_b": "一种RAID级别，使用两个独立奇偶校验，可容忍双盘故障，但写性能差。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "raid 6",
+      "decision": {
+        "merge": true,
+        "canonical": "RAID 6级",
+        "reason": "RAID 6级与RAID 6定义一致，语义等价。"
+      }
+    },
+    {
+      "idx_a": 561,
+      "idx_b": 562,
+      "name_a": "数据项",
+      "name_b": "基本数据项",
+      "def_a": "文件系统中最低级的数据组织形式，分为基本数据项和组合数据项。",
+      "def_b": "用于描述对象某种属性的字符集，是数据组织中可以命名的最小逻辑数据单位。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "数据元素",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "数据项包含基本数据项，是包含关系，不等价。"
+      }
+    },
+    {
+      "idx_a": 564,
+      "idx_b": 968,
+      "name_a": "关键字",
+      "name_b": "密钥",
+      "def_a": "能唯一标识一个记录的一个或多个数据项。",
+      "def_b": "加密和解密算法中的关键参数，分为加密密钥和解密密钥。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "key",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "关键字是数据库概念，密钥是密码学概念，语义不同。"
+      }
+    },
+    {
+      "idx_a": 565,
+      "idx_b": 1631,
+      "name_a": "有结构文件",
+      "name_b": "记录式文件",
+      "def_a": "由若干个相关记录组成的文件。",
+      "def_b": "文件由若干记录组成，可以按记录进行读写、查找等操作。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "记录式文件",
+      "decision": {
+        "merge": true,
+        "canonical": "有结构文件",
+        "reason": "有结构文件和记录式文件是同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 566,
+      "idx_b": 1630,
+      "name_a": "无结构文件",
+      "name_b": "流式文件",
+      "def_a": "被看成是一个字符流的文件。",
+      "def_b": "构成文件的基本单位是字符，文件是无结构的一串字符的集合。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "流式文件",
+      "decision": {
+        "merge": true,
+        "canonical": "无结构文件",
+        "reason": "无结构文件和流式文件是同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 583,
+      "idx_b": 742,
+      "name_a": "打开文件",
+      "name_b": "open",
+      "def_a": "将文件属性从外存拷贝到内存打开文件表，并返回索引号，避免重复检索目录。",
+      "def_b": "UNIX系统调用，将文件属性从磁盘拷贝到内存，建立用户与文件间的通路并返回文件描述符。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "打开文件",
+      "decision": {
+        "merge": true,
+        "canonical": "打开文件",
+        "reason": "打开文件和open系统调用是同一机制的中英文别名。"
+      }
+    },
+    {
+      "idx_a": 584,
+      "idx_b": 743,
+      "name_a": "关闭文件",
+      "name_b": "文件关闭",
+      "def_a": "将文件从打开文件表中删除，释放系统资源。",
+      "def_b": "断开用户程序与文件之间已建立的连接，释放文件资源。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "close",
+      "decision": {
+        "merge": true,
+        "canonical": "关闭文件",
+        "reason": "关闭文件和文件关闭是同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 585,
+      "idx_b": 1642,
+      "name_a": "文件的逻辑结构",
+      "name_b": "文件逻辑结构",
+      "def_a": "从用户观点出发观察到的文件组织形式，独立于物理特性。",
+      "def_b": "从用户角度看到的文件组织形式，关注记录之间的逻辑关系。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "文件组织",
+      "decision": {
+        "merge": true,
+        "canonical": "文件的逻辑结构",
+        "reason": "两者定义完全相同，只是表述略有差异。"
+      }
+    },
+    {
+      "idx_a": 586,
+      "idx_b": 1726,
+      "name_a": "文件的物理结构",
+      "name_b": "文件的物理组织",
+      "def_a": "文件在外存上的存储组织形式，与存储介质和外存分配方式有关。",
+      "def_b": "文件在外存上的存储组织形式，包括连续、链接和索引结构。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "文件存储结构",
+      "decision": {
+        "merge": true,
+        "canonical": "文件的物理结构",
+        "reason": "文件的物理结构和物理组织是同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 590,
+      "idx_b": 1646,
+      "name_a": "索引文件",
+      "name_b": "索引结构",
+      "def_a": "为变长记录文件建立索引表，每个记录对应一个表项，记录长度和指针，以加快检索速度。",
+      "def_b": "文件数据存放在非连续物理块中，通过索引表记录物理块号的文件物理结构。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "索引文件",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "索引文件是逻辑结构概念，索引结构是物理结构概念，不等价。"
+      }
+    },
+    {
+      "idx_a": 590,
+      "idx_b": 600,
+      "name_a": "索引文件",
+      "name_b": "索引分配",
+      "def_a": "为变长记录文件建立索引表，每个记录对应一个表项，记录长度和指针，以加快检索速度。",
+      "def_b": "一种外存分配方式，通过索引表记录文件占用的盘块号，形成索引式文件结构。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "索引分配",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "索引文件是逻辑结构，索引分配是物理分配方式，不等价。"
+      }
+    },
+    {
+      "idx_a": 593,
+      "idx_b": 1644,
+      "name_a": "顺序结构",
+      "name_b": "连续结构",
+      "def_a": "文件记录按关键字（如字母顺序）排列，便于高效检索。",
+      "def_b": "文件数据存放在磁盘连续物理块中的文件物理结构。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "顺序结构",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "顺序结构是逻辑结构，连续结构是物理结构，不等价。"
+      }
+    },
+    {
+      "idx_a": 595,
+      "idx_b": 621,
+      "name_a": "多级索引",
+      "name_b": "多级索引分配",
+      "def_a": "为文件建立多级索引表，通过逐级索引减少查找记录数，进一步提高检索效率。",
+      "def_b": "通过建立多级索引块来管理大文件磁盘空间分配的方式，支持两级、三级等索引。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "多级索引",
+      "decision": {
+        "merge": true,
+        "canonical": "多级索引",
+        "reason": "多级索引和多级索引分配是同一机制的不同表述。"
+      }
+    },
+    {
+      "idx_a": 598,
+      "idx_b": 1649,
+      "name_a": "连续分配",
+      "name_b": "连续文件",
+      "def_a": "一种外存分配方式，为文件分配一组相邻接的盘块，形成顺序文件结构。",
+      "def_b": "文件物理结构的一种，文件数据连续存放在磁盘块中，适合顺序存取，但不利于动态增长。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "连续分配",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "连续分配是分配方式，连续文件是物理结构，不等价。"
+      }
+    },
+    {
+      "idx_a": 599,
+      "idx_b": 1650,
+      "name_a": "链接分配",
+      "name_b": "串联文件",
+      "def_a": "一种外存分配方式，通过链接指针将文件分散的盘块连接起来，形成链接式文件结构。",
+      "def_b": "文件物理结构的一种，文件数据通过指针链接成链，克服了连续文件的不足，但随机访问开销大。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "链接分配",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "链接分配是分配方式，串联文件是物理结构，不等价。"
+      }
+    },
+    {
+      "idx_a": 601,
+      "idx_b": 1274,
+      "name_a": "外存碎片",
+      "name_b": "外碎片",
+      "def_a": "磁盘空间在文件建立和删除过程中被分割成许多小块，这些较小的连续区难以用来存储文件的现象。",
+      "def_b": "内存中空闲分区总和足够但分散，无法满足大连续分配请求的现象。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "外部碎片",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "外存碎片是磁盘碎片，外碎片是内存碎片，概念不同。"
+      }
+    },
+    {
+      "idx_a": 601,
+      "idx_b": 1280,
+      "name_a": "外存碎片",
+      "name_b": "外部碎片",
+      "def_a": "磁盘空间在文件建立和删除过程中被分割成许多小块，这些较小的连续区难以用来存储文件的现象。",
+      "def_b": "系统中无法利用的小空闲分区，如动态分区管理中分区之间的碎片。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "外部碎片",
+      "decision": {
+        "merge": true,
+        "canonical": "外部碎片",
+        "reason": "外存碎片和外部碎片是同义词，均指磁盘空间中的小空闲块，但概念A定义更具体于磁盘，概念B更通用，合并后规范名选“外部碎片”。"
+      }
+    },
+    {
+      "idx_a": 1274,
+      "idx_b": 1280,
+      "name_a": "外碎片",
+      "name_b": "外部碎片",
+      "def_a": "内存中空闲分区总和足够但分散，无法满足大连续分配请求的现象。",
+      "def_b": "系统中无法利用的小空闲分区，如动态分区管理中分区之间的碎片。",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "外部碎片",
+      "decision": {
+        "merge": true,
+        "canonical": "外部碎片",
+        "reason": "外碎片和外部碎片是同义词，均指内存中分散的小空闲分区，合并后规范名选“外部碎片”。"
+      }
+    },
+    {
+      "idx_a": 605,
+      "idx_b": 658,
+      "name_a": "簇",
+      "name_b": "集群系统",
+      "def_a": "一组连续的扇区，作为文件分配的基本单位，可减少指针开销但增加内部碎片。",
+      "def_b": "由一组互连的自主计算机组成统一的计算机系统，提高并行处理能力和可用性。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "cluster",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "簇是磁盘分配单位，集群系统是计算机系统，两者概念完全不同。"
+      }
+    },
+    {
+      "idx_a": 606,
+      "idx_b": 1699,
+      "name_a": "文件分配表",
+      "name_b": "FAT文件系统",
+      "def_a": "用于显式链接分配的表，存放文件所有盘块的链接指针，实现快速随机访问。",
+      "def_b": "MS-DOS兼容的文件分配表文件系统，结构简单但功能有限。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fat",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "文件分配表是一种数据结构，FAT文件系统是使用该结构的文件系统，两者不等价。"
+      }
+    },
+    {
+      "idx_a": 610,
+      "idx_b": 614,
+      "name_a": "NTFS",
+      "name_b": "NTFS文件系统",
+      "def_a": "新技术文件系统，支持大文件、安全性和恢复功能，采用类似显式链接方式。",
+      "def_b": "Windows NT支持的高性能日志文件系统，支持大文件、安全性和压缩等特性。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "ntfs",
+      "decision": {
+        "merge": true,
+        "canonical": "NTFS文件系统",
+        "reason": "NTFS是NTFS文件系统的简称，语义完全等价，规范名选较完整的“NTFS文件系统”。"
+      }
+    },
+    {
+      "idx_a": 611,
+      "idx_b": 1617,
+      "name_a": "卷",
+      "name_b": "逻辑卷",
+      "def_a": "逻辑磁盘单元，可单独格式化，包含文件系统信息、文件和空闲空间。",
+      "def_b": "由多个磁盘分区组成的单一逻辑存储单元，对文件系统隐藏物理磁盘配置。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "卷",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "卷是逻辑磁盘单元，逻辑卷是由多个分区组成的逻辑存储单元，两者不等价。"
+      }
+    },
+    {
+      "idx_a": 626,
+      "idx_b": 1727,
+      "name_a": "文件目录",
+      "name_b": "目录",
+      "def_a": "文件控制块的有序集合，用于标识文件及其物理地址，实现按名存取。",
+      "def_b": "文件系统中用于组织和管理文件的结构，提供文件名到物理地址的映射。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "目录",
+      "decision": {
+        "merge": true,
+        "canonical": "文件目录",
+        "reason": "文件目录和目录是同义词，均指文件控制块集合，规范名选较完整的“文件目录”。"
+      }
+    },
+    {
+      "idx_a": 628,
+      "idx_b": 1683,
+      "name_a": "索引结点",
+      "name_b": "索引节点",
+      "def_a": "UNIX系统中用于描述文件信息的数据结构，包含直接地址和间接地址等。",
+      "def_b": "UNIX/Linux文件系统中用于存储文件元数据（如权限、大小、时间戳）和指向数据块指针的数据结构。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "inode",
+      "decision": {
+        "merge": true,
+        "canonical": "索引节点",
+        "reason": "索引结点和索引节点是同义词，均指UNIX文件元数据结构，规范名选“索引节点”。"
+      }
+    },
+    {
+      "idx_a": 630,
+      "idx_b": 1686,
+      "name_a": "内存索引结点",
+      "name_b": "内存索引节点",
+      "def_a": "文件打开时从磁盘索引结点拷贝到内存的索引结点，增加了结点编号、状态、访问计数等字段。",
+      "def_b": "磁盘索引节点读入内存后的副本，用于加速文件访问，通过哈希表管理。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "内存i结点",
+      "decision": {
+        "merge": true,
+        "canonical": "内存索引节点",
+        "reason": "内存索引结点和内存索引节点是同义词，均指磁盘索引节点的内存副本，规范名选“内存索引节点”。"
+      }
+    },
+    {
+      "idx_a": 633,
+      "idx_b": 1638,
+      "name_a": "多级目录结构",
+      "name_b": "多级文件目录",
+      "def_a": "采用树形层次结构的目录组织方式，支持文件共享和安全性，是现代操作系统常用目录结构。",
+      "def_b": "层次化目录结构，目录表目指向下一级目录或文件，几乎所有现代文件系统采用。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "层次目录",
+      "decision": {
+        "merge": true,
+        "canonical": "多级目录结构",
+        "reason": "多级目录结构和多级文件目录是同义词，均指树形层次目录，规范名选较完整的“多级目录结构”。"
+      }
+    },
+    {
+      "idx_a": 633,
+      "idx_b": 1640,
+      "name_a": "多级目录结构",
+      "name_b": "多级目录",
+      "def_a": "采用树形层次结构的目录组织方式，支持文件共享和安全性，是现代操作系统常用目录结构。",
+      "def_b": "一种层次化的目录结构，允许不同用户和性质的文件构成子树，解决重名问题并提高查找速度。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "树形目录",
+      "decision": {
+        "merge": true,
+        "canonical": "多级目录结构",
+        "reason": "多级目录结构和多级目录是同义词，均指层次化目录，规范名选较完整的“多级目录结构”。"
+      }
+    },
+    {
+      "idx_a": 649,
+      "idx_b": 1660,
+      "name_a": "硬链接",
+      "name_b": "硬连接",
+      "def_a": "基于索引结点的文件共享方式，多个目录项指向同一索引结点，链接计数表示共享用户数。",
+      "def_b": "文件共享方式，多个目录项指向同一个inode，增加引用计数，删除时计数减1。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "硬链接",
+      "decision": {
+        "merge": true,
+        "canonical": "硬链接",
+        "reason": "硬链接和硬连接是同义词，均指基于索引结点的文件共享，规范名选“硬链接”。"
+      }
+    },
+    {
+      "idx_a": 650,
+      "idx_b": 1661,
+      "name_a": "符号链接",
+      "name_b": "软连接",
+      "def_a": "创建LINK类型新文件，包含被链接文件路径名，实现文件共享，可跨网络。",
+      "def_b": "文件共享方式，创建一个特殊文件存储目标文件路径，访问时重定向，类似快捷方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "符号链接",
+      "decision": {
+        "merge": true,
+        "canonical": "符号链接",
+        "reason": "符号链接和软连接是同义词，均指通过路径名共享文件，规范名选“符号链接”。"
+      }
+    },
+    {
+      "idx_a": 690,
+      "idx_b": 706,
+      "name_a": "管道连接",
+      "name_b": "管道",
+      "def_a": "将第一条命令的输出作为第二条命令的输入，形成命令管道，使用管道符“|”。",
+      "def_b": "连接两条命令，使前一条命令的输出作为后一条命令的输入的通信机制。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "管道",
+      "decision": {
+        "merge": true,
+        "canonical": "管道",
+        "reason": "管道连接和管道是同义词，均指命令间数据流传递机制，规范名选较短的“管道”。"
+      }
+    },
+    {
+      "idx_a": 706,
+      "idx_b": 1098,
+      "name_a": "管道",
+      "name_b": "管道机制",
+      "def_a": "连接两条命令，使前一条命令的输出作为后一条命令的输入的通信机制。",
+      "def_b": "一种进程间通信机制，通过共享文件（pipe文件）连接写进程和读进程，实现生产者-消费者通信。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "pipe",
+      "decision": {
+        "merge": true,
+        "canonical": "管道",
+        "reason": "管道和管道机制是同义词，均指进程间通信机制，规范名选较短的“管道”。"
+      }
+    },
+    {
+      "idx_a": 725,
+      "idx_b": 727,
+      "name_a": "陷入",
+      "name_b": "内中断",
+      "def_a": "由CPU内部事件或执行指令引起的中断，如系统调用、程序错误等，也称内中断。",
+      "def_b": "由CPU内部事件引起的中断，包括程序错误和系统调用等，与当前指令相关。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "陷入",
+      "decision": {
+        "merge": true,
+        "canonical": "陷入",
+        "reason": "陷入与内中断是同义词，均指由CPU内部事件引起的中断。"
+      }
+    },
+    {
+      "idx_a": 725,
+      "idx_b": 1206,
+      "name_a": "陷入",
+      "name_b": "陷阱",
+      "def_a": "由CPU内部事件或执行指令引起的中断，如系统调用、程序错误等，也称内中断。",
+      "def_b": "一种同步异常，由特定指令（如系统调用）触发，用于从用户态切换到内核态。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "trap",
+      "decision": {
+        "merge": true,
+        "canonical": "陷入",
+        "reason": "陷入与陷阱是同义词，均指由指令触发的同步异常。"
+      }
+    },
+    {
+      "idx_a": 727,
+      "idx_b": 1206,
+      "name_a": "内中断",
+      "name_b": "陷阱",
+      "def_a": "由CPU内部事件引起的中断，包括程序错误和系统调用等，与当前指令相关。",
+      "def_b": "一种同步异常，由特定指令（如系统调用）触发，用于从用户态切换到内核态。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "trap",
+      "decision": {
+        "merge": true,
+        "canonical": "内中断",
+        "reason": "内中断与陷阱是同义词，均指由CPU内部事件或指令引起的中断。"
+      }
+    },
+    {
+      "idx_a": 734,
+      "idx_b": 1063,
+      "name_a": "fork",
+      "name_b": "fork系统调用",
+      "def_a": "UNIX系统调用，用于创建一个新进程，新进程作为调用者的子进程并继承父进程属性。",
+      "def_b": "UNIX中用于创建新进程的系统调用，新进程是调用进程的副本。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fork",
+      "decision": {
+        "merge": true,
+        "canonical": "fork系统调用",
+        "reason": "fork与fork系统调用是同一系统调用的简称与全称。"
+      }
+    },
+    {
+      "idx_a": 734,
+      "idx_b": 1404,
+      "name_a": "fork",
+      "name_b": "进程创建原语",
+      "def_a": "UNIX系统调用，用于创建一个新进程，新进程作为调用者的子进程并继承父进程属性。",
+      "def_b": "进程创建原语用于创建一个新进程，典型实现包括fork和exec系统调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fork",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "fork是具体系统调用，进程创建原语是更抽象的概念，包含fork和exec等。"
+      }
+    },
+    {
+      "idx_a": 1063,
+      "idx_b": 1404,
+      "name_a": "fork系统调用",
+      "name_b": "进程创建原语",
+      "def_a": "UNIX中用于创建新进程的系统调用，新进程是调用进程的副本。",
+      "def_b": "进程创建原语用于创建一个新进程，典型实现包括fork和exec系统调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "fork",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "fork系统调用是具体实现，进程创建原语是抽象概念，二者不等价。"
+      }
+    },
+    {
+      "idx_a": 735,
+      "idx_b": 1064,
+      "name_a": "exit",
+      "name_b": "exit系统调用",
+      "def_a": "UNIX系统调用，用于进程自我终止，并留下包含统计信息的记账信息。",
+      "def_b": "UNIX中用于终止进程执行的系统调用，释放进程占用的资源。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "exit",
+      "decision": {
+        "merge": true,
+        "canonical": "exit系统调用",
+        "reason": "exit与exit系统调用是同一系统调用的简称与全称。"
+      }
+    },
+    {
+      "idx_a": 737,
+      "idx_b": 1087,
+      "name_a": "exec",
+      "name_b": "exec系统调用",
+      "def_a": "UNIX系统调用，用可执行文件覆盖调用进程的进程映像，改变进程执行的程序。",
+      "def_b": "UNIX中用于将可执行文件覆盖到进程用户级上下文的系统调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "exec",
+      "decision": {
+        "merge": true,
+        "canonical": "exec系统调用",
+        "reason": "exec与exec系统调用是同一系统调用的简称与全称。"
+      }
+    },
+    {
+      "idx_a": 737,
+      "idx_b": 1404,
+      "name_a": "exec",
+      "name_b": "进程创建原语",
+      "def_a": "UNIX系统调用，用可执行文件覆盖调用进程的进程映像，改变进程执行的程序。",
+      "def_b": "进程创建原语用于创建一个新进程，典型实现包括fork和exec系统调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "exec",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "exec是具体系统调用，进程创建原语是更抽象的概念，包含fork和exec等。"
+      }
+    },
+    {
+      "idx_a": 1087,
+      "idx_b": 1404,
+      "name_a": "exec系统调用",
+      "name_b": "进程创建原语",
+      "def_a": "UNIX中用于将可执行文件覆盖到进程用户级上下文的系统调用。",
+      "def_b": "进程创建原语用于创建一个新进程，典型实现包括fork和exec系统调用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "exec",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "exec系统调用是具体实现，进程创建原语是抽象概念，二者不等价。"
+      }
+    },
+    {
+      "idx_a": 749,
+      "idx_b": 1102,
+      "name_a": "消息机制",
+      "name_b": "消息队列",
+      "def_a": "通过消息队列实现进程间通信的机制，支持发送和接收消息。",
+      "def_b": "消息队列是由多个消息组成的队列，每个队列有唯一的关键字和描述符，用于进程间通信。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "消息队列",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "消息机制是通信方式，消息队列是具体数据结构，二者不等价。"
+      }
+    },
+    {
+      "idx_a": 750,
+      "idx_b": 1456,
+      "name_a": "共享存储器机制",
+      "name_b": "共享内存",
+      "def_a": "通过共享存储区实现进程间通信的机制，需将共享区映射到进程地址空间。",
+      "def_b": "一种高效的进程间通信方式，多个进程共享同一块物理内存，需要同步机制避免冲突。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "共享内存",
+      "decision": {
+        "merge": true,
+        "canonical": "共享存储器机制",
+        "reason": "共享存储器机制与共享内存是同义词，均指通过共享内存实现进程间通信。"
+      }
+    },
+    {
+      "idx_a": 795,
+      "idx_b": 807,
+      "name_a": "局域网",
+      "name_b": "计算机局域网",
+      "def_a": "覆盖较小地理范围（如一个房间、一栋楼）的计算机网络。",
+      "def_b": "将多台微机互连以实现通信和资源共享的网络，覆盖范围有限。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "lan",
+      "decision": {
+        "merge": true,
+        "canonical": "局域网",
+        "reason": "局域网与计算机局域网是同义词，均指覆盖较小地理范围的计算机网络。"
+      }
+    },
+    {
+      "idx_a": 796,
+      "idx_b": 1288,
+      "name_a": "交换技术",
+      "name_b": "交换",
+      "def_a": "在多个结点之间建立暂时通信线路以传递信息的技术。",
+      "def_b": "将暂时不用的程序或数据从主存移到辅存，再读入指定程序或数据的技术。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "swapping",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "交换技术指网络通信中的线路交换，交换指内存管理中的换入换出，二者不同。"
+      }
+    },
+    {
+      "idx_a": 835,
+      "idx_b": 852,
+      "name_a": "路径选择",
+      "name_b": "路由选择",
+      "def_a": "网络层的功能之一，在两个网络地址之间选择一条适当的传输路径。",
+      "def_b": "IP协议中确定数据报从源到目标路径的机制，包括源路由选择等方式。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "路由选择",
+      "decision": {
+        "merge": true,
+        "canonical": "路由选择",
+        "reason": "路径选择与路由选择是同义词，均指网络层确定传输路径的机制。"
+      }
+    },
+    {
+      "idx_a": 841,
+      "idx_b": 874,
+      "name_a": "TCP/IP协议",
+      "name_b": "TCP/IP",
+      "def_a": "由IP和TCP组成的协议族，是Internet的核心协议，已成为网络互连的事实标准。",
+      "def_b": "传输控制协议/网际协议，Internet的核心协议栈，用于网络互连。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "tcp/ip",
+      "decision": {
+        "merge": true,
+        "canonical": "TCP/IP协议",
+        "reason": "全称与简称等价，语义完全相同。"
+      }
+    },
+    {
+      "idx_a": 846,
+      "idx_b": 859,
+      "name_a": "传输控制协议",
+      "name_b": "传输控制协议TCP",
+      "def_a": "传输层协议，提供面向连接的、可靠的端到端通信机制。",
+      "def_b": "TCP是一种面向连接的、可靠的端到端通信协议，通过确认和重发机制保证数据传输可靠性。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "tcp",
+      "decision": {
+        "merge": true,
+        "canonical": "传输控制协议",
+        "reason": "全称与全称加缩写等价，语义相同。"
+      }
+    },
+    {
+      "idx_a": 855,
+      "idx_b": 880,
+      "name_a": "简单邮件传送协议",
+      "name_b": "简单邮件传输协议",
+      "def_a": "应用层协议，用于提供电子邮件服务。",
+      "def_b": "用于电子邮件系统中客户与服务器之间传输ASCII码文本的简单协议。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "smtp",
+      "decision": {
+        "merge": true,
+        "canonical": "简单邮件传送协议",
+        "reason": "“传送”与“传输”为同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 856,
+      "idx_b": 883,
+      "name_a": "远程登录协议",
+      "name_b": "远程登录服务",
+      "def_a": "应用层协议，用于实现远程登录服务。",
+      "def_b": "基于网络的终端仿真程序，使用户能通过Internet登录远程主机并访问其资源。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "telnet",
+      "decision": {
+        "merge": true,
+        "canonical": "远程登录协议",
+        "reason": "“协议”与“服务”在此语境下等价，均指Telnet。"
+      }
+    },
+    {
+      "idx_a": 863,
+      "idx_b": 1016,
+      "name_a": "介质访问控制子层MAC",
+      "name_b": "数据识别码",
+      "def_a": "MAC是数据链路层的底部子层，负责控制多个设备共享传输介质的访问。",
+      "def_b": "用于保证数据完整性的校验码，由发送方计算并随数据传送。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "mac",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "MAC子层与数据识别码是完全不同的概念。"
+      }
+    },
+    {
+      "idx_a": 890,
+      "idx_b": 941,
+      "name_a": "统一资源定位符",
+      "name_b": "统一资源定位器",
+      "def_a": "描述资源位置和访问协议的格式化字符串，用于定位网络资源。",
+      "def_b": "用于唯一标识互联网上资源位置的字符串。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "url",
+      "decision": {
+        "merge": true,
+        "canonical": "统一资源定位符",
+        "reason": "“定位符”与“定位器”为同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 922,
+      "idx_b": 1066,
+      "name_a": "网络文件系统协议NFS",
+      "name_b": "网络文件系统NFS",
+      "def_a": "一种用于TCP/IP网络上的客户/服务器协议，允许客户访问远程文件系统、共享打印机和文件传输。",
+      "def_b": "允许网络上的计算机共享文件的协议，使远程文件访问如同本地。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nfs",
+      "decision": {
+        "merge": true,
+        "canonical": "网络文件系统协议NFS",
+        "reason": "两者均指NFS协议，定义一致。"
+      }
+    },
+    {
+      "idx_a": 922,
+      "idx_b": 1700,
+      "name_a": "网络文件系统协议NFS",
+      "name_b": "NFS",
+      "def_a": "一种用于TCP/IP网络上的客户/服务器协议，允许客户访问远程文件系统、共享打印机和文件传输。",
+      "def_b": "网络文件系统，允许通过网络在多台计算机之间共享文件。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nfs",
+      "decision": {
+        "merge": true,
+        "canonical": "网络文件系统协议NFS",
+        "reason": "全称与简称等价，定义一致。"
+      }
+    },
+    {
+      "idx_a": 1066,
+      "idx_b": 1700,
+      "name_a": "网络文件系统NFS",
+      "name_b": "NFS",
+      "def_a": "允许网络上的计算机共享文件的协议，使远程文件访问如同本地。",
+      "def_b": "网络文件系统，允许通过网络在多台计算机之间共享文件。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "nfs",
+      "decision": {
+        "merge": true,
+        "canonical": "网络文件系统NFS",
+        "reason": "全称与简称等价，定义一致。"
+      }
+    },
+    {
+      "idx_a": 939,
+      "idx_b": 940,
+      "name_a": "单点登录",
+      "name_b": "单一登录",
+      "def_a": "用户只需登录一次即可访问所有被授权网络资源，无需重复认证。",
+      "def_b": "用户使用一个账户和口令即可访问网络中所有授权资源的技术。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "sso",
+      "decision": {
+        "merge": true,
+        "canonical": "单点登录",
+        "reason": "“单点登录”与“单一登录”为同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 961,
+      "idx_b": 979,
+      "name_a": "DES",
+      "name_b": "数据加密标准",
+      "def_a": "美国的数据加密标准，一种对称密钥加密算法。",
+      "def_b": "一种对称分组加密算法，使用56位密钥对64位数据块加密。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "des",
+      "decision": {
+        "merge": true,
+        "canonical": "数据加密标准",
+        "reason": "简称与全称等价，定义一致。"
+      }
+    },
+    {
+      "idx_a": 982,
+      "idx_b": 1013,
+      "name_a": "数字证明书",
+      "name_b": "数字证书",
+      "def_a": "由认证机构颁发的电子证书，用于绑定公钥与实体身份。",
+      "def_b": "由认证机构颁发的电子文档，用于证明公开密钥持有者的身份。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "数字证书",
+      "decision": {
+        "merge": true,
+        "canonical": "数字证书",
+        "reason": "“数字证明书”与“数字证书”为同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 1018,
+      "idx_b": 1026,
+      "name_a": "访问矩阵",
+      "name_b": "访问控制矩阵",
+      "def_a": "一种描述系统访问控制的矩阵，行代表域，列代表对象，矩阵项为访问权集合。",
+      "def_b": "一种用矩阵形式表示域对对象访问权限的模型，行代表域，列代表对象。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "access matrix",
+      "decision": {
+        "merge": true,
+        "canonical": "访问控制矩阵",
+        "reason": "“访问矩阵”与“访问控制矩阵”为同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 1019,
+      "idx_b": 1029,
+      "name_a": "保护域",
+      "name_b": "域",
+      "def_a": "进程对一组对象访问权的集合，规定了进程所能访问的对象和能执行的操作。",
+      "def_b": "访问控制中的抽象概念，通常对应一个用户或进程，拥有对一组对象的访问权限。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "域",
+      "decision": {
+        "merge": true,
+        "canonical": "保护域",
+        "reason": "“保护域”与“域”在此语境下等价，定义一致。"
+      }
+    },
+    {
+      "idx_a": 1027,
+      "idx_b": 1668,
+      "name_a": "访问控制表",
+      "name_b": "存取控制表",
+      "def_a": "按列划分访问矩阵，为每个对象建立一张表，列出有权访问的域及其权限。",
+      "def_b": "一种以客体为中心，列出每个客体及其允许访问的主体的访问控制列表。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "acl",
+      "decision": {
+        "merge": true,
+        "canonical": "访问控制表",
+        "reason": "“访问控制表”与“存取控制表”为同义词，定义一致。"
+      }
+    },
+    {
+      "idx_a": 1065,
+      "idx_b": 1093,
+      "name_a": "信号通信工具",
+      "name_b": "信号",
+      "def_a": "UNIX中用于进程间通信的机制，通过发送信号通知进程发生事件。",
+      "def_b": "UNIX系统中用于进程间通信和同步的软中断机制",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "信号",
+      "decision": {
+        "merge": true,
+        "canonical": "信号",
+        "reason": "信号通信工具是信号的别名，两者均指UNIX进程间通信的软中断机制。"
+      }
+    },
+    {
+      "idx_a": 1088,
+      "idx_b": 1112,
+      "name_a": "0进程",
+      "name_b": "换页进程",
+      "def_a": "系统引导时创建的惟一进程，后变为对换进程，是所有进程的祖先。",
+      "def_b": "UNIX核心中的0号进程，定期增加有效页年龄并将超龄页面换出内存。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "0进程",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "0进程是系统引导时创建的初始进程，而换页进程是0号进程的具体功能角色，两者不等价。"
+      }
+    },
+    {
+      "idx_a": 1103,
+      "idx_b": 1456,
+      "name_a": "共享存储区",
+      "name_b": "共享内存",
+      "def_a": "共享存储区是多个进程共享的内存区域，出现在各进程的虚地址空间中，用于高速通信。",
+      "def_b": "一种高效的进程间通信方式，多个进程共享同一块物理内存，需要同步机制避免冲突。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "shared memory",
+      "decision": {
+        "merge": true,
+        "canonical": "共享内存",
+        "reason": "共享存储区是共享内存的别名，均指多个进程共享同一物理内存的通信方式。"
+      }
+    },
+    {
+      "idx_a": 1130,
+      "idx_b": 1276,
+      "name_a": "空闲链表",
+      "name_b": "链表表示法",
+      "def_a": "双向链表，用于管理空闲盘块缓冲区，分配时从首部取，释放时挂末尾。",
+      "def_b": "将空闲内存块用链表链接起来，每个节点记录分区大小和状态。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "空闲链表",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "空闲链表特指盘块缓冲区的管理，链表表示法泛指内存空闲块管理，两者应用场景不同。"
+      }
+    },
+    {
+      "idx_a": 1139,
+      "idx_b": 1555,
+      "name_a": "提前读方式",
+      "name_b": "预先读",
+      "def_a": "在读取当前盘块时，提前将下一个盘块的数据读入缓冲区，以缩短后续读取时间。",
+      "def_b": "在一般读的基础上异步读入另一块，以提高顺序访问的读取速度。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "read ahead",
+      "decision": {
+        "merge": true,
+        "canonical": "提前读方式",
+        "reason": "提前读方式与预先读同义，均指在读取当前盘块时提前读入下一盘块以加速顺序访问。"
+      }
+    },
+    {
+      "idx_a": 1150,
+      "idx_b": 1689,
+      "name_a": "超级块",
+      "name_b": "超块",
+      "def_a": "UNIX文件系统中用于记录文件系统盘块和索引结点使用情况的特殊盘块。",
+      "def_b": "文件系统中包含文件系统基本大小和形式的数据结构，用于文件系统维护，包含幻数、修订级别、数据块大小等信息。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "superblock",
+      "decision": {
+        "merge": true,
+        "canonical": "超级块",
+        "reason": "超块是超级块的简称，均指文件系统中记录元数据的特殊盘块。"
+      }
+    },
+    {
+      "idx_a": 1175,
+      "idx_b": 1227,
+      "name_a": "冯·诺依曼体系结构",
+      "name_b": "冯诺依曼计算机",
+      "def_a": "一种计算机体系结构，采用二进制和程序存储概念，指令和数据共享同一存储空间。",
+      "def_b": "采用存储程序原理，由运算器、控制器、存储器、输入输出设备组成的计算机体系结构。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "von neumann architecture",
+      "decision": {
+        "merge": true,
+        "canonical": "冯·诺依曼体系结构",
+        "reason": "冯诺依曼计算机是冯·诺依曼体系结构的别称，均指存储程序原理的计算机体系结构。"
+      }
+    },
+    {
+      "idx_a": 1193,
+      "idx_b": 1315,
+      "name_a": "页式内存管理",
+      "name_b": "分页存储管理",
+      "def_a": "将物理内存划分为固定大小的页框，将进程的虚拟地址空间划分为相同大小的页，通过页表实现地址映射的内存管理方式。",
+      "def_b": "将进程的逻辑地址空间分成大小相等的页，并将内存分成同样大小的块，允许进程的页分散存放在不连续的内存块中。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "paging",
+      "decision": {
+        "merge": true,
+        "canonical": "分页存储管理",
+        "reason": "页式内存管理与分页存储管理同义，均指将虚拟地址空间和物理内存划分为固定大小页框的管理方式。"
+      }
+    },
+    {
+      "idx_a": 1195,
+      "idx_b": 1224,
+      "name_a": "Unix",
+      "name_b": "UNIX操作系统",
+      "def_a": "一种多用户、多任务的分时操作系统，由Ken Thompson和Dennis Ritchie于1970年在PDP-7上开发，对现代操作系统影响深远。",
+      "def_b": "1969-1970年由贝尔实验室开发的多用户、多任务操作系统，最初用汇编编写，后重写于C语言。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "unix",
+      "decision": {
+        "merge": true,
+        "canonical": "UNIX操作系统",
+        "reason": "Unix与UNIX操作系统是同一操作系统的不同写法，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1205,
+      "idx_b": 1206,
+      "name_a": "异常",
+      "name_b": "陷阱",
+      "def_a": "由指令执行产生的同步事件，包括陷阱和故障，用于处理错误或系统调用。",
+      "def_b": "一种同步异常，由特定指令（如系统调用）触发，用于从用户态切换到内核态。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "异常",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "异常是陷阱的上位概念，陷阱是异常的一种类型，两者是包含关系而非等价。"
+      }
+    },
+    {
+      "idx_a": 1228,
+      "idx_b": 1248,
+      "name_a": "引导加载程序",
+      "name_b": "Boot Loader",
+      "def_a": "系统加电后运行的第一段软件代码，用于初始化硬件并加载操作系统内核。",
+      "def_b": "操作系统内核运行前执行的一段小程序，用于初始化硬件并加载内核。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "引导加载程序",
+      "decision": {
+        "merge": true,
+        "canonical": "引导加载程序",
+        "reason": "Boot Loader是引导加载程序的英文名称，两者均指初始化硬件并加载内核的启动代码。"
+      }
+    },
+    {
+      "idx_a": 1228,
+      "idx_b": 1233,
+      "name_a": "引导加载程序",
+      "name_b": "Bootloader",
+      "def_a": "系统加电后运行的第一段软件代码，用于初始化硬件并加载操作系统内核。",
+      "def_b": "引导加载程序，负责将操作系统内核加载到内存并移交控制权。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "bootloader",
+      "decision": {
+        "merge": true,
+        "canonical": "引导加载程序",
+        "reason": "Bootloader是引导加载程序的英文名称，两者语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1242,
+      "idx_b": 1583,
+      "name_a": "分区表",
+      "name_b": "硬盘分区表",
+      "def_a": "记录磁盘分区信息的表格，存储在MBR或GPT中，包含分区类型、起始位置等。",
+      "def_b": "存储在硬盘主引导记录中的64字节数据结构，用于描述分区信息。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "dpt",
+      "decision": {
+        "merge": true,
+        "canonical": "分区表",
+        "reason": "硬盘分区表是分区表的具体形式，两者均指记录磁盘分区信息的数据结构。"
+      }
+    },
+    {
+      "idx_a": 1253,
+      "idx_b": 1355,
+      "name_a": "地址空间",
+      "name_b": "虚拟地址空间",
+      "def_a": "程序所使用逻辑地址的集合，是编译后目标程序限定的地址范围。",
+      "def_b": "进程在内存中存放的逻辑视图，大小与虚拟存储空间相同，从0开始编址。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "虚拟地址空间",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "地址空间泛指逻辑地址集合，虚拟地址空间特指进程的逻辑视图，两者不等价。"
+      }
+    },
+    {
+      "idx_a": 1263,
+      "idx_b": 1301,
+      "name_a": "数据段",
+      "name_b": "数据节",
+      "def_a": "存放已初始化全局变量的内存区域，属于静态内存分配，占用可执行文件空间。",
+      "def_b": "存放已初始化全局变量和静态变量的节。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": ".data",
+      "decision": {
+        "merge": true,
+        "canonical": "数据段",
+        "reason": "数据节是数据段的别名，均指存放已初始化全局变量的内存区域。"
+      }
+    },
+    {
+      "idx_a": 1264,
+      "idx_b": 1302,
+      "name_a": "代码段",
+      "name_b": "文本节",
+      "def_a": "存放程序执行代码的内存区域，通常只读，大小在运行前确定。",
+      "def_b": "存放程序执行指令的节。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": ".text",
+      "decision": {
+        "merge": true,
+        "canonical": "代码段",
+        "reason": "代码段和文本节是同义词，均指存放程序执行代码的内存区域。"
+      }
+    },
+    {
+      "idx_a": 1270,
+      "idx_b": 1272,
+      "name_a": "可变分区",
+      "name_b": "可变式分区",
+      "def_a": "根据程序大小动态划分分区，分区大小和数量可变。",
+      "def_b": "分区的大小和数量可根据进程需求动态变化，无内碎片但有外碎片。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "动态分区",
+      "decision": {
+        "merge": true,
+        "canonical": "可变分区",
+        "reason": "可变分区和可变式分区是完全同义的概念。"
+      }
+    },
+    {
+      "idx_a": 1275,
+      "idx_b": 1593,
+      "name_a": "位图表示法",
+      "name_b": "位图",
+      "def_a": "用位图中的每一位表示一个内存分配单元是否空闲，0空闲1占用。",
+      "def_b": "用二进制位串表示磁盘块分配状态，每位对应一个物理块，用于空闲空间管理。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "位图",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "位图表示法用于内存管理，位图用于磁盘空间管理，应用领域不同。"
+      }
+    },
+    {
+      "idx_a": 1275,
+      "idx_b": 1653,
+      "name_a": "位图表示法",
+      "name_b": "位视图",
+      "def_a": "用位图中的每一位表示一个内存分配单元是否空闲，0空闲1占用。",
+      "def_b": "文件存储空间管理方法，使用位图表示磁盘块的使用状态，每位对应一个块，0空闲1占用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "位图",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "位图表示法用于内存管理，位视图用于文件存储空间管理，应用领域不同。"
+      }
+    },
+    {
+      "idx_a": 1593,
+      "idx_b": 1653,
+      "name_a": "位图",
+      "name_b": "位视图",
+      "def_a": "用二进制位串表示磁盘块分配状态，每位对应一个物理块，用于空闲空间管理。",
+      "def_b": "文件存储空间管理方法，使用位图表示磁盘块的使用状态，每位对应一个块，0空闲1占用。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "位图",
+      "decision": {
+        "merge": true,
+        "canonical": "位图",
+        "reason": "位图和位视图在文件存储空间管理中是完全同义的。"
+      }
+    },
+    {
+      "idx_a": 1287,
+      "idx_b": 1289,
+      "name_a": "覆盖技术",
+      "name_b": "覆盖",
+      "def_a": "一种内存扩充技术，将程序划分为覆盖段，共享同一内存区域，以在小内存中运行大作业。",
+      "def_b": "允许一个程序的不同模块在运行时共享同一内存区域，以减少所需内存空间的技术。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "overlay",
+      "decision": {
+        "merge": true,
+        "canonical": "覆盖技术",
+        "reason": "覆盖技术和覆盖是完全同义的概念。"
+      }
+    },
+    {
+      "idx_a": 1290,
+      "idx_b": 1304,
+      "name_a": "ELF文件格式",
+      "name_b": "ELF文件",
+      "def_a": "Executable and Linkable Format，一种用于可执行文件、目标文件和共享库的标准文件格式。",
+      "def_b": "Executable and Linkable Format，可执行与可链接格式，是Unix/Linux系统中用于表示目标文件、可执行文件和共享库的标准文件格式。",
+      "role_a": "概念",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "elf",
+      "decision": {
+        "merge": true,
+        "canonical": "ELF文件格式",
+        "reason": "ELF文件格式和ELF文件是完全同义的。"
+      }
+    },
+    {
+      "idx_a": 1308,
+      "idx_b": 1311,
+      "name_a": "程序装载",
+      "name_b": "可执行文件加载",
+      "def_a": "将可执行文件从磁盘加载到内存并准备执行的过程",
+      "def_b": "操作系统将可执行文件从磁盘读入内存并建立进程地址空间的过程。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "程序加载",
+      "decision": {
+        "merge": true,
+        "canonical": "程序装载",
+        "reason": "程序装载和可执行文件加载是完全同义的概念。"
+      }
+    },
+    {
+      "idx_a": 1309,
+      "idx_b": 1311,
+      "name_a": "execve系统调用",
+      "name_b": "可执行文件加载",
+      "def_a": "用于执行一个可执行文件的系统调用，会替换当前进程的地址空间",
+      "def_b": "操作系统将可执行文件从磁盘读入内存并建立进程地址空间的过程。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "execve系统调用",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "execve系统调用是具体系统调用，可执行文件加载是更广泛的过程，不等价。"
+      }
+    },
+    {
+      "idx_a": 1312,
+      "idx_b": 1386,
+      "name_a": "内存映射",
+      "name_b": "内存映射文件",
+      "def_a": "将文件或设备内容映射到进程虚拟地址空间，实现文件访问和共享内存的机制。",
+      "def_b": "将文件映射到进程虚拟地址空间，通过内存访问文件，支持共享和按需加载。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "mmap",
+      "decision": {
+        "merge": true,
+        "canonical": "内存映射",
+        "reason": "内存映射和内存映射文件是完全同义的机制。"
+      }
+    },
+    {
+      "idx_a": 1318,
+      "idx_b": 1708,
+      "name_a": "哈希页表",
+      "name_b": "杂凑页表",
+      "def_a": "使用哈希函数将虚拟页号映射到页表项，用于处理大于32位地址空间的分页系统。",
+      "def_b": "使用哈希表实现页表，加快页表查找速度，适用于大地址空间。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "哈希页表",
+      "decision": {
+        "merge": true,
+        "canonical": "哈希页表",
+        "reason": "哈希页表和杂凑页表是完全同义的概念。"
+      }
+    },
+    {
+      "idx_a": 1323,
+      "idx_b": 1593,
+      "name_a": "位示图",
+      "name_b": "位图",
+      "def_a": "一种数据结构，用二进制位表示内存页框的分配状态，用于物理页面管理。",
+      "def_b": "用二进制位串表示磁盘块分配状态，每位对应一个物理块，用于空闲空间管理。",
+      "role_a": "概念",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "位示图",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "位示图用于内存页框管理，位图用于磁盘块管理，应用领域不同。"
+      }
+    },
+    {
+      "idx_a": 1367,
+      "idx_b": 1712,
+      "name_a": "时钟页面置换算法",
+      "name_b": "时钟算法",
+      "def_a": "第二次机会算法的环形队列实现，通过循环扫描页面并检查访问位来淘汰页面。",
+      "def_b": "使用循环链表和访问位，近似LRU，实现简单且性能较好。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "clock",
+      "decision": {
+        "merge": true,
+        "canonical": "时钟页面置换算法",
+        "reason": "时钟页面置换算法和时钟算法是完全同义的。"
+      }
+    },
+    {
+      "idx_a": 1438,
+      "idx_b": 1477,
+      "name_a": "优先级反转",
+      "name_b": "优先级倒置",
+      "def_a": "低优先级进程占用临界区导致高优先级进程被阻塞的现象。",
+      "def_b": "高优先级进程被低优先级进程延迟或阻塞的现象",
+      "role_a": "问题",
+      "role_b": "问题",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "priority inversion",
+      "decision": {
+        "merge": true,
+        "canonical": "优先级反转",
+        "reason": "优先级反转和优先级倒置是完全同义的概念。"
+      }
+    },
+    {
+      "idx_a": 1494,
+      "idx_b": 1508,
+      "name_a": "SCHED_RR",
+      "name_b": "RR调度",
+      "def_a": "Linux中轮转方式执行的实时进程调度策略，时间片到期后插入队尾。",
+      "def_b": "时间片轮转调度算法，每个进程分配一个时间片，轮流执行，抢占式。",
+      "role_a": "算法",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "rr调度",
+      "decision": {
+        "merge": false,
+        "canonical": null,
+        "reason": "SCHED_RR是Linux具体调度策略，RR调度是通用算法，不等价。"
+      }
+    },
+    {
+      "idx_a": 1521,
+      "idx_b": 1522,
+      "name_a": "打破循环等待条件",
+      "name_b": "有序资源分配法",
+      "def_a": "通过资源有序分配策略，使进程按编号递增顺序申请资源，防止形成环路。",
+      "def_b": "将资源分类编号，进程必须按编号递增顺序申请资源，以预防死锁。",
+      "role_a": "机制",
+      "role_b": "算法",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "有序资源分配法",
+      "decision": {
+        "merge": true,
+        "canonical": "有序资源分配法",
+        "reason": "两者描述同一死锁预防策略，只是表述不同，语义完全等价。"
+      }
+    },
+    {
+      "idx_a": 1599,
+      "idx_b": 1610,
+      "name_a": "数据条带",
+      "name_b": "条带化",
+      "def_a": "将数据分割成块并并行存储到多个磁盘上的技术，以提高读写性能。",
+      "def_b": "将数据分块并分布到多个磁盘上，以提高并行存取性能。",
+      "role_a": "机制",
+      "role_b": "机制",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "条带化",
+      "decision": {
+        "merge": true,
+        "canonical": "条带化",
+        "reason": "两者描述同一磁盘数据分布技术，名称互为同义词。"
+      }
+    },
+    {
+      "idx_a": 1673,
+      "idx_b": 1674,
+      "name_a": "基于日志结构的文件系统",
+      "name_b": "日志结构文件系统",
+      "def_a": "一种将磁盘视为日志，所有写操作追加到日志末尾以提高写性能的文件系统。",
+      "def_b": "一种将磁盘视为连续日志，通过顺序写入提高写性能的文件系统。",
+      "role_a": "机制",
+      "role_b": "概念",
+      "source": "alias_match",
+      "confidence": 1.0,
+      "matched_key": "log-structured file system",
+      "decision": {
+        "merge": true,
+        "canonical": "基于日志结构的文件系统",
+        "reason": "两者描述同一文件系统类型，名称互为同义词。"
+      }
+    }
+  ],
+  "apply_log": [
+    {
+      "kept": "用户接口",
+      "absorbed": "用户与计算机硬件系统之间的接口",
+      "reason": "概念A是用户接口的定义描述，概念B是简称，语义完全等价。"
+    },
+    {
+      "kept": "图形用户界面",
+      "absorbed": "图形用户接口",
+      "reason": "图形用户界面与图形用户接口是同义词，规范名选较长的中文名称。"
+    },
+    {
+      "kept": "图形用户界面",
+      "absorbed": "图形化用户界面",
+      "reason": "图形用户界面与图形化用户界面是同义词，规范名选较长的中文名称。"
+    },
+    {
+      "kept": "存储器管理",
+      "absorbed": "内存管理",
+      "reason": "存储器管理与内存管理是同义词，规范名选较完整的中文名称。"
+    },
+    {
+      "kept": "存储器管理",
+      "absorbed": "存储管理",
+      "reason": "存储器管理与存储管理是同义词，规范名选较完整的中文名称。"
+    },
+    {
+      "kept": "设备管理",
+      "absorbed": "I/O设备管理",
+      "reason": "I/O设备管理与设备管理是同义词，规范名选较简短的中文名称。"
+    },
+    {
+      "kept": "SPOOLing系统",
+      "absorbed": "Spooling系统",
+      "reason": "SPOOLing系统与Spooling系统是同一概念的不同大小写写法。"
+    },
+    {
+      "kept": "SPOOLing系统",
+      "absorbed": "Spooling",
+      "reason": "SPOOLing系统与Spooling是同一概念的不同写法，规范名选较完整名称。"
+    },
+    {
+      "kept": "虚拟存储器",
+      "absorbed": "虚拟存储器技术",
+      "reason": "虚拟存储器技术与虚拟存储器是同一概念的不同表述，规范名选较完整名称。"
+    },
+    {
+      "kept": "虚拟存储器",
+      "absorbed": "虚拟内存",
+      "reason": "虚拟存储器技术与虚拟内存是同一概念的不同表述，规范名选较完整中文名称。"
+    },
+    {
+      "kept": "通道技术",
+      "absorbed": "I/O通道",
+      "reason": "通道技术和I/O通道是同一概念的不同表述，语义完全等价。"
+    },
+    {
+      "kept": "缓冲技术",
+      "absorbed": "数据缓冲",
+      "reason": "缓冲技术和数据缓冲均指通过缓冲区缓解速度不匹配的机制，语义等价。"
+    },
+    {
+      "kept": "缓冲技术",
+      "absorbed": "缓冲",
+      "reason": "缓冲技术和缓冲是同一概念的不同表述，语义完全等价。"
+    },
+    {
+      "kept": "多道程序设计技术",
+      "absorbed": "多道程序设计",
+      "reason": "多道程序设计技术和多道程序设计是同一概念的不同表述，语义完全等价。"
+    },
+    {
+      "kept": "多道程序设计技术",
+      "absorbed": "多道程序",
+      "reason": "多道程序设计技术和多道程序是同一概念的不同表述，语义完全等价。"
+    },
+    {
+      "kept": "作业周转时间",
+      "absorbed": "周转时间",
+      "reason": "作业周转时间和周转时间是同一概念的不同表述，语义完全等价。"
+    },
+    {
+      "kept": "多道程序设计技术",
+      "absorbed": "多道程序技术",
+      "reason": "多道程序技术和多道程序设计是同一概念的不同表述，语义完全等价。"
+    },
+    {
+      "kept": "SPOOLing技术",
+      "absorbed": "虚拟设备技术",
+      "reason": "虚拟设备技术是SPOOLing技术的别名，两者定义完全一致。"
+    },
+    {
+      "kept": "进程互斥",
+      "absorbed": "互斥",
+      "reason": "进程互斥是互斥的具体应用，定义等价。"
+    },
+    {
+      "kept": "进程同步",
+      "absorbed": "同步",
+      "reason": "进程同步是同步的具体应用，定义等价。"
+    },
+    {
+      "kept": "信号量机制",
+      "absorbed": "信号量",
+      "reason": "信号量机制与信号量定义完全一致，信号量是简称。"
+    },
+    {
+      "kept": "信号量集机制",
+      "absorbed": "信号量集",
+      "reason": "信号量集与信号量集机制定义完全一致，后者更完整。"
+    },
+    {
+      "kept": "进程通信",
+      "absorbed": "进程间通信",
+      "reason": "进程通信与进程间通信定义完全一致，后者是完整名称。"
+    },
+    {
+      "kept": "作业调度",
+      "absorbed": "高级调度",
+      "reason": "作业调度与高级调度定义完全一致，高级调度是别名。"
+    },
+    {
+      "kept": "进程调度",
+      "absorbed": "低级调度",
+      "reason": "进程调度与低级调度定义完全一致，低级调度是别名。"
+    },
+    {
+      "kept": "内存保护",
+      "absorbed": "存储保护",
+      "reason": "内存保护与存储保护定义完全一致，内存保护更常用。"
+    },
+    {
+      "kept": "地址映射",
+      "absorbed": "地址变换",
+      "reason": "地址映射与地址变换定义完全一致，地址映射更简洁。"
+    },
+    {
+      "kept": "地址映射",
+      "absorbed": "地址转换",
+      "reason": "地址映射与地址转换定义完全一致，地址映射更简洁。"
+    },
+    {
+      "kept": "页面置换",
+      "absorbed": "置换功能",
+      "reason": "置换功能即页面置换，语义完全等价。"
+    },
+    {
+      "kept": "应用程序接口",
+      "absorbed": "程序接口",
+      "reason": "程序接口即应用程序接口，语义完全等价。"
+    },
+    {
+      "kept": "微内核",
+      "absorbed": "微内核操作系统",
+      "reason": "微内核与微内核操作系统语义完全等价。"
+    },
+    {
+      "kept": "微内核结构",
+      "absorbed": "微内核",
+      "reason": "微内核与微内核结构语义完全等价。"
+    },
+    {
+      "kept": "机制与策略分离",
+      "absorbed": "机制与策略分开",
+      "reason": "两者语义完全等价，均为同一设计原理。"
+    },
+    {
+      "kept": "消息传递",
+      "absorbed": "消息传递通信机制",
+      "reason": "消息传递通信机制与消息传递语义完全等价。"
+    },
+    {
+      "kept": "消息传递",
+      "absorbed": "消息缓冲通信",
+      "reason": "消息缓冲通信是消息传递的一种具体形式，但此处定义均指消息传递机制，语义等价。"
+    },
+    {
+      "kept": "地址变换机构",
+      "absorbed": "地址变换机制",
+      "reason": "地址变换机制与地址变换机构语义完全等价。"
+    },
+    {
+      "kept": "消息传递",
+      "absorbed": "消息传递机制",
+      "reason": "消息传递机制与消息传递语义完全等价。"
+    },
+    {
+      "kept": "用户态",
+      "absorbed": "用户态执行",
+      "reason": "用户态与用户态执行语义完全等价。"
+    },
+    {
+      "kept": "系统态",
+      "absorbed": "核心态执行",
+      "reason": "系统态、核心态执行、内核态均指CPU的特权模式，语义完全等价。"
+    },
+    {
+      "kept": "系统态",
+      "absorbed": "内核态",
+      "reason": "系统态与内核态是同一概念的不同名称。"
+    },
+    {
+      "kept": "运行状态",
+      "absorbed": "执行状态",
+      "reason": "执行状态与运行状态均指进程获得CPU并执行的状态。"
+    },
+    {
+      "kept": "进程优先级",
+      "absorbed": "优先级",
+      "reason": "进程优先级与优先级在进程调度上下文中同义。"
+    },
+    {
+      "kept": "进程控制块的组织方式",
+      "absorbed": "PCB组织方式",
+      "reason": "两者描述同一概念，PCB组织方式为简称。"
+    },
+    {
+      "kept": "进程树",
+      "absorbed": "进程图",
+      "reason": "进程图与进程树均描述进程家族关系，进程树更常用。"
+    },
+    {
+      "kept": "唤醒原语",
+      "absorbed": "Wakeup原语",
+      "reason": "唤醒原语与Wakeup原语是同一机制的中英文名称。"
+    },
+    {
+      "kept": "AND型信号量",
+      "absorbed": "AND信号量",
+      "reason": "两者是同一概念的不同表述，AND型信号量更完整。"
+    },
+    {
+      "kept": "AND型信号量",
+      "absorbed": "AND信号量集",
+      "reason": "AND型信号量和AND信号量集是同一概念的不同名称。"
+    },
+    {
+      "kept": "忙等",
+      "absorbed": "忙等待",
+      "reason": "忙等和忙等待是同一概念的不同表述。"
+    },
+    {
+      "kept": "哲学家进餐问题",
+      "absorbed": "哲学家就餐问题",
+      "reason": "两者是同一经典问题的不同译名。"
+    },
+    {
+      "kept": "AND信号量机制",
+      "absorbed": "AND型信号量",
+      "reason": "AND信号量机制和AND信号量集是同一概念的不同名称。"
+    },
+    {
+      "kept": "间接通信方式",
+      "absorbed": "信箱通信",
+      "reason": "间接通信方式包括信箱通信，但此处两者语义等价。"
+    },
+    {
+      "kept": "对称多处理机",
+      "absorbed": "对称式多处理系统",
+      "reason": "两者是同一概念的不同表述。"
+    },
+    {
+      "kept": "内核支持线程",
+      "absorbed": "内核级线程",
+      "reason": "内核支持线程和内核级线程是同一概念的不同名称。"
+    },
+    {
+      "kept": "多对多模型",
+      "absorbed": "多对多线程模型",
+      "reason": "两者是同一线程模型的不同表述。"
+    },
+    {
+      "kept": "处理机调度",
+      "absorbed": "CPU调度",
+      "reason": "处理机调度和CPU调度是同一概念的不同名称。"
+    },
+    {
+      "kept": "中级调度",
+      "absorbed": "进程对换",
+      "reason": "中级调度和进程对换是同一概念的不同名称。"
+    },
+    {
+      "kept": "先来先服务调度算法",
+      "absorbed": "先来先服务",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "先来先服务调度算法",
+      "absorbed": "先来先服务算法",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "先来先服务调度算法",
+      "absorbed": "FCFS调度",
+      "reason": "中文全称与英文缩写关系，语义等价。"
+    },
+    {
+      "kept": "短作业优先调度算法",
+      "absorbed": "短作业优先",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "短作业优先调度算法",
+      "absorbed": "SJF调度",
+      "reason": "中文全称与英文缩写关系，语义等价。"
+    },
+    {
+      "kept": "优先级调度算法",
+      "absorbed": "最高优先权优先调度算法",
+      "reason": "不同表述但语义等价，均为优先级调度。"
+    },
+    {
+      "kept": "优先级调度算法",
+      "absorbed": "优先级调度",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "高响应比优先调度算法",
+      "absorbed": "最高响应比优先调度算法",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "高响应比优先调度算法",
+      "absorbed": "最高响应比优先",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "时间片轮转调度算法",
+      "absorbed": "轮转调度算法",
+      "reason": "全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "时间片轮转调度算法",
+      "absorbed": "RR调度",
+      "reason": "中文全称与英文缩写关系，语义等价。"
+    },
+    {
+      "kept": "高优先权优先调度算法",
+      "absorbed": "优先级调度算法",
+      "reason": "不同表述但语义等价，均为最高优先权优先。"
+    },
+    {
+      "kept": "静态优先级",
+      "absorbed": "静态优先权",
+      "reason": "两者语义完全等价，均为进程创建时确定且运行期间不变的优先级，'优先权'与'优先级'是同义词。"
+    },
+    {
+      "kept": "动态优先级",
+      "absorbed": "动态优先权",
+      "reason": "两者语义完全等价，均为运行过程中可动态调整的优先级，'优先权'与'优先级'是同义词。"
+    },
+    {
+      "kept": "非抢占式优先权调度算法",
+      "absorbed": "非抢占式优先调度算法",
+      "reason": "两者语义完全等价，均为非抢占式优先级调度算法，'优先'与'优先权'是同义词。"
+    },
+    {
+      "kept": "最早截止时间优先算法",
+      "absorbed": "最早截止时间优先",
+      "reason": "两者语义完全等价，均为根据截止时间越早优先级越高的实时调度算法。"
+    },
+    {
+      "kept": "资源分配图",
+      "absorbed": "进程-资源图",
+      "reason": "两者语义完全等价，均为描述进程与资源请求分配关系的有向图，用于死锁检测。"
+    },
+    {
+      "kept": "存储器层次结构",
+      "absorbed": "存储层次结构",
+      "reason": "两者语义完全等价，均为按速度、容量和价格组织的多级存储体系。"
+    },
+    {
+      "kept": "程序局部性原理",
+      "absorbed": "局部性原理",
+      "reason": "两者语义完全等价，均为程序执行时局限于某部分区域的现象。"
+    },
+    {
+      "kept": "静态重定位",
+      "absorbed": "可重定位装入方式",
+      "reason": "两者语义完全等价，均为程序装入时一次性完成地址转换的方式。"
+    },
+    {
+      "kept": "循环首次适应算法",
+      "absorbed": "下次适应算法",
+      "reason": "两者语义完全等价，均为从上次查找位置开始循环查找空闲分区的算法。"
+    },
+    {
+      "kept": "固定分区",
+      "absorbed": "固定式分区",
+      "reason": "两者语义完全等价，均为将内存划分为固定大小分区的机制。"
+    },
+    {
+      "kept": "紧凑",
+      "absorbed": "紧凑技术",
+      "reason": "两者语义完全等价，均为通过移动作业合并空闲分区以消除外部碎片的技术。"
+    },
+    {
+      "kept": "对换",
+      "absorbed": "交换",
+      "reason": "两者语义完全等价，均为将进程在内存与外存之间交换的技术。"
+    },
+    {
+      "kept": "整体对换",
+      "absorbed": "中级调度",
+      "reason": "两者语义完全等价，均为以整个进程为单位的对换方式。"
+    },
+    {
+      "kept": "分页存储管理方式",
+      "absorbed": "分页系统",
+      "reason": "两者语义完全等价，均为将内存和逻辑地址空间划分为固定大小页的存储管理方式。"
+    },
+    {
+      "kept": "分页存储管理",
+      "absorbed": "分页存储管理方式",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "分段存储管理方式",
+      "absorbed": "分段系统",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "页",
+      "absorbed": "页面",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "页框",
+      "absorbed": "物理块",
+      "reason": "同义词，物理块即页框。"
+    },
+    {
+      "kept": "页内碎片",
+      "absorbed": "内碎片",
+      "reason": "同义词，内碎片即内部碎片。"
+    },
+    {
+      "kept": "内部碎片",
+      "absorbed": "页内碎片",
+      "reason": "同义词，页内碎片是内部碎片的一种。"
+    },
+    {
+      "kept": "内存管理单元",
+      "absorbed": "地址变换机构",
+      "reason": "同义词，地址变换机构即MMU。"
+    },
+    {
+      "kept": "多级页表",
+      "absorbed": "两级页表",
+      "reason": "两级页表是多级页表的特例，但语义等价。"
+    },
+    {
+      "kept": "分段存储管理",
+      "absorbed": "分段存储管理方式",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "分段存储管理",
+      "absorbed": "段式存储管理",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "分段存储管理",
+      "absorbed": "段式内存管理",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "段共享",
+      "absorbed": "信息共享",
+      "reason": "概念A是段共享的广义描述，语义等价。"
+    },
+    {
+      "kept": "页式存储管理",
+      "absorbed": "分页存储管理",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "段页式存储管理",
+      "absorbed": "段页式系统",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "时间局部性",
+      "absorbed": "时间局限性",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "空间局部性",
+      "absorbed": "空间局限性",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "请求调页",
+      "absorbed": "请求调页策略",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "请求调页",
+      "absorbed": "请求式分页",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "请求调页",
+      "absorbed": "按需调页",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "请求分页系统",
+      "absorbed": "请求调页",
+      "reason": "请求调页策略是请求分页系统的核心机制，但请求分页系统包含页面置换功能，范围更广，不合并。"
+    },
+    {
+      "kept": "请求调页存储管理",
+      "absorbed": "请求分页系统",
+      "reason": "请求调页存储管理与请求式分页完全等价。"
+    },
+    {
+      "kept": "请求分页存储管理方式",
+      "absorbed": "分页请求系统",
+      "reason": "分页请求系统与请求分页存储管理方式完全等价。"
+    },
+    {
+      "kept": "请求分页存储管理方式",
+      "absorbed": "请求调页存储管理",
+      "reason": "分页请求系统与请求分页系统完全等价。"
+    },
+    {
+      "kept": "请求分段系统",
+      "absorbed": "请求分段存储管理方式",
+      "reason": "请求分段系统与请求分段存储管理方式完全等价。"
+    },
+    {
+      "kept": "请求分段系统",
+      "absorbed": "请求分段存储管理",
+      "reason": "请求分段系统与请求分段存储管理完全等价。"
+    },
+    {
+      "kept": "缺页中断",
+      "absorbed": "缺页错误",
+      "reason": "缺页错误与缺页中断是同义术语，均指页面不在内存时引发的异常。"
+    },
+    {
+      "kept": "预调页策略",
+      "absorbed": "预调页",
+      "reason": "预调页策略与预调页是同义术语，均指预先调入页面的策略。"
+    },
+    {
+      "kept": "最佳置换算法",
+      "absorbed": "最优置换算法",
+      "reason": "最佳置换算法与最优置换算法是同义术语，均指理想化的置换算法。"
+    },
+    {
+      "kept": "先进先出页面置换算法",
+      "absorbed": "先进先出置换算法",
+      "reason": "两者名称略有差异但语义完全等价，均指FIFO页面置换算法。"
+    },
+    {
+      "kept": "最近最久未使用置换算法",
+      "absorbed": "最近最少使用页面置换算法",
+      "reason": "两者均指LRU页面置换算法，语义完全等价。"
+    },
+    {
+      "kept": "最近最久未使用置换算法",
+      "absorbed": "最近最少使用置换算法",
+      "reason": "两者均指LRU页面置换算法，语义完全等价。"
+    },
+    {
+      "kept": "Clock置换算法",
+      "absorbed": "时钟页面置换算法",
+      "reason": "Clock置换算法与时钟页面置换算法是同义术语，均指该算法。"
+    },
+    {
+      "kept": "最少使用置换算法",
+      "absorbed": "最少使用算法",
+      "reason": "两者均指选择使用次数最少的页面进行置换，语义等价。"
+    },
+    {
+      "kept": "最少使用置换算法",
+      "absorbed": "最不频繁使用置换算法",
+      "reason": "两者均指置换访问次数最少的页面，语义等价。"
+    },
+    {
+      "kept": "分段共享",
+      "absorbed": "段共享",
+      "reason": "两者均指多个进程共享同一内存段，语义等价。"
+    },
+    {
+      "kept": "环保护机构",
+      "absorbed": "环保护",
+      "reason": "两者均指分层特权环保护机制，语义等价。"
+    },
+    {
+      "kept": "设备独立性",
+      "absorbed": "设备无关性",
+      "reason": "两者均指用户程序独立于具体物理设备，语义等价。"
+    },
+    {
+      "kept": "DMA方式",
+      "absorbed": "直接存储器访问方式",
+      "reason": "DMA方式与直接存储器访问方式为全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "DMA方式",
+      "absorbed": "DMA控制方式",
+      "reason": "DMA方式与DMA控制方式均指直接存储器访问，语义等价。"
+    },
+    {
+      "kept": "DMA方式",
+      "absorbed": "直接存储器访问",
+      "reason": "DMA方式与直接存储器访问为全称与简称关系，语义等价。"
+    },
+    {
+      "kept": "中断驱动方式",
+      "absorbed": "中断驱动I/O控制方式",
+      "reason": "两者均指设备通过中断通知CPU完成I/O，语义等价。"
+    },
+    {
+      "kept": "中断驱动方式",
+      "absorbed": "中断驱动I/O",
+      "reason": "两者均指设备完成I/O后发中断通知CPU，语义等价。"
+    },
+    {
+      "kept": "程序I/O方式",
+      "absorbed": "程序控制I/O",
+      "reason": "两者均指CPU通过轮询设备状态进行I/O，语义等价。"
+    },
+    {
+      "kept": "通道控制方式",
+      "absorbed": "I/O通道控制方式",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "直接存储访问方式",
+      "absorbed": "DMA方式",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "直接存储访问方式",
+      "absorbed": "直接内存访问",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "循环缓冲",
+      "absorbed": "环形缓冲",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "缓冲池",
+      "absorbed": "公用缓冲池方式",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "I/O软件层次结构",
+      "absorbed": "层次式I/O软件",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "中断处理程序",
+      "absorbed": "中断服务例程",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "中断处理程序",
+      "absorbed": "中断服务程序",
+      "reason": "同义词，语义完全等价。"
+    },
+    {
+      "kept": "SPOOLing技术",
+      "absorbed": "SPOOLing系统",
+      "reason": "大小写差异，语义完全等价。"
+    },
+    {
+      "kept": "SPOOLing技术",
+      "absorbed": "Spooling技术",
+      "reason": "全称与简称关系，语义完全等价。"
+    },
+    {
+      "kept": "输入输出重定向",
+      "absorbed": "I/O重定向",
+      "reason": "I/O重定向是输入输出重定向的缩写，语义完全等价。"
+    },
+    {
+      "kept": "输入输出重定向",
+      "absorbed": "重定向",
+      "reason": "重定向是输入输出重定向的简称，语义等价。"
+    },
+    {
+      "kept": "主引导记录",
+      "absorbed": "MBR",
+      "reason": "MBR是主引导记录的英文缩写，语义完全等价。"
+    },
+    {
+      "kept": "最短寻道时间优先",
+      "absorbed": "最短寻道时间优先算法",
+      "reason": "两者名称和定义完全一致，只是后者多了“算法”二字，语义等价。"
+    },
+    {
+      "kept": "进程饥饿",
+      "absorbed": "饥饿",
+      "reason": "饥饿是进程饥饿的简称，语义完全等价。"
+    },
+    {
+      "kept": "磁盘高速缓存",
+      "absorbed": "块高速缓存",
+      "reason": "块高速缓存是磁盘高速缓存的另一种称呼，语义等价。"
+    },
+    {
+      "kept": "延迟写",
+      "absorbed": "延迟写方式",
+      "reason": "延迟写方式与延迟写定义完全一致，语义等价。"
+    },
+    {
+      "kept": "廉价磁盘冗余阵列",
+      "absorbed": "RAID",
+      "reason": "RAID是廉价磁盘冗余阵列的英文缩写，语义等价。"
+    },
+    {
+      "kept": "廉价磁盘冗余阵列",
+      "absorbed": "廉价冗余磁盘阵列",
+      "reason": "两者名称和定义完全一致，只是词序略有不同，语义等价。"
+    },
+    {
+      "kept": "RAID 5级",
+      "absorbed": "RAID 5",
+      "reason": "RAID 5级与RAID 5定义一致，语义等价。"
+    },
+    {
+      "kept": "RAID 6级",
+      "absorbed": "RAID 6",
+      "reason": "RAID 6级与RAID 6定义一致，语义等价。"
+    },
+    {
+      "kept": "有结构文件",
+      "absorbed": "记录式文件",
+      "reason": "有结构文件和记录式文件是同义词，定义一致。"
+    },
+    {
+      "kept": "无结构文件",
+      "absorbed": "流式文件",
+      "reason": "无结构文件和流式文件是同义词，定义一致。"
+    },
+    {
+      "kept": "打开文件",
+      "absorbed": "open",
+      "reason": "打开文件和open系统调用是同一机制的中英文别名。"
+    },
+    {
+      "kept": "关闭文件",
+      "absorbed": "文件关闭",
+      "reason": "关闭文件和文件关闭是同义词，定义一致。"
+    },
+    {
+      "kept": "文件的逻辑结构",
+      "absorbed": "文件逻辑结构",
+      "reason": "两者定义完全相同，只是表述略有差异。"
+    },
+    {
+      "kept": "文件的物理结构",
+      "absorbed": "文件的物理组织",
+      "reason": "文件的物理结构和物理组织是同义词，定义一致。"
+    },
+    {
+      "kept": "多级索引",
+      "absorbed": "多级索引分配",
+      "reason": "多级索引和多级索引分配是同一机制的不同表述。"
+    },
+    {
+      "kept": "外部碎片",
+      "absorbed": "外存碎片",
+      "reason": "外存碎片和外部碎片是同义词，均指磁盘空间中的小空闲块，但概念A定义更具体于磁盘，概念B更通用，合并后规范名选“外部碎片”。"
+    },
+    {
+      "kept": "外部碎片",
+      "absorbed": "外碎片",
+      "reason": "外碎片和外部碎片是同义词，均指内存中分散的小空闲分区，合并后规范名选“外部碎片”。"
+    },
+    {
+      "kept": "NTFS文件系统",
+      "absorbed": "NTFS",
+      "reason": "NTFS是NTFS文件系统的简称，语义完全等价，规范名选较完整的“NTFS文件系统”。"
+    },
+    {
+      "kept": "文件目录",
+      "absorbed": "目录",
+      "reason": "文件目录和目录是同义词，均指文件控制块集合，规范名选较完整的“文件目录”。"
+    },
+    {
+      "kept": "索引节点",
+      "absorbed": "索引结点",
+      "reason": "索引结点和索引节点是同义词，均指UNIX文件元数据结构，规范名选“索引节点”。"
+    },
+    {
+      "kept": "内存索引节点",
+      "absorbed": "内存索引结点",
+      "reason": "内存索引结点和内存索引节点是同义词，均指磁盘索引节点的内存副本，规范名选“内存索引节点”。"
+    },
+    {
+      "kept": "多级目录结构",
+      "absorbed": "多级文件目录",
+      "reason": "多级目录结构和多级文件目录是同义词，均指树形层次目录，规范名选较完整的“多级目录结构”。"
+    },
+    {
+      "kept": "多级目录结构",
+      "absorbed": "多级目录",
+      "reason": "多级目录结构和多级目录是同义词，均指层次化目录，规范名选较完整的“多级目录结构”。"
+    },
+    {
+      "kept": "硬链接",
+      "absorbed": "硬连接",
+      "reason": "硬链接和硬连接是同义词，均指基于索引结点的文件共享，规范名选“硬链接”。"
+    },
+    {
+      "kept": "符号链接",
+      "absorbed": "软连接",
+      "reason": "符号链接和软连接是同义词，均指通过路径名共享文件，规范名选“符号链接”。"
+    },
+    {
+      "kept": "管道",
+      "absorbed": "管道连接",
+      "reason": "管道连接和管道是同义词，均指命令间数据流传递机制，规范名选较短的“管道”。"
+    },
+    {
+      "kept": "管道",
+      "absorbed": "管道机制",
+      "reason": "管道和管道机制是同义词，均指进程间通信机制，规范名选较短的“管道”。"
+    },
+    {
+      "kept": "陷入",
+      "absorbed": "内中断",
+      "reason": "陷入与内中断是同义词，均指由CPU内部事件引起的中断。"
+    },
+    {
+      "kept": "陷入",
+      "absorbed": "陷阱",
+      "reason": "陷入与陷阱是同义词，均指由指令触发的同步异常。"
+    },
+    {
+      "kept": "fork系统调用",
+      "absorbed": "fork",
+      "reason": "fork与fork系统调用是同一系统调用的简称与全称。"
+    },
+    {
+      "kept": "exit系统调用",
+      "absorbed": "exit",
+      "reason": "exit与exit系统调用是同一系统调用的简称与全称。"
+    },
+    {
+      "kept": "exec系统调用",
+      "absorbed": "exec",
+      "reason": "exec与exec系统调用是同一系统调用的简称与全称。"
+    },
+    {
+      "kept": "共享存储器机制",
+      "absorbed": "共享内存",
+      "reason": "共享存储器机制与共享内存是同义词，均指通过共享内存实现进程间通信。"
+    },
+    {
+      "kept": "局域网",
+      "absorbed": "计算机局域网",
+      "reason": "局域网与计算机局域网是同义词，均指覆盖较小地理范围的计算机网络。"
+    },
+    {
+      "kept": "路由选择",
+      "absorbed": "路径选择",
+      "reason": "路径选择与路由选择是同义词，均指网络层确定传输路径的机制。"
+    },
+    {
+      "kept": "TCP/IP协议",
+      "absorbed": "TCP/IP",
+      "reason": "全称与简称等价，语义完全相同。"
+    },
+    {
+      "kept": "传输控制协议",
+      "absorbed": "传输控制协议TCP",
+      "reason": "全称与全称加缩写等价，语义相同。"
+    },
+    {
+      "kept": "简单邮件传送协议",
+      "absorbed": "简单邮件传输协议",
+      "reason": "“传送”与“传输”为同义词，定义一致。"
+    },
+    {
+      "kept": "远程登录协议",
+      "absorbed": "远程登录服务",
+      "reason": "“协议”与“服务”在此语境下等价，均指Telnet。"
+    },
+    {
+      "kept": "统一资源定位符",
+      "absorbed": "统一资源定位器",
+      "reason": "“定位符”与“定位器”为同义词，定义一致。"
+    },
+    {
+      "kept": "网络文件系统协议NFS",
+      "absorbed": "网络文件系统NFS",
+      "reason": "两者均指NFS协议，定义一致。"
+    },
+    {
+      "kept": "网络文件系统协议NFS",
+      "absorbed": "NFS",
+      "reason": "全称与简称等价，定义一致。"
+    },
+    {
+      "kept": "单点登录",
+      "absorbed": "单一登录",
+      "reason": "“单点登录”与“单一登录”为同义词，定义一致。"
+    },
+    {
+      "kept": "数据加密标准",
+      "absorbed": "DES",
+      "reason": "简称与全称等价，定义一致。"
+    },
+    {
+      "kept": "数字证书",
+      "absorbed": "数字证明书",
+      "reason": "“数字证明书”与“数字证书”为同义词，定义一致。"
+    },
+    {
+      "kept": "访问控制矩阵",
+      "absorbed": "访问矩阵",
+      "reason": "“访问矩阵”与“访问控制矩阵”为同义词，定义一致。"
+    },
+    {
+      "kept": "保护域",
+      "absorbed": "域",
+      "reason": "“保护域”与“域”在此语境下等价，定义一致。"
+    },
+    {
+      "kept": "访问控制表",
+      "absorbed": "存取控制表",
+      "reason": "“访问控制表”与“存取控制表”为同义词，定义一致。"
+    },
+    {
+      "kept": "信号",
+      "absorbed": "信号通信工具",
+      "reason": "信号通信工具是信号的别名，两者均指UNIX进程间通信的软中断机制。"
+    },
+    {
+      "kept": "共享存储器机制",
+      "absorbed": "共享存储区",
+      "reason": "共享存储区是共享内存的别名，均指多个进程共享同一物理内存的通信方式。"
+    },
+    {
+      "kept": "提前读方式",
+      "absorbed": "预先读",
+      "reason": "提前读方式与预先读同义，均指在读取当前盘块时提前读入下一盘块以加速顺序访问。"
+    },
+    {
+      "kept": "超级块",
+      "absorbed": "超块",
+      "reason": "超块是超级块的简称，均指文件系统中记录元数据的特殊盘块。"
+    },
+    {
+      "kept": "冯·诺依曼体系结构",
+      "absorbed": "冯诺依曼计算机",
+      "reason": "冯诺依曼计算机是冯·诺依曼体系结构的别称，均指存储程序原理的计算机体系结构。"
+    },
+    {
+      "kept": "页式内存管理",
+      "absorbed": "页式存储管理",
+      "reason": "页式内存管理与分页存储管理同义，均指将虚拟地址空间和物理内存划分为固定大小页框的管理方式。"
+    },
+    {
+      "kept": "UNIX操作系统",
+      "absorbed": "Unix",
+      "reason": "Unix与UNIX操作系统是同一操作系统的不同写法，语义完全等价。"
+    },
+    {
+      "kept": "引导加载程序",
+      "absorbed": "Boot Loader",
+      "reason": "Boot Loader是引导加载程序的英文名称，两者均指初始化硬件并加载内核的启动代码。"
+    },
+    {
+      "kept": "引导加载程序",
+      "absorbed": "Bootloader",
+      "reason": "Bootloader是引导加载程序的英文名称，两者语义完全等价。"
+    },
+    {
+      "kept": "分区表",
+      "absorbed": "硬盘分区表",
+      "reason": "硬盘分区表是分区表的具体形式，两者均指记录磁盘分区信息的数据结构。"
+    },
+    {
+      "kept": "数据段",
+      "absorbed": "数据节",
+      "reason": "数据节是数据段的别名，均指存放已初始化全局变量的内存区域。"
+    },
+    {
+      "kept": "代码段",
+      "absorbed": "文本节",
+      "reason": "代码段和文本节是同义词，均指存放程序执行代码的内存区域。"
+    },
+    {
+      "kept": "可变分区",
+      "absorbed": "可变式分区",
+      "reason": "可变分区和可变式分区是完全同义的概念。"
+    },
+    {
+      "kept": "位图",
+      "absorbed": "位视图",
+      "reason": "位图和位视图在文件存储空间管理中是完全同义的。"
+    },
+    {
+      "kept": "覆盖技术",
+      "absorbed": "覆盖",
+      "reason": "覆盖技术和覆盖是完全同义的概念。"
+    },
+    {
+      "kept": "ELF文件格式",
+      "absorbed": "ELF文件",
+      "reason": "ELF文件格式和ELF文件是完全同义的。"
+    },
+    {
+      "kept": "程序装载",
+      "absorbed": "可执行文件加载",
+      "reason": "程序装载和可执行文件加载是完全同义的概念。"
+    },
+    {
+      "kept": "内存映射",
+      "absorbed": "内存映射文件",
+      "reason": "内存映射和内存映射文件是完全同义的机制。"
+    },
+    {
+      "kept": "哈希页表",
+      "absorbed": "杂凑页表",
+      "reason": "哈希页表和杂凑页表是完全同义的概念。"
+    },
+    {
+      "kept": "Clock置换算法",
+      "absorbed": "时钟算法",
+      "reason": "时钟页面置换算法和时钟算法是完全同义的。"
+    },
+    {
+      "kept": "优先级反转",
+      "absorbed": "优先级倒置",
+      "reason": "优先级反转和优先级倒置是完全同义的概念。"
+    },
+    {
+      "kept": "有序资源分配法",
+      "absorbed": "打破循环等待条件",
+      "reason": "两者描述同一死锁预防策略，只是表述不同，语义完全等价。"
+    },
+    {
+      "kept": "条带化",
+      "absorbed": "数据条带",
+      "reason": "两者描述同一磁盘数据分布技术，名称互为同义词。"
+    },
+    {
+      "kept": "基于日志结构的文件系统",
+      "absorbed": "日志结构文件系统",
+      "reason": "两者描述同一文件系统类型，名称互为同义词。"
+    }
+  ]
+}

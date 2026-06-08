@@ -1,0 +1,4170 @@
+[
+  {
+    "source": "GNU",
+    "target": "Linux操作系统",
+    "type": "PREREQUISITE",
+    "description": "Linux操作系统的定义中明确提到使用GNU软件，若不了解GNU则无法理解该表述的具体含义。",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "用户态",
+    "target": "上下文切换",
+    "type": "PREREQUISITE",
+    "description": "上下文切换的定义中明确包含CPU在用户态与系统态之间切换的模式切换，离开用户态概念无法表述这种切换。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "系统态",
+    "target": "上下文切换",
+    "type": "PREREQUISITE",
+    "description": "上下文切换的定义中明确包含CPU在系统态与用户态之间切换的模式切换，离开系统态概念无法表述这种切换。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "系统区表",
+    "target": "进程区表",
+    "type": "PREREQUISITE",
+    "description": "进程区表存放各区起始虚地址及指向系统区表中对应表项的指针，其定义直接依赖系统区表的存在",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程表项",
+    "target": "U区",
+    "type": "PREREQUISITE",
+    "description": "U区是存放用户进程表项扩充数据的区域，若没有进程表项则无法定义其扩充内容",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程表项",
+    "target": "exit系统调用",
+    "type": "PREREQUISITE",
+    "description": "exit系统调用会将进程状态修改为终止态，并将退出状态等信息写入进程表项，进程表项是存放这些核心数据的地方，exit操作直接修改进程表项内容。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程表项",
+    "target": "wait系统调用",
+    "type": "PREREQUISITE",
+    "description": "wait系统调用需要检查子进程的终止状态，该状态信息存储在子进程的进程表项中，wait通过读取进程表项内容来判断子进程是否终止。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程表项",
+    "target": "U区",
+    "type": "PREREQUISITE",
+    "description": "U区定义为存放进程表项扩充数据的私用区域，其核心含义是作为进程表项的补充，直接引用了进程表项的概念。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "页面年龄",
+    "target": "0进程",
+    "type": "PREREQUISITE",
+    "description": "0进程定期增加有效页年龄并将超龄页面换出，其核心操作直接作用于页面年龄，缺此概念则0进程的行为无从描述",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "0进程",
+    "target": "1进程",
+    "type": "PREREQUISITE",
+    "description": "1进程被定义为由0进程创建的始祖进程，因此1进程的概念直接引用0进程",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑地址",
+    "target": "内存保护",
+    "type": "PREREQUISITE",
+    "description": "内存保护常使用界限寄存器方法，界限寄存器中保存的是作业逻辑地址的范围，防止越界访问，其机制直接依赖逻辑地址的定义。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑地址",
+    "target": "地址映射",
+    "type": "PREREQUISITE",
+    "description": "地址映射的定义明确将逻辑地址作为转换的起点，没有逻辑地址则无法定义地址映射。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "后备队列",
+    "target": "监督程序",
+    "type": "PREREQUISITE",
+    "description": "监督程序的核心操作是从后备队列中选取作业并调入内存，没有后备队列，监督程序的作业调度功能无法定义。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "后备队列",
+    "target": "作业调度",
+    "type": "PREREQUISITE",
+    "description": "作业调度的定义明确指出从外存上的后备队列中选择作业调入内存，没有后备队列就无法定义作业调度。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "字符缓冲区",
+    "target": "空闲字符缓冲区队列",
+    "type": "PREREQUISITE",
+    "description": "空闲字符缓冲区队列是由所有空闲字符缓冲区链接形成的队列，其定义直接依赖字符缓冲区的概念。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "字符缓冲区",
+    "target": "cblock结构",
+    "type": "PREREQUISITE",
+    "description": "cblock结构是专门用于描述字符缓冲区的数据结构，其定义直接提及“字符缓冲区”。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "字符缓冲区",
+    "target": "clist结构",
+    "type": "PREREQUISITE",
+    "description": "clist结构是控制字符缓冲区队列的信息块，其定义明确引用字符缓冲区队列，而字符缓冲区队列由字符缓冲区组成，因此clist结构的理解必须以字符缓冲区为基础。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "盘块缓冲区",
+    "target": "散列队列",
+    "type": "PREREQUISITE",
+    "description": "散列队列是按设备号和块号散列值组织的双向链表，其设计目标是快速查找特定盘块缓冲区，没有盘块缓冲区概念则散列队列的存在意义无法表述。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "盘块缓冲区",
+    "target": "一般读方式",
+    "type": "PREREQUISITE",
+    "description": "一般读方式的核心操作是将盘块信息读入盘块缓冲区，读操作直接作用于盘块缓冲区。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "盘块缓冲区",
+    "target": "一般写方式",
+    "type": "PREREQUISITE",
+    "description": "一般写方式的核心操作是将盘块缓冲区数据写入磁盘，写操作直接作用于盘块缓冲区。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "超级块",
+    "target": "空闲磁盘i结点编号栈",
+    "type": "PREREQUISITE",
+    "description": "空闲磁盘i结点编号栈存储在超级块中，作为超级块数据结构的一部分，没有超级块的概念无法说明该栈的定位和用途。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "中断和陷入处理",
+    "target": "请求调入功能",
+    "type": "PREREQUISITE",
+    "description": "请求调入功能在运行时需通过缺页中断触发所需页面的调入，中断和陷入处理是其实现中不可或缺的触发和响应机制。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "中断和陷入处理",
+    "target": "设备处理",
+    "type": "PREREQUISITE",
+    "description": "设备处理的核心操作包括处理设备中断，中断和陷入处理是其定义中直接引用的中断响应和处理部分，缺此则设备处理无法完成。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "页表机制",
+    "target": "请求调入功能",
+    "type": "PREREQUISITE",
+    "description": "请求调入功能必须依赖页表机制中的存在位等标志来判断页面是否在内存，页表机制为其提供了必要的状态记录和地址转换基础。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "存储程序概念",
+    "target": "冯·诺依曼体系结构",
+    "type": "PREREQUISITE",
+    "description": "冯·诺依曼体系结构的核心定义是采用存储程序原理，直接引用了存储程序概念",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "存储程序概念",
+    "target": "单道程序系统",
+    "type": "PREREQUISITE",
+    "description": "单道程序系统的定义中“内存中仅存放一道程序”直接基于程序以二进制形式存储在内存中的存储程序概念，没有该概念则无法表述程序在内存中的存储与执行。",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "冯·诺依曼体系结构",
+    "target": "冯·诺依曼瓶颈",
+    "type": "PREREQUISITE",
+    "description": "冯·诺依曼瓶颈特指冯·诺依曼结构中指令和数据共用总线导致的性能限制，其定义必须依赖冯·诺依曼体系结构",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "冯·诺依曼瓶颈",
+    "target": "哈佛结构",
+    "type": "PREREQUISITE",
+    "description": "哈佛结构的定义明确以解决冯·诺依曼瓶颈为目标，直接引用冯·诺依曼瓶颈",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "指令分级",
+    "target": "微内核结构",
+    "type": "PREREQUISITE",
+    "description": "微内核结构中用户态服务器的运行方式依赖CPU特权级别的划分，该划分由指令分级机制提供",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "指令分级",
+    "target": "内核页表隔离",
+    "type": "PREREQUISITE",
+    "description": "内核页表隔离基于用户态/内核态的区分来控制访问，该区分依赖指令分级定义的特权级",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "页式内存管理",
+    "target": "内核页表隔离",
+    "type": "PREREQUISITE",
+    "description": "内核页表隔离直接操作页表来分离内核与用户空间，页表概念来自页式内存管理机制",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "批处理技术",
+    "target": "批处理系统",
+    "type": "PREREQUISITE",
+    "description": "批处理系统的定义中“将作业成批输入并处理”是批处理技术的直接应用，批处理系统的核心操作流程完全依赖于批处理技术。",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "脱机输入技术",
+    "target": "脱机批处理系统",
+    "type": "PREREQUISITE",
+    "description": "脱机批处理系统通过卫星机将作业从输入设备读入磁带再供主机读取，其输入处理路径直接采用脱机输入技术，缺此技术则无法描述脱机批处理系统的输入方式。",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "脱机输出技术",
+    "target": "脱机批处理系统",
+    "type": "PREREQUISITE",
+    "description": "脱机批处理系统通过卫星机将计算结果从输出磁带传至输出设备，其输出处理路径直接基于脱机输出技术，缺此技术则无法说明脱机批处理系统的输出机制。",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "IBM System/360",
+    "target": "OS/360",
+    "type": "PREREQUISITE",
+    "description": "OS/360是为IBM System/360系列计算机设计的操作系统，其指令集、体系结构和硬件特性完全绑定于该平台，脱离IBM System/360则无法定义OS/360的目标环境和功能基础。",
+    "chapter": "1.引论",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "扩充机器",
+    "type": "PREREQUISITE",
+    "description": "扩充机器的定义中直接包含'覆盖了操作系统软件的计算机'，去掉操作系统概念后扩充机器的含义无法表述",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "用户与操作系统接口",
+    "type": "PREREQUISITE",
+    "description": "用户与操作系统接口的定义中直接提到操作系统作为中介，没有操作系统无法定义该接口",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "资源管理者",
+    "type": "PREREQUISITE",
+    "description": "资源管理者的定义直接说明操作系统负责管理资源，没有操作系统则资源管理者概念无法独立存在。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "抽象",
+    "type": "PREREQUISITE",
+    "description": "抽象的定义中隐含操作系统通过隐藏硬件细节提供简化接口，没有操作系统则抽象概念无法具体化。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "命令接口",
+    "type": "PREREQUISITE",
+    "description": "命令接口是操作系统提供的功能，没有操作系统则无法定义命令接口。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "系统调用",
+    "type": "PREREQUISITE",
+    "description": "系统调用是操作系统提供给应用程序的接口，其定义直接依赖于操作系统的存在。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "处理机管理",
+    "type": "PREREQUISITE",
+    "description": "处理机管理是操作系统对处理器资源的管理功能，其定义直接依赖于操作系统。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "存储器管理",
+    "type": "PREREQUISITE",
+    "description": "存储器管理是操作系统对内存的管理功能，其定义直接依赖于操作系统。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "文件系统",
+    "type": "PREREQUISITE",
+    "description": "文件系统是操作系统中负责管理外存上文件的子系统，其定义直接引用操作系统作为其所属系统。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "操作系统",
+    "target": "资源管理",
+    "type": "PREREQUISITE",
+    "description": "资源管理的定义明确操作系统作为资源管理者，操作系统是资源管理的执行者。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程",
+    "target": "线程",
+    "type": "PREREQUISITE",
+    "description": "线程的核心定义是比进程更小的独立运行和调度基本单位，且共享进程的资源，线程的定义直接依赖于进程的概念。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "进程",
+    "target": "资源共享",
+    "type": "PREREQUISITE",
+    "description": "资源共享的定义明确指出资源供内存中多个并发执行的进程或线程共同使用，其表述直接依赖于进程概念。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "进程",
+    "target": "临界资源",
+    "type": "PREREQUISITE",
+    "description": "临界资源的定义直接引用进程，规定只允许一个进程访问，没有进程概念就无法定义临界资源。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程",
+    "target": "同时访问方式",
+    "type": "PREREQUISITE",
+    "description": "同时访问方式的定义直接引用进程，允许多个进程同时访问，没有进程概念就无法定义。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程",
+    "target": "进程通信",
+    "type": "PREREQUISITE",
+    "description": "进程通信的定义直接以进程为通信主体，没有进程概念无法定义进程通信。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程",
+    "target": "进程调度",
+    "type": "PREREQUISITE",
+    "description": "进程调度的操作对象是进程，没有进程概念无法定义进程调度。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程上下文",
+    "target": "进程上下文切换",
+    "type": "PREREQUISITE",
+    "description": "进程上下文切换的直接操作就是保存当前进程的进程上下文并恢复另一进程的进程上下文，没有进程上下文概念，切换操作无从定义",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程上下文",
+    "target": "exec系统调用",
+    "type": "PREREQUISITE",
+    "description": "exec系统调用的核心语义是用可执行文件覆盖调用进程的进程映像，而进程映像即进程上下文的实体，没有进程上下文就无法解释如何覆盖进程的执行环境",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "动态优先数轮转调度算法",
+    "target": "被抢占状态",
+    "type": "PREREQUISITE",
+    "description": "被抢占状态的定义明确依赖该调度算法的抢占式优先数调度策略：核心态进程返回用户态时，若有更高优先级进程，则当前进程被抢占处理机而进入该状态",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "多道程序设计技术",
+    "target": "作业调度",
+    "type": "PREREQUISITE",
+    "description": "作业调度将作业从外存调入内存的前提是系统支持多道程序设计，使其能够管理多个并发作业，因此作业调度的定义依赖于多道程序设计技术。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "多道程序设计技术",
+    "target": "进程调度",
+    "type": "PREREQUISITE",
+    "description": "进程调度是在多道环境下分配CPU给就绪进程，若无多道程序设计技术带来的并发，进程调度即无存在的必要，其基本操作围绕多道并发进程展开。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "多道程序设计技术",
+    "target": "内存分配",
+    "type": "PREREQUISITE",
+    "description": "内存分配机制的核心目标是为同时驻留的多道程序分配内存以提高利用率，其功能定义直接建立在多道程序设计技术营造的多道环境之上。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "多道程序设计技术",
+    "target": "虚拟处理机技术",
+    "type": "PREREQUISITE",
+    "description": "虚拟处理机技术描述中明确指出‘利用多道程序设计技术’，将其作为实现物理机虚拟化的基础，因此该技术的表述直接依赖多道程序设计技术。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "多道程序设计技术",
+    "target": "存储器管理",
+    "type": "PREREQUISITE",
+    "description": "存储器管理需要支持多道程序并发执行，其核心功能（内存分配、保护）直接依赖于多道程序设计技术。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "多道程序设计技术",
+    "target": "异步性",
+    "type": "PREREQUISITE",
+    "description": "异步性的定义直接基于多道程序环境，没有多道程序设计技术就没有异步性",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "内存分配",
+    "target": "作业调度",
+    "type": "PREREQUISITE",
+    "description": "作业调度在将作业调入内存时，必须为作业分配内存空间，该步骤直接调用内存分配机制，因此作业调度的完整操作依赖内存分配。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "内存分配",
+    "target": "地址映射",
+    "type": "PREREQUISITE",
+    "description": "地址映射转换逻辑地址时需要基址和界限等由内存分配产生的信息，没有内存分配提供的物理区域，地址映射即无法进行。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "内存分配",
+    "target": "请求调入功能",
+    "type": "PREREQUISITE",
+    "description": "请求调入功能在调入缺失部分时，需要动态分配物理内存帧来存放，该分配步骤直接依赖于内存分配机制。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "地址映射",
+    "target": "请求调入功能",
+    "type": "PREREQUISITE",
+    "description": "请求调入功能调入所需页面/段后，必须更新页表/段表以重定向地址映射，其功能的正确性依赖于地址映射机制来完成地址转换的重新配置。",
+    "chapter": "1.操作系统引论",
+    "reviewed": false
+  },
+  {
+    "source": "幻数",
+    "target": "引导扇区",
+    "type": "PREREQUISITE",
+    "description": "引导扇区末尾必须包含特定的字节序列55AA（即幻数），BIOS通过验证该幻数来判断引导扇区是否有效，引导扇区的核心启动功能完全依赖于幻数的存在与定义。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "信号",
+    "target": "exit系统调用",
+    "type": "PREREQUISITE",
+    "description": "exit系统调用在终止进程时会向其父进程发送SIGCHLD信号以通知事件，信号的发送机制是exit定义中明确的一部分。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程树",
+    "target": "exit系统调用",
+    "type": "PREREQUISITE",
+    "description": "exit系统调用终止进程时，需要将其所有子进程的父进程改为init进程，这一操作直接修改进程树的父子关系，依赖于进程树的概念。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "进程树",
+    "target": "wait系统调用",
+    "type": "PREREQUISITE",
+    "description": "wait系统调用用于等待调用者自身的子进程，其操作建立在父子进程关系的基础上，进程树正是描述这一父子关系的结构。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "开放软件基金会",
+    "target": "共同开放软件环境",
+    "type": "PREREQUISITE",
+    "description": "共同开放软件环境是由OSF和UI两大集团联合开发的标准，其定义直接提及并依赖于开放软件基金会（OSF）这一组织。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "UI集团",
+    "target": "共同开放软件环境",
+    "type": "PREREQUISITE",
+    "description": "共同开放软件环境是由OSF和UI两大集团联合开发的标准，其定义直接提及并依赖于UI集团这一组织。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "UNIX系统",
+    "target": "UNIX系统发展史",
+    "type": "PREREQUISITE",
+    "description": "UNIX系统发展史是对UNIX系统从诞生至今的演变过程的描述，其主题和内容完全基于UNIX系统概念，缺少UNIX系统则无法表述发展史。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "UNIX系统",
+    "target": "应用程序接口",
+    "type": "PREREQUISITE",
+    "description": "应用程序接口是操作系统为应用程序提供的编程接口标准，其目的是实现不同UNIX系统间的兼容性，这一定义直接建立在UNIX系统概念之上。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "混合索引文件结构",
+    "target": "地址转换过程bmap",
+    "type": "PREREQUISITE",
+    "description": "bmap将逻辑字节偏移转换为物理盘块号时，必须依据混合索引文件结构中定义的直接块、一次间接块、二次间接块等寻址方式，没有混合索引文件结构，bmap无法进行地址转换。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "ifree",
+    "target": "iput",
+    "type": "PREREQUISITE",
+    "description": "iput 在回收内存索引结点时，若发现该 i 结点的磁盘链接计数已为零且内存引用计数为零，则必须调用 ifree 释放对应的磁盘索引结点，否则磁盘 i 结点无法回收。",
+    "chapter": "10.UNIX系统内核结构",
+    "reviewed": false
+  },
+  {
+    "source": "死锁",
+    "target": "哲学家进餐问题",
+    "type": "PREREQUISITE",
+    "description": "哲学家进餐问题的核心描述是多个进程可能发生死锁，没有死锁概念则无法表述该问题。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "死锁",
+    "target": "AND信号量机制",
+    "type": "PREREQUISITE",
+    "description": "AND信号量机制的定义明确指出其目的是避免死锁，机制设计围绕同时获取多个资源以避免死锁展开，不理解死锁概念就无法理解AND机制的必要性和原理。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "线程控制块",
+    "target": "线程创建",
+    "type": "PREREQUISITE",
+    "description": "线程创建过程中需要通过线程控制块来管理和控制新线程，线程控制块是线程创建操作的核心数据结构。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "线程控制块",
+    "target": "线程创建",
+    "type": "PREREQUISITE",
+    "description": "线程创建的核心操作是分配并初始化线程控制块，没有线程控制块的概念，无法表述线程创建的具体行为。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "线程控制块",
+    "target": "线程终止",
+    "type": "PREREQUISITE",
+    "description": "线程终止意味着回收线程控制块并清理资源，其定义直接基于线程控制块的存在。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "忙等",
+    "target": "让权等待",
+    "type": "PREREQUISITE",
+    "description": "让权等待的定义明确指出“避免忙等”，去掉忙等概念则无法理解让权等待的目标和语境。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "忙等",
+    "target": "让权等待",
+    "type": "PREREQUISITE",
+    "description": "让权等待的定义直接以“避免忙等”作为其设计目标，忙等是该准则所针对的问题，未理解忙等则让权等待的存在意义无从解释。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "消息缓冲区",
+    "target": "信箱",
+    "type": "PREREQUISITE",
+    "description": "信箱通信的实现依赖消息缓冲区作为消息的存储结构，信箱中存放的是消息缓冲区的链表，去掉消息缓冲区则无法描述信箱中消息的格式和存储机制。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "原语",
+    "target": "进程控制",
+    "type": "PREREQUISITE",
+    "description": "进程控制的定义中明确指出其操作“由原语实现”，原语是构成进程控制操作的基本执行单元，缺其则进程控制的实现机制无法说明。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "静止就绪",
+    "target": "静止阻塞",
+    "type": "PREREQUISITE",
+    "description": "静止阻塞的定义中规定其等待事件发生后转为静止就绪，静止就绪是该状态转换的唯一目标态，缺少静止就绪则静止阻塞的后续转换路径无法表述。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "BIOS",
+    "target": "硬件自检",
+    "type": "PREREQUISITE",
+    "description": "硬件自检是BIOS在系统启动时执行的核心流程，其定义完全依附于BIOS，无BIOS则无法说明自检的执行主体和时机。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "BIOS",
+    "target": "启动顺序",
+    "type": "PREREQUISITE",
+    "description": "启动顺序是指BIOS设置中的设备引导优先级，其概念直接引用BIOS作为配置环境。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "BIOS",
+    "target": "X86启动过程",
+    "type": "PREREQUISITE",
+    "description": "X86启动过程的定义明确包含BIOS阶段，BIOS是x86平台加电后的首个固件执行步骤。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "硬件自检",
+    "target": "X86启动过程",
+    "type": "PREREQUISITE",
+    "description": "X86启动过程的步骤明确包括POST（硬件自检），硬件自检是该流程不可或缺的环节。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "引导加载程序",
+    "target": "X86启动过程",
+    "type": "PREREQUISITE",
+    "description": "X86启动过程的最终目标是加载操作系统引导程序，其流程描述直接引用引导加载程序作为终点。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "引导加载程序",
+    "target": "Linux内核启动过程",
+    "type": "PREREQUISITE",
+    "description": "Linux内核启动过程以Bootloader加载内核为起点，其定义直接依赖于引导加载程序的概念和前置动作。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "UEFI",
+    "target": "GPT",
+    "type": "PREREQUISITE",
+    "description": "GPT被定义为UEFI使用的分区方案，其角色和定位直接依托于UEFI固件标准。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "主分区",
+    "target": "活动分区",
+    "type": "PREREQUISITE",
+    "description": "活动分区是标记为可引导的主分区，其定义的核心是主分区概念的延伸，无主分区则活动分区无从谈起。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "扩展分区",
+    "target": "逻辑分区",
+    "type": "PREREQUISITE",
+    "description": "逻辑分区被定义为在扩展分区内划分的独立分区，其存在完全依赖于扩展分区的概念。",
+    "chapter": "2.启动",
+    "reviewed": false
+  },
+  {
+    "source": "进程控制块",
+    "target": "创建状态",
+    "type": "PREREQUISITE",
+    "description": "创建状态的定义指出“PCB已分配但资源未完全就绪”，明确引用了进程控制块的概念，缺少PCB则无法表述创建状态的特征。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "进程控制块",
+    "target": "终止状态",
+    "type": "PREREQUISITE",
+    "description": "终止状态的定义指出“PCB尚未被回收”，明确引用了进程控制块，缺少PCB则无法描述终止状态的特征。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "程序的并发执行",
+    "target": "程序并发执行的特征",
+    "type": "PREREQUISITE",
+    "description": "程序并发执行的特征（间断性、失去封闭性、不可再现性）是由程序的并发执行直接产生的，不先理解程序的并发执行则无从谈起其特征。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "一对一模型",
+    "target": "多对多模型",
+    "type": "PREREQUISITE",
+    "description": "多对多模型的定义“结合一对一和多对一优点”直接引用了“一对一”概念，必须先理解一对一模型及其优点才能完整理解多对多模型。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "多对一模型",
+    "target": "多对多模型",
+    "type": "PREREQUISITE",
+    "description": "多对多模型的定义同样直接引用了“多对一”概念，必须先理解多对一模型及其优点才能完整理解多对多模型。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "运行时系统",
+    "type": "PREREQUISITE",
+    "description": "运行时系统是用于管理和控制用户级线程的函数集合，其定义明确以用户级线程为管理对象。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "组合方式线程",
+    "type": "PREREQUISITE",
+    "description": "组合方式线程的定义是同时支持用户级线程和内核支持线程，缺少用户级线程则组合概念无法成立。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "轻型进程",
+    "type": "PREREQUISITE",
+    "description": "轻型进程定义为用户级线程与内核之间的中间层，其概念直接引用用户级线程。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "线程池",
+    "type": "PREREQUISITE",
+    "description": "线程池是供用户线程连接的LWP池，其核心用途是服务用户级线程，定义中明确提及用户线程。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "一对一模型",
+    "type": "PREREQUISITE",
+    "description": "一对一模型定义每个用户线程对应一个内核线程，直接以用户线程为基础。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "多对一模型",
+    "type": "PREREQUISITE",
+    "description": "多对一模型定义多个用户线程映射到一个内核线程，依赖用户线程概念。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "用户级线程",
+    "target": "多对多模型",
+    "type": "PREREQUISITE",
+    "description": "多对多模型定义多个用户线程映射到多个内核线程，依赖用户线程。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "内核支持线程",
+    "target": "组合方式线程",
+    "type": "PREREQUISITE",
+    "description": "组合方式线程的定义同时依赖内核支持线程，去掉内核支持线程其含义无法表述。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "内核支持线程",
+    "target": "一对一模型",
+    "type": "PREREQUISITE",
+    "description": "一对一模型定义中也直接以内核线程为基础。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "内核支持线程",
+    "target": "多对一模型",
+    "type": "PREREQUISITE",
+    "description": "多对一模型定义中同样依赖内核线程概念。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "内核支持线程",
+    "target": "多对多模型",
+    "type": "PREREQUISITE",
+    "description": "多对多模型也依赖内核线程。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "静态重定位",
+    "target": "单道程序内存管理",
+    "type": "PREREQUISITE",
+    "description": "单道程序内存管理的核心操作是静态地址翻译（即静态重定位），其定义明确采用静态重定位技术，缺此则无法表述其地址转换方式。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "分区式分配",
+    "target": "多道程序存储管理",
+    "type": "PREREQUISITE",
+    "description": "多道程序存储管理的定义直接指明采用分区分配方式，分区式分配是实现多个程序并发内存共享的基础，缺此则无法解释其内存划分机制。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "重定位",
+    "target": "重定位信息",
+    "type": "PREREQUISITE",
+    "description": "重定位信息的定义是用于修改代码或数据地址的信息，其目的和内容完全基于重定位操作，缺重定位则其含义无法理解。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "重定位",
+    "target": "动态运行时装入方式",
+    "type": "PREREQUISITE",
+    "description": "动态运行时装入方式的核心是在程序运行时动态转换地址，这直接依赖于重定位的基本原理，无重定位概念无法解释地址的动态修改。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "重定位",
+    "target": "紧凑",
+    "type": "PREREQUISITE",
+    "description": "紧凑操作需要移动作业，移动后必须修正作业内所有地址，这必须借助重定位技术，无重定位概念无法实施紧凑。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "重定位",
+    "target": "基本分页存储管理方式",
+    "type": "PREREQUISITE",
+    "description": "分页管理中页表完成虚拟地址到物理地址的转换，这一地址映射过程本质就是重定位，必须依赖重定位的基本概念。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "死锁检测",
+    "target": "死锁解除",
+    "type": "PREREQUISITE",
+    "description": "死锁解除的定义直接依赖于死锁检测的发生：检测到死锁后，通过撤消或挂起进程等方式解除死锁，无死锁检测则无法表述解除操作的前提。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "死锁检测",
+    "target": "死锁解除",
+    "type": "PREREQUISITE",
+    "description": "死锁解除的定义以检测到死锁为前提，其核心操作——撤消或挂起进程——直接依赖死锁检测的存在和结果，缺此则死锁解除无法启动。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "段",
+    "target": "段描述符",
+    "type": "PREREQUISITE",
+    "description": "段描述符是描述段属性的数据结构，其核心字段如基地址、长度均直接针对段进行定义。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "段描述符",
+    "target": "段选择子",
+    "type": "PREREQUISITE",
+    "description": "段选择子的功能是通过索引定位到一个段描述符，其操作语义完全建立在段描述符的存在之上。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "段描述符",
+    "target": "全局描述符表",
+    "type": "PREREQUISITE",
+    "description": "全局描述符表定义为存放段描述符的表格，表格条目的类型就是段描述符。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "段描述符",
+    "target": "局部描述符表",
+    "type": "PREREQUISITE",
+    "description": "局部描述符表同样定义为存放段描述符的表格，与GDT的唯一区别是作用域。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页表项",
+    "target": "页保护",
+    "type": "PREREQUISITE",
+    "description": "页保护机制直接读取并检查页表项中的保护位字段，若没有页表项则无法定义页保护操作。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页表项",
+    "target": "一级页表",
+    "type": "PREREQUISITE",
+    "description": "一级页表是由页表项组成的页表结构，没有页表项就无法定义一级页表。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "非剥夺性资源",
+    "target": "不剥夺条件",
+    "type": "PREREQUISITE",
+    "description": "不剥夺条件定义中资源不可被强制剥夺的特性，直接源于非剥夺性资源的概念。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "最大需求矩阵",
+    "target": "需求矩阵",
+    "type": "PREREQUISITE",
+    "description": "需求矩阵的每个元素由最大需求矩阵对应元素减去分配矩阵得到，没有最大需求矩阵则需求矩阵无法计算或定义。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "分配矩阵",
+    "target": "需求矩阵",
+    "type": "PREREQUISITE",
+    "description": "需求矩阵的每个元素由最大需求矩阵对应元素减去分配矩阵得到，没有分配矩阵则需求矩阵无法计算或定义。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "编译",
+    "target": "链接",
+    "type": "PREREQUISITE",
+    "description": "链接的定义是将目标模块链接成装入模块，目标模块由编译产生，缺编译则链接无操作对象。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "链接",
+    "target": "装入",
+    "type": "PREREQUISITE",
+    "description": "装入的定义是将装入模块载入内存，装入模块是链接的输出，缺链接则装入无处理对象。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "链接",
+    "target": "装入",
+    "type": "PREREQUISITE",
+    "description": "装入程序的操作对象是链接后形成的装入模块，因此装入的定义必须依赖链接的概念。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "程序头表",
+    "target": "程序装载",
+    "type": "PREREQUISITE",
+    "description": "程序装载过程根据程序头表中的段描述信息将文件内容映射到进程地址空间，没有程序头表无法确定装载方式。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "ELF头",
+    "target": "程序装载",
+    "type": "PREREQUISITE",
+    "description": "程序装载需要读取ELF头以验证文件类型、获取入口地址，并通过e_phoff定位程序头表，ELF头是装载的起点。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "节头表",
+    "target": "符号解析",
+    "type": "PREREQUISITE",
+    "description": "符号解析需要访问符号表，符号表在ELF文件中作为节存在，通过节头表中的条目定位该节。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "全局偏移量表",
+    "target": "过程连接表",
+    "type": "PREREQUISITE",
+    "description": "过程连接表的延迟绑定机制通过跳转到全局偏移量表中的条目实现，PLT的功能直接依赖GOT中地址的存储。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "全局偏移量表",
+    "target": "动态链接",
+    "type": "PREREQUISITE",
+    "description": "动态链接利用全局偏移量表（GOT）存储已解析的全局符号地址，运行时通过GOT直接访问，无GOT无法完成符号的动态地址获取。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "段式地址映射",
+    "target": "扁平化内存管理",
+    "type": "PREREQUISITE",
+    "description": "扁平化内存管理通过设置段基址为0和段限长为4GB来简化分段，其定义直接基于段式地址映射中的段选择子和描述符。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "段式地址映射",
+    "target": "分页与分段比较",
+    "type": "PREREQUISITE",
+    "description": "分页与分段比较需要对比段式地址映射的机制，如用户可见性、地址空间维度等，缺少段式地址映射就无法进行对比。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "段式地址映射",
+    "target": "扁平化内存管理",
+    "type": "PREREQUISITE",
+    "description": "扁平化内存管理通过将段基址设为0、段限长设为4GB来实现简化分段，其定义直接依赖于段式地址映射中的段描述符和基址/限长概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "段式地址映射",
+    "target": "分页与分段比较",
+    "type": "PREREQUISITE",
+    "description": "分页与分段比较对比分段和分页的差异，必须首先理解段式地址映射的基本过程才能进行对比分析。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "缺页错误处理机制",
+    "type": "PREREQUISITE",
+    "description": "缺页错误处理过程包含页表查询、页面换入等步骤，这些操作完全基于页式地址映射的页表和地址转换机制。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "有效内存访问时间",
+    "type": "PREREQUISITE",
+    "description": "有效内存访问时间的计算基于页式地址映射中TLB命中与否的分支以及两次内存访问操作，没有页式地址映射无法定义该概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "页共享",
+    "type": "PREREQUISITE",
+    "description": "页共享是通过多个进程的页表项映射到同一物理页框实现的，其机制直接依赖页式地址映射中的页表结构。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "缺页错误处理机制",
+    "type": "PREREQUISITE",
+    "description": "缺页错误处理机制是针对页式地址映射中页表项无效时引发的缺页中断的一套处理步骤，其基本操作完全基于页式地址映射的硬件机制。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "固定分配策略",
+    "type": "PREREQUISITE",
+    "description": "固定分配策略为每个进程分配固定数量的页框，页框是页式地址映射中定义的物理内存基本单位，理解页框概念必须依赖页式地址映射。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "可变分配策略",
+    "type": "PREREQUISITE",
+    "description": "可变分配策略根据缺页率动态调整分配页框数，页框和缺页的概念均源自页式地址映射，缺页率直接建立在页式映射机制上。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "第二次机会页面置换算法",
+    "type": "PREREQUISITE",
+    "description": "第二次机会页面置换算法维护一个FIFO页面队列并检查访问位，页面和访问位均定义在页式地址映射的页表结构中，缺此无法表述算法。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "老化算法",
+    "type": "PREREQUISITE",
+    "description": "老化算法通过移位寄存器记录页面访问历史，页面及其访问位是页式地址映射中页表项的核心字段，无此无法解释老化算法的输入。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "对换系统",
+    "type": "PREREQUISITE",
+    "description": "对换系统是Solaris的页式虚拟存储管理系统，其核心操作对象是页面和页框，完全建立在页式地址映射的机制之上。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页式地址映射",
+    "target": "分页与分段比较",
+    "type": "PREREQUISITE",
+    "description": "分页与分段比较需要对比页式地址映射的固定大小页面、透明性等特性，页式地址映射是其比较对象之一。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "作业控制块",
+    "type": "PREREQUISITE",
+    "description": "作业控制块是系统为每个作业设置的数据结构，其存在标志和全部管理信息均以作业为实体，没有作业概念则无法定义作业控制块。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "作业流",
+    "type": "PREREQUISITE",
+    "description": "作业流定义为多个作业依次形成的外存输入流和处理流，作业是构成流的基本元素，缺少作业概念则作业流无法表述。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "多道程序度",
+    "type": "PREREQUISITE",
+    "description": "多道程序度是允许同时在内存中运行的作业数目，其度量单位直接引用作业，无作业则数目无对象。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "作业流",
+    "type": "PREREQUISITE",
+    "description": "作业流定义为“多个作业依次存放形成的输入流”，其构成元素直接是“作业”，缺少作业概念无法定义作业流。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "作业控制块",
+    "type": "PREREQUISITE",
+    "description": "作业控制块是系统为每个作业设置的数据结构，其存在意义和内容均围绕作业概念展开，无作业则无作业控制块。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "多道程序度",
+    "type": "PREREQUISITE",
+    "description": "多道程序度定义为“允许同时在内存中运行的作业数目”，直接量化作业的并发数，核心概念是作业。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "先来先服务调度算法",
+    "type": "PREREQUISITE",
+    "description": "先来先服务调度算法按“作业”到达外存的先后顺序进行调度，其调度对象是作业，算法语义完全基于作业的到达顺序。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "短作业优先调度算法",
+    "type": "PREREQUISITE",
+    "description": "短作业优先调度算法选择预计执行时间最短的作业（或对应进程）执行，核心依赖作业的执行时间属性，无作业概念则无法定义“短作业”。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "作业",
+    "target": "调度队列模型",
+    "type": "PREREQUISITE",
+    "description": "调度队列模型描述作业或进程在调度过程中形成的队列结构，其中作业是基本调度对象，模型定义直接引用作业概念。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "安全序列",
+    "target": "不安全状态",
+    "type": "PREREQUISITE",
+    "description": "不安全状态的定义核心是系统无法找到安全序列，安全序列是判定不安全状态的必要条件，脱离安全序列则无法解释何为不安全。",
+    "chapter": "3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "段表",
+    "target": "越界检查",
+    "type": "PREREQUISITE",
+    "description": "越界检查的定义是检查段号是否超出段表长度及段内地址是否超出段长，直接依赖段表提供的段表长度和段长信息，无段表则无法表述越界检查操作。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "段表",
+    "target": "存取控制检查",
+    "type": "PREREQUISITE",
+    "description": "存取控制检查的定义是根据段表的存取控制字段限制访问权限，直接依赖段表中存储的存取控制信息，无段表则该项检查无从谈起。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "段表",
+    "target": "动态增长",
+    "type": "PREREQUISITE",
+    "description": "动态增长允许段在运行时增加长度，这需要更新段表中该段的长度字段，段表是实现动态增长机制不可或缺的数据结构。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "段表",
+    "target": "地址越界中断",
+    "type": "PREREQUISITE",
+    "description": "地址越界中断发生时需要依据段表中记录的段长判断逻辑地址是否越界，段表是产生该中断的硬件逻辑所需的数据结构。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "死锁发生的四个必要条件",
+    "target": "有序资源分配法",
+    "type": "PREREQUISITE",
+    "description": "有序资源分配法的核心策略是防止形成环路等待，而环路等待是死锁发生的四个必要条件之一，若不了解该条件，就无法理解为何按序分配能预防死锁。",
+    "chapter": "4.死锁",
+    "reviewed": false
+  },
+  {
+    "source": "死锁发生的四个必要条件",
+    "target": "打破不可剥夺条件",
+    "type": "PREREQUISITE",
+    "description": "打破不可剥夺条件的方法直接针对死锁四个必要条件中的不剥夺条件，其解除死锁的机理完全建立在不剥夺条件的概念之上，缺此即无法阐述该方法为何有效。",
+    "chapter": "4.死锁",
+    "reviewed": false
+  },
+  {
+    "source": "进程的逻辑空间",
+    "target": "虚存管理",
+    "type": "PREREQUISITE",
+    "description": "虚存管理的管理对象是虚拟存储器，即进程的逻辑空间，没有逻辑空间则虚存管理无法定义。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "进程的逻辑空间",
+    "target": "一级页表",
+    "type": "PREREQUISITE",
+    "description": "一级页表的大小由进程的逻辑地址空间大小决定，必须理解逻辑空间才能表述一级页表。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "虚存管理",
+    "target": "交换分区",
+    "type": "PREREQUISITE",
+    "description": "交换分区用于在物理内存不足时暂存内存页面，其用途完全由虚拟存储管理决定，是虚存管理的支持组件。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "虚存管理",
+    "target": "驻留集",
+    "type": "PREREQUISITE",
+    "description": "驻留集是虚拟存储系统中分配给进程的物理页框集合，没有虚存管理概念就无法表述驻留集。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "虚存管理",
+    "target": "离散性",
+    "type": "PREREQUISITE",
+    "description": "离散性是虚拟存储技术的核心特征，直接基于虚存管理定义。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "驻留集",
+    "target": "等分法",
+    "type": "PREREQUISITE",
+    "description": "等分法分配的是进程的驻留集大小，其含义完全依赖于驻留集概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "驻留集",
+    "target": "比例法",
+    "type": "PREREQUISITE",
+    "description": "比例法按比例分配进程的驻留集大小，其含义完全依赖于驻留集概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "驻留集",
+    "target": "优先权法",
+    "type": "PREREQUISITE",
+    "description": "优先权法根据优先级分配进程的驻留集大小，其含义完全依赖于驻留集概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "紧凑",
+    "target": "动态重定位分区分配算法",
+    "type": "PREREQUISITE",
+    "description": "动态重定位分区分配算法在找不到足够大空闲分区时，直接调用紧凑操作将小空闲分区拼接成大分区，紧凑是该算法的核心步骤",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "紧凑",
+    "target": "动态重定位分区分配算法",
+    "type": "PREREQUISITE",
+    "description": "动态重定位分区分配算法的核心是在无法分配时执行紧凑，拼接空闲分区，紧凑是其必要步骤",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "动态重定位",
+    "target": "动态重定位分区分配算法",
+    "type": "PREREQUISITE",
+    "description": "动态重定位分区分配算法在紧凑后需要利用动态重定位技术进行地址变换，以确保移动后的程序能正确执行",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "动态重定位",
+    "target": "紧凑",
+    "type": "PREREQUISITE",
+    "description": "紧凑操作通过移动作业消除外部碎片，移动后必须依靠动态重定位调整地址，否则程序无法正确运行",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "动态重定位",
+    "target": "动态运行时装入方式",
+    "type": "PREREQUISITE",
+    "description": "动态运行时装入方式要求程序在运行时动态转换地址，这直接依赖于动态重定位技术",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "基本分页存储管理方式",
+    "target": "分页与分段的区别",
+    "type": "PREREQUISITE",
+    "description": "分页与分段的区别的定义直接对比了分页的特点（物理单位、大小固定、一维地址空间），这些特点源自基本分页存储管理方式",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "分段存储管理",
+    "target": "分页与分段的区别",
+    "type": "PREREQUISITE",
+    "description": "分页与分段的区别的定义直接对比了分段的特点（逻辑单位、长度可变、二维地址空间），这些特点源自分段存储管理",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "存储空间",
+    "target": "内部碎片",
+    "type": "PREREQUISITE",
+    "description": "内部碎片定义为“分配给作业的存储空间中未被利用的部分”，其核心对象‘存储空间’直接引自存储空间概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "存储空间",
+    "target": "空闲页面链表",
+    "type": "PREREQUISITE",
+    "description": "空闲页面链表的定义基于‘空闲物理页框’，物理页框是存储空间的划分单位，必须理解存储空间才能定义页框链表。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "存储空间",
+    "target": "位图表示法",
+    "type": "PREREQUISITE",
+    "description": "位图表示法用每一位表示一个‘内存分配单元’是否空闲，该单元即存储空间中的物理单元，定义直接依赖存储空间。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "存储空间",
+    "target": "链表表示法",
+    "type": "PREREQUISITE",
+    "description": "链表表示法链接的‘空闲内存块’是存储空间中的块，其操作对象本质上是存储空间的划分，定义必然引用存储空间。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "存储空间",
+    "target": "存储控制块",
+    "type": "PREREQUISITE",
+    "description": "存储控制块管理的是‘内存分区’，即对存储空间的划分，其定义离不开存储空间概念。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "相对优先级",
+    "target": "权重",
+    "type": "PREREQUISITE",
+    "description": "权重的计算中实时进程的权重直接使用相对优先级（1000+rt_priority），权重定义完全依赖相对优先级。",
+    "chapter": "4.调度",
+    "reviewed": false
+  },
+  {
+    "source": "调度标志",
+    "target": "调度时机",
+    "type": "PREREQUISITE",
+    "description": "调度时机的两个条件（从核心态返回用户态、主动放弃处理机）均需检查调度标志（runrun等）以决策是否执行调度，调度时机的操作直接依赖调度标志的状态。",
+    "chapter": "4.调度",
+    "reviewed": false
+  },
+  {
+    "source": "静态优先级",
+    "target": "单调速率调度",
+    "type": "PREREQUISITE",
+    "description": "单调速率调度通过静态方式为每个任务分配固定的优先级，其运作原理直接建立在静态优先级的定义之上：优先级在任务运行前确定且不变。",
+    "chapter": "4.调度",
+    "reviewed": false
+  },
+  {
+    "source": "动态优先级",
+    "target": "优先级继承",
+    "type": "PREREQUISITE",
+    "description": "优先级继承要求低优先级进程临时提升至其所阻塞的高优先级进程的水平，这种运行时调整依赖动态优先级机制，否则继承语义无法表达。",
+    "chapter": "4.调度",
+    "reviewed": false
+  },
+  {
+    "source": "动态优先级",
+    "target": "优先级置顶",
+    "type": "PREREQUISITE",
+    "description": "优先级置顶将进入临界区的进程优先级瞬时提升至最高，其核心动作是修改当前优先级值，这一操作必须以动态优先级概念为基础。",
+    "chapter": "4.调度",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统驱动程序",
+    "target": "文件系统过滤器驱动程序",
+    "type": "PREREQUISITE",
+    "description": "文件系统过滤器驱动程序的定义明确建立在截获文件系统驱动程序产生的I/O请求之上，离开文件系统驱动程序，过滤器驱动程序的操作对象和基本功能无法表述。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统驱动程序",
+    "target": "文件系统过滤器驱动程序",
+    "type": "PREREQUISITE",
+    "description": "文件系统过滤器驱动程序截取文件系统驱动程序产生的I/O请求并执行额外处理，其操作对象完全依赖于文件系统驱动程序输出的I/O请求。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "第二次机会页面置换算法",
+    "target": "Belady现象",
+    "type": "PREREQUISITE",
+    "description": "Belady现象被定义为FIFO（或FIFO变体如第二次机会）算法下分配的物理页面增多但缺页率反而上升的异常，其解释必须以具体的FIFO类算法为对象。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "固定分配策略",
+    "target": "全局置换",
+    "type": "PREREQUISITE",
+    "description": "全局置换允许从其他进程的驻留集中换出页面，驻留集是指分配给进程的页框集合，该概念源自固定分配策略中的固定分配集合定义。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "固定分配策略",
+    "target": "抖动",
+    "type": "PREREQUISITE",
+    "description": "抖动定义中直接使用驻留集概念（驻留集小于工作集），驻留集的大小和含义由固定分配策略中为进程分配固定页框集合来定义。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "工作集",
+    "target": "抖动",
+    "type": "PREREQUISITE",
+    "description": "抖动被直接定义为驻留集小于工作集导致缺页率急剧上升的现象，工作集是定义中不可或缺的比较基准。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页错误处理机制",
+    "target": "页面清除策略",
+    "type": "PREREQUISITE",
+    "description": "页面清除策略决定何时将修改页面写回外存，其时机选择与缺页错误处理过程中检查脏位、确定写回步骤直接相关，必须理解缺页处理流程。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页错误处理机制",
+    "target": "L=S准则",
+    "type": "PREREQUISITE",
+    "description": "L=S准则中的平均缺页处理时间S直接对应缺页错误处理机制的完整过程，脱离缺页处理无法定义S。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页错误处理机制",
+    "target": "写时复制技术",
+    "type": "PREREQUISITE",
+    "description": "写时复制技术的核心实现依赖缺页中断：共享页面被标记为只读，写操作触发缺页错误，在缺页处理程序中完成页面复制，缺页处理机制是其操作基础。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "L=S准则",
+    "target": "50%准则",
+    "type": "PREREQUISITE",
+    "description": "50%准则可由L=S准则推导得出，当L=S时分页设备利用率为S/(L+S)=0.5，故50%准则直接以L=S相等作为前提。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "页框",
+    "type": "PREREQUISITE",
+    "description": "页框是内存中与页大小相等的物理块，其定义直接依赖“页”的概念以确定大小。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "页表页",
+    "type": "PREREQUISITE",
+    "description": "页表页存储页表项，页表项是实现页到页框映射的基本元素，缺少“页”概念页表项无法定义。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "页面调度策略",
+    "type": "PREREQUISITE",
+    "description": "页面调度策略管理的对象是进程的页面，决定页面调入、放置和置换，直接以“页”为操作单位。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "写时复制技术",
+    "type": "PREREQUISITE",
+    "description": "写时复制技术是在进程共享内存时，仅在写入时复制页面，其操作对象是“页”面。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "保留与提交",
+    "type": "PREREQUISITE",
+    "description": "保留与提交中“保留地址空间”的对象是进程的虚拟地址空间，该空间以页为基本单位划分。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "工作集策略",
+    "type": "PREREQUISITE",
+    "description": "工作集是进程当前频繁访问的页面集合，其定义直接基于“页”面。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "内存管理单元",
+    "type": "PREREQUISITE",
+    "description": "内存管理单元的核心功能是将逻辑地址中的页号转换为物理块号，“页”是其处理的基本逻辑单位。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "对换系统",
+    "type": "PREREQUISITE",
+    "description": "对换系统是提供页式虚拟存储管理的系统，其管理的基本单位是“页”。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页",
+    "target": "页面置换",
+    "type": "PREREQUISITE",
+    "description": "页面置换的基本操作对象是页，置换的单位是页，没有页的概念无法定义页面置换",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "空闲页面链表",
+    "type": "PREREQUISITE",
+    "description": "空闲页面链表由所有空闲页框数据表项链接而成，链表中的元素就是空闲“页框”。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "页表页",
+    "type": "PREREQUISITE",
+    "description": "页表页是存储页表项的物理页面，其本身就是一个物理“页框”。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "页面调度策略",
+    "type": "PREREQUISITE",
+    "description": "页面调度策略中的置页策略和淘汰策略直接涉及为页面选择或回收物理“页框”。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "50%准则",
+    "type": "PREREQUISITE",
+    "description": "50%准则衡量分页单元的利用率，该利用率基于已分配与总“页框”数的比值。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "写时复制技术",
+    "type": "PREREQUISITE",
+    "description": "写时复制技术中，当写入共享页面时需分配新的物理“页框”来存放复制内容。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "保留与提交",
+    "type": "PREREQUISITE",
+    "description": "保留与提交机制中，“提交”操作即指将保留的地址空间映射到实际的物理“页框”。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "工作集策略",
+    "type": "PREREQUISITE",
+    "description": "工作集策略调整进程的驻留集大小，即控制分配给进程的物理“页框”数量。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页框",
+    "target": "内存管理单元",
+    "type": "PREREQUISITE",
+    "description": "内存管理单元输出的物理块号对应物理内存中的“页框”，需要理解页框作为物理内存分配单位。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "空闲页面链表",
+    "target": "页面调度策略",
+    "type": "PREREQUISITE",
+    "description": "页面调度策略中的置页策略需要从“空闲页面链表”中获取空闲页框来放置调入的页面。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页面调度策略",
+    "target": "页面清除策略",
+    "type": "PREREQUISITE",
+    "description": "页面清除策略决定何时将被置换的修改页面写回外存，其决策直接依附于页面调度过程中的“页面置换”操作。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "页表页",
+    "target": "自映射机制",
+    "type": "PREREQUISITE",
+    "description": "自映射机制通过将页目录和页表项映射到虚拟地址空间，使得部分页目录项指向自身所在的“页表页”，从而简化页表访问，其实现基于页表页的存在。",
+    "chapter": "3.内存管理",
+    "reviewed": false
+  },
+  {
+    "source": "运行状态",
+    "target": "进程状态转换",
+    "type": "PREREQUISITE",
+    "description": "进程状态转换描述进程在就绪、运行、阻塞等状态间的切换，运行状态是其中不可或缺的一个状态。",
+    "chapter": "4.进程与线程",
+    "reviewed": false
+  },
+  {
+    "source": "并发与并行",
+    "target": "竞争条件",
+    "type": "PREREQUISITE",
+    "description": "竞争条件的定义是“多个进程并发访问同一数据”，直接依赖并发概念。",
+    "chapter": "4.进程与线程",
+    "reviewed": false
+  },
+  {
+    "source": "并发与并行",
+    "target": "Bernstein条件",
+    "type": "PREREQUISITE",
+    "description": "Bernstein条件用于判断两个程序能否并发执行且结果可再现，其前提是并发执行。",
+    "chapter": "4.进程与线程",
+    "reviewed": false
+  },
+  {
+    "source": "克隆标志",
+    "target": "clone",
+    "type": "PREREQUISITE",
+    "description": "clone系统调用的核心机制是通过克隆标志指定父子进程共享的资源，标志的定义是clone不可分割的一部分。",
+    "chapter": "4.进程与线程",
+    "reviewed": false
+  },
+  {
+    "source": "clone",
+    "target": "Linux线程",
+    "type": "PREREQUISITE",
+    "description": "Linux线程的定义明确指出通过clone系统调用创建执行上下文并共享资源，因此clone是Linux线程定义的基石。",
+    "chapter": "4.进程与线程",
+    "reviewed": false
+  },
+  {
+    "source": "连续分配方式",
+    "target": "空闲分区表",
+    "type": "PREREQUISITE",
+    "description": "空闲分区表用于记录连续分配方式中内存的空闲分区，空闲分区是连续分配方式下的基本概念，否则无从定义空闲分区表。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "连续分配方式",
+    "target": "空闲分区链",
+    "type": "PREREQUISITE",
+    "description": "空闲分区链是链接空闲分区形成的数据结构，空闲分区只存在于连续分配方式中，因此该链的定义直接依赖连续分配方式。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "连续分配方式",
+    "target": "碎片",
+    "type": "PREREQUISITE",
+    "description": "碎片是指连续分配方式中无法利用的小分区，离开连续分配背景，碎片没有意义。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "空闲分区链",
+    "target": "内存回收",
+    "type": "PREREQUISITE",
+    "description": "内存回收的核心操作是将释放的分区插入空闲分区链并合并相邻分区，这些操作直接基于空闲分区链的数据结构。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲池",
+    "target": "Getbuf过程",
+    "type": "PREREQUISITE",
+    "description": "Getbuf过程的定义为从指定缓冲队列中互斥且同步地获取一个缓冲区，而指定缓冲队列正是缓冲池所管理的空、输入、输出队列，没有缓冲池就无法表述Getbuf过程。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲池",
+    "target": "Putbuf过程",
+    "type": "PREREQUISITE",
+    "description": "Putbuf过程的定义为将缓冲区互斥地添加到指定缓冲队列，该队列直接来源于缓冲池的队列划分，脱离缓冲池则Putbuf过程的操作对象不存在。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘高速缓存",
+    "target": "数据一致性",
+    "type": "PREREQUISITE",
+    "description": "数据一致性问题定义为高速缓存中的数据与磁盘数据保持一致的问题，其核心概念直接建立在磁盘高速缓存之上。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘高速缓存",
+    "target": "周期性地写回磁盘",
+    "type": "PREREQUISITE",
+    "description": "周期性地写回磁盘是将高速缓存中已修改的盘块数据定期写回磁盘的机制，其操作对象完全依赖磁盘高速缓存的存在。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘高速缓存",
+    "target": "写穿透高速缓存",
+    "type": "PREREQUISITE",
+    "description": "写穿透高速缓存是一种高速缓存写策略，其定义是基于磁盘高速缓存这一基础，描述数据修改时立即写回磁盘的行为。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘高速缓存",
+    "target": "延迟写",
+    "type": "PREREQUISITE",
+    "description": "延迟写是将本应立即写回磁盘的数据暂缓写入高速缓存的空闲缓冲区，其语义和操作直接依赖磁盘高速缓存的缓冲区机制。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘高速缓存",
+    "target": "最近未使用算法",
+    "type": "PREREQUISITE",
+    "description": "最近未使用算法是一种置换算法，选择高速缓存中最近未被使用的盘块数据换出，其操作对象直接引自磁盘高速缓存中的盘块。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "P操作",
+    "target": "AND信号量机制",
+    "type": "PREREQUISITE",
+    "description": "AND信号量机制的核心是在一次原子操作中同时完成对多个信号量的wait操作，即对多个信号量执行P操作，不掌握P操作的语义就无法定义AND机制。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "P操作",
+    "target": "记录型信号量",
+    "type": "PREREQUISITE",
+    "description": "记录型信号量重新实现了wait操作，但其基本语义仍是申请资源并在资源不足时等待，若不了解基本P操作的作用，就无法理解记录型信号量中wait操作的设计目的和与整型信号量的区别。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "P操作",
+    "target": "Swait操作",
+    "type": "PREREQUISITE",
+    "description": "Swait操作是信号量集机制中的资源申请操作，其基本思想是将多个信号量的P操作集中在一起并增加条件检查，理解Swait操作需要先理解单个信号量的P操作语义。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "P操作",
+    "target": "信号量实现进程互斥",
+    "type": "PREREQUISITE",
+    "description": "信号量实现进程互斥的核心手段是使用P操作获取互斥信号量以进入临界区，互斥的入口控制直接由P操作定义，没有P操作无法实现互斥。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "P操作",
+    "target": "生产者-消费者问题",
+    "type": "PREREQUISITE",
+    "description": "生产者-消费者问题的经典解法需要使用P操作对empty和full等信号量进行资源申请与同步控制，若不懂P操作，就无法建立和理解该问题的同步模型。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "V操作",
+    "target": "AND信号量机制",
+    "type": "PREREQUISITE",
+    "description": "AND信号量机制需要同时释放多个资源，其释放操作与V操作语义一致，理解AND机制中对多个信号量的同时释放依赖V操作的基本概念。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "V操作",
+    "target": "记录型信号量",
+    "type": "PREREQUISITE",
+    "description": "记录型信号量中的signal操作基于V操作的释放与唤醒语义，理解其让权等待下的唤醒机制需要先掌握V操作的基本功能。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "V操作",
+    "target": "Ssignal操作",
+    "type": "PREREQUISITE",
+    "description": "Ssignal操作是信号量集机制中同时释放多个资源的操作，其实现基于对每个信号量执行V操作，不掌握V操作就无法理解Ssignal如何释放与唤醒。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "V操作",
+    "target": "信号量实现进程互斥",
+    "type": "PREREQUISITE",
+    "description": "互斥访问要求退出临界区时释放互斥信号量，这一步骤必须使用V操作，V操作是互斥机制的必要组成部分。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "V操作",
+    "target": "生产者-消费者问题",
+    "type": "PREREQUISITE",
+    "description": "生产者-消费者问题中生产者或消费者必须通过V操作释放资源（如full、empty）并唤醒等待进程，V操作是方案中不可或缺的操作。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "整型信号量",
+    "target": "记录型信号量",
+    "type": "PREREQUISITE",
+    "description": "记录型信号量的结构包含一个整型变量（等同于整型信号量的值）并增加等待队列，是对整型信号量的改进，缺少整型信号量的概念就无法理解记录型信号量为何保留整型值以及如何扩展。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "同步机制准则",
+    "target": "记录型信号量",
+    "type": "PREREQUISITE",
+    "description": "记录型信号量明确遵循同步机制准则中的“让权等待”，其引入等待队列的设计直接基于该准则，不掌握同步机制准则就无法理解记录型信号量为何需要让进程阻塞而非忙等。",
+    "chapter": "2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲控制块",
+    "target": "空闲缓冲队列",
+    "type": "PREREQUISITE",
+    "description": "空闲缓冲队列是由缓冲控制块构成的链表，用于管理空闲缓存块，没有缓冲控制块就无法定义队列元素和操作。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲控制块",
+    "target": "设备I/O请求队列",
+    "type": "PREREQUISITE",
+    "description": "设备I/O请求队列是正在与外设进行I/O操作的缓存块列表，每个缓存块对应一个缓冲控制块，队列的定义直接依赖缓冲控制块。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲控制块",
+    "target": "设备缓冲区队列",
+    "type": "PREREQUISITE",
+    "description": "设备缓冲区队列是按哈希组织、与各外设相关的缓存块列表，其基本单元是缓冲控制块，去掉缓冲控制块无法表述队列结构。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲控制块",
+    "target": "有缓存I/O",
+    "type": "PREREQUISITE",
+    "description": "有缓存I/O的核心是系统缓冲区管理机构，该机构使用缓冲控制块来管理缓存块，没有缓冲控制块就无法定义缓冲区管理。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "I/O端口地址",
+    "target": "端口驱动程序",
+    "type": "PREREQUISITE",
+    "description": "端口驱动程序实现对特定类型I/O端口的I/O请求处理，其操作对象是I/O端口地址所标识的寄存器，定义直接依赖于I/O端口地址的概念。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "I/O端口地址",
+    "target": "内存映射I/O",
+    "type": "PREREQUISITE",
+    "description": "内存映射I/O的定义是将I/O端口地址映射到物理内存地址空间，其映射操作的对象直接就是I/O端口地址，没有I/O端口地址概念则映射无从谈起。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "I/O端口地址",
+    "target": "I/O独立编址",
+    "type": "PREREQUISITE",
+    "description": "I/O独立编址的核心是为I/O端口分配独立的地址空间，明确区分于内存地址空间，其编址方案完全建立在I/O端口地址概念之上。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "通道控制方式",
+    "target": "多通路I/O系统",
+    "type": "PREREQUISITE",
+    "description": "多通路I/O系统的核心是将设备连接到多个通道以增加通路，其定义直接引用“通道”概念，而通道由通道控制方式定义，缺少该前置概念则无法理解多通路I/O系统的组成与工作原理。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "总线",
+    "target": "直接存储访问方式",
+    "type": "PREREQUISITE",
+    "description": "直接存储访问方式（DMA）要在内存和I/O设备之间直接传输数据，必须通过系统总线完成；没有总线，DMA的数据传输操作无法进行。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "I/O管理",
+    "target": "快速I/O",
+    "type": "PREREQUISITE",
+    "description": "快速I/O的定义为不通过I/O管理器直接向驱动程序发出I/O请求，其概念明确对比并依赖于操作系统I/O管理中的标准I/O路径和I/O管理器，缺少I/O管理则无法说明绕过的是什么。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "非阻塞I/O",
+    "target": "事件驱动I/O",
+    "type": "PREREQUISITE",
+    "description": "事件驱动I/O的第一阶段要求进程发起I/O操作后不阻塞、立即返回，这直接基于非阻塞I/O的语义；没有非阻塞I/O，事件驱动I/O的“立即返回并等待通知”机制无法定义。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "非阻塞I/O",
+    "target": "异步I/O",
+    "type": "PREREQUISITE",
+    "description": "异步I/O要求进程发起I/O后完全无需等待、立即返回，这本质上是非阻塞I/O的进一步扩展；异步I/O的定义直接包含了非阻塞I/O的发起即返回特性。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "虚设备",
+    "target": "虚拟I/O",
+    "type": "PREREQUISITE",
+    "description": "虚拟I/O是应用程序通过SPOOLing程序交换数据来模拟高速I/O，而SPOOLing程序的核心就是利用虚设备（将共享设备模拟为独占设备）；没有虚设备概念，虚拟I/O的实现基础无法理解。",
+    "chapter": "5.IO管理",
+    "reviewed": false
+  },
+  {
+    "source": "块设备",
+    "target": "磁盘高速缓存",
+    "type": "PREREQUISITE",
+    "description": "磁盘高速缓存定义为在内存中保存磁盘块副本的缓冲区，'磁盘块'概念直接来自块设备以数据块为存取单位的特性，没有块设备的概念则无法定义磁盘块。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "I/O系统",
+    "target": "I/O瓶颈",
+    "type": "PREREQUISITE",
+    "description": "I/O瓶颈的定义直接使用'I/O系统吞吐量'，是对I/O系统性能问题的描述，不理解I/O系统则无法表述该瓶颈。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "输入输出设备",
+    "target": "通道程序",
+    "type": "PREREQUISITE",
+    "description": "通道程序被定义为控制I/O设备完成数据传输的程序，其操作对象就是输入输出设备，去掉输入输出设备的概念则通道程序的用途无法解释。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "输入输出设备",
+    "target": "逻辑设备",
+    "type": "PREREQUISITE",
+    "description": "逻辑设备是相对于具体物理设备的抽象设备，其定义中的'物理设备'直接指向输入输出设备，没有物理设备概念则抽象设备无从谈起。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "输入输出设备",
+    "target": "缓冲区工作方式",
+    "type": "PREREQUISITE",
+    "description": "缓冲区工作方式的四种模式（收容输入、提取输入、收容输出、提取输出）直接指向对输入输出设备的数据操作，没有输入输出设备则这些工作模式丧失操作对象而无法定义。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑设备",
+    "target": "统一命名",
+    "type": "PREREQUISITE",
+    "description": "统一命名要求采用预先设计的统一逻辑名称访问设备，'逻辑名称'源于逻辑设备的抽象概念，不理解逻辑设备就无法阐明统一命名的内在机制。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑设备",
+    "target": "用户层软件",
+    "type": "PREREQUISITE",
+    "description": "用户层软件提供I/O库函数，这些函数操作的对象是逻辑设备，不建立逻辑设备概念，用户层软件无法向用户呈现可用的设备抽象。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "一般信号量",
+    "target": "PV操作",
+    "type": "PREREQUISITE",
+    "description": "PV操作直接作用于信号量的整数值，申请和释放资源的语义完全依赖于信号量的定义，没有信号量概念则PV操作无法表述。",
+    "chapter": "4.进程同步",
+    "reviewed": false
+  },
+  {
+    "source": "一般信号量",
+    "target": "AND型信号量集",
+    "type": "PREREQUISITE",
+    "description": "AND型信号量集的核心是同时操作多个信号量，其机制完全建立在信号量概念之上，缺少信号量则无法定义资源的一次性分配与释放。",
+    "chapter": "4.进程同步",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "AND型信号量集",
+    "type": "PREREQUISITE",
+    "description": "AND型信号量集的操作本质是对多个信号量的原子P操作和V操作扩展，必须理解PV操作的原语才能定义其同时申请和释放的行为。",
+    "chapter": "4.进程同步",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "整型信号量",
+    "type": "PREREQUISITE",
+    "description": "整型信号量定义为仅能通过PV操作（P操作和V操作）访问的整型变量，其基本操作直接基于PV操作的语义，不掌握PV操作则无法理解整型信号量的访问方式。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "记录型信号量",
+    "type": "PREREQUISITE",
+    "description": "记录型信号量的基本操作是P操作和V操作（即PV操作），其定义包含整型变量和等待队列，操作语义完全继承自PV操作。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "AND信号量机制",
+    "type": "PREREQUISITE",
+    "description": "AND信号量机制是对PV操作的扩展，实现一次申请多个资源，其核心同步操作Swait便是基于P操作的思想，不理解PV无法定义AND机制。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "Swait操作",
+    "type": "PREREQUISITE",
+    "description": "Swait操作是信号量集机制中的申请资源操作，本质是PV操作中P操作的泛化，同时检查多个信号量并执行减操作，直接依赖PV语义。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "Ssignal操作",
+    "type": "PREREQUISITE",
+    "description": "Ssignal操作是信号量集机制中的释放资源操作，是PV操作中V操作的泛化，同时增加多个信号量值并唤醒进程。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "信号量实现进程互斥",
+    "type": "PREREQUISITE",
+    "description": "该机制直接使用互斥信号量的wait/signal操作（即P/V操作）来保证临界区互斥，PV操作是其实现的基础。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "信号量实现前趋关系",
+    "type": "PREREQUISITE",
+    "description": "前趋关系的实现依赖于在进程间放置信号量，并用P/V操作控制执行顺序，PV操作是前趋图建模的核心。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "PV操作",
+    "target": "信号量集机制",
+    "type": "PREREQUISITE",
+    "description": "信号量集机制通过Swait和Ssignal操作一次处理多个信号量，这些操作是PV操作的直接扩展，整体机制基于PV操作思想构建。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "顺序文件",
+    "target": "运行记录文件",
+    "type": "PREREQUISITE",
+    "description": "运行记录文件是为顺序文件记录的增删改操作日志，其定义直接依赖于顺序文件。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "顺序文件",
+    "target": "索引顺序文件",
+    "type": "PREREQUISITE",
+    "description": "索引顺序文件是顺序文件和索引文件的结合，其定义明确提及顺序文件作为基础存储方式。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "顺序文件",
+    "target": "索引顺序文件",
+    "type": "PREREQUISITE",
+    "description": "索引顺序文件是顺序文件与索引文件的结合，其定义直接引用顺序文件作为基本构成。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "顺序文件",
+    "target": "运行记录文件",
+    "type": "PREREQUISITE",
+    "description": "运行记录文件用于记录对顺序文件的增删改操作，其定义直接以顺序文件为操作对象。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "索引文件",
+    "target": "索引顺序文件",
+    "type": "PREREQUISITE",
+    "description": "索引顺序文件使用索引表加速存取，其定义直接引用索引文件的概念为分组建立索引项。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "索引文件",
+    "target": "索引顺序文件",
+    "type": "PREREQUISITE",
+    "description": "索引顺序文件的定义明确结合了索引文件，缺少索引文件概念将无法完整表述其机制。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "簇",
+    "target": "簇内零头",
+    "type": "PREREQUISITE",
+    "description": "簇内零头是由于簇大小大于文件实际数据量导致的浪费，其定义完全依赖于簇作为分配单位的概念。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "NTFS文件系统",
+    "target": "元数据",
+    "type": "PREREQUISITE",
+    "description": "在NTFS上下文中，元数据特指MFT表中的文件记录，不引入NTFS无法说明MFT的存在和结构。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘索引结点",
+    "target": "基于索引结点的共享方式",
+    "type": "PREREQUISITE",
+    "description": "基于索引结点的共享方式定义中，目录项只包含文件名和指向索引结点的指针，通过索引结点实现文件共享，直接依赖磁盘索引结点的概念。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘索引结点",
+    "target": "硬链接",
+    "type": "PREREQUISITE",
+    "description": "硬链接的定义是基于索引结点的文件共享方式，多个目录项指向同一索引结点，链接计数存放在索引结点中，没有磁盘索引结点概念则硬链接无法表述。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘索引结点",
+    "target": "打开文件",
+    "type": "PREREQUISITE",
+    "description": "打开文件操作的核心是将磁盘索引结点中的文件属性拷贝到内存，没有磁盘索引结点就无法表述打开文件的基本动作。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘索引结点",
+    "target": "目录查询技术",
+    "type": "PREREQUISITE",
+    "description": "目录查询技术的最终目标是获取文件物理地址，而物理地址记录在磁盘索引结点中，缺少该概念则无法完成物理地址的获取。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘索引结点",
+    "target": "内存索引节点",
+    "type": "PREREQUISITE",
+    "description": "内存索引节点的定义是磁盘索引结点在内存中的拷贝，其字段源于磁盘索引结点并扩展，无磁盘索引结点概念无法表述内存索引节点。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "变长记录",
+    "target": "索引文件",
+    "type": "PREREQUISITE",
+    "description": "索引文件是为变长记录文件建立的索引表，其核心定义直接依赖变长记录的概念，否则无法表述。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "单通路I/O系统",
+    "target": "瓶颈现象",
+    "type": "PREREQUISITE",
+    "description": "瓶颈现象定义为单通路I/O系统中某个组件成为性能限制环节，其表述直接依赖单通路I/O系统的概念。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "单通路I/O系统",
+    "target": "瓶颈现象",
+    "type": "PREREQUISITE",
+    "description": "瓶颈现象明确指单通路I/O系统中某个组件成为性能瓶颈，其定义完全建立在单通路I/O系统结构之上，缺之则瓶颈现象失去适用场景。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘存储器",
+    "target": "输入井",
+    "type": "PREREQUISITE",
+    "description": "输入井定义为磁盘上用于暂存输入数据的区域，必须基于磁盘存储器的概念才能表述。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘存储器",
+    "target": "输出井",
+    "type": "PREREQUISITE",
+    "description": "输出井定义为磁盘上用于暂存输出数据的区域，必须基于磁盘存储器的概念才能表述。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘存储器",
+    "target": "磁盘格式化",
+    "type": "PREREQUISITE",
+    "description": "磁盘格式化是对磁盘进行的操作，以使其记录格式能被接受，其操作对象直接是磁盘存储器。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁盘存储器",
+    "target": "SPOOLing技术",
+    "type": "PREREQUISITE",
+    "description": "SPOOLing技术通过磁盘模拟低速I/O设备，磁盘是其实现虚拟设备功能的核心硬件基础，没有磁盘则无法定义SPOOLing技术。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "输入井",
+    "target": "输入缓冲区",
+    "type": "PREREQUISITE",
+    "description": "输入缓冲区是内存中暂存输入设备数据并传送到输入井的区域，其定义直接包含输入井作为数据最终目的地。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "输入井",
+    "target": "输入进程SPi",
+    "type": "PREREQUISITE",
+    "description": "输入进程SPi负责将数据从输入设备传送到输入井，其核心职责直接依赖输入井作为数据传送目标。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "输出井",
+    "target": "输出缓冲区",
+    "type": "PREREQUISITE",
+    "description": "输出缓冲区是内存中暂存从输出井送来的数据并传给输出设备的区域，其定义直接包含输出井作为数据来源。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "输出井",
+    "target": "输出进程SPo",
+    "type": "PREREQUISITE",
+    "description": "输出进程SPo负责将数据从输出井传送到输出设备，其核心职责直接依赖输出井作为数据来源。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁道",
+    "target": "寻道时间",
+    "type": "PREREQUISITE",
+    "description": "寻道时间定义为磁头移动到指定磁道所需的时间，直接使用磁道作为移动目标，缺磁道无法定义寻道时间。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "磁道",
+    "target": "磁盘格式化",
+    "type": "PREREQUISITE",
+    "description": "磁盘格式化需要标记有缺陷的磁道，其操作对象和操作单位包含磁道，因此直接依赖磁道概念。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "扇区",
+    "target": "旋转延迟时间",
+    "type": "PREREQUISITE",
+    "description": "旋转延迟时间定义为指定扇区旋转到磁头下所需的时间，直接使用扇区作为旋转目标，缺扇区无法定义旋转延迟时间。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "扇区",
+    "target": "磁盘格式化",
+    "type": "PREREQUISITE",
+    "description": "磁盘格式化需要标记有缺陷的扇区，其操作对象和操作单位包含扇区，因此直接依赖扇区概念。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "扇区",
+    "target": "磁盘分区",
+    "type": "PREREQUISITE",
+    "description": "磁盘分区定义中明确每个分区有独立的起始扇区，其表述直接依赖扇区作为分区边界的度量单位。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "柱面",
+    "target": "CHS寻址",
+    "type": "PREREQUISITE",
+    "description": "CHS寻址通过柱面、磁头、扇区三个参数定位物理扇区，柱面是其核心坐标参数之一，没有柱面的定义就无法表述CHS寻址。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "卷参数块",
+    "target": "卷安装",
+    "type": "PREREQUISITE",
+    "description": "卷安装的过程直接定义为文件系统驱动程序通过卷参数块(VPB)与I/O管理器交互完成挂载，卷参数块是该交互中不可缺失的数据结构。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "卷参数块",
+    "target": "卷安装",
+    "type": "PREREQUISITE",
+    "description": "卷安装过程通过卷参数块与I/O管理器交互来挂载文件系统，卷参数块是卷安装操作的核心数据结构。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "跨分区卷",
+    "target": "DMIO驱动程序",
+    "type": "PREREQUISITE",
+    "description": "DMIO驱动程序的定义明确指定其职责是处理跨分区卷的I/O，跨分区卷是该驱动程序的作用对象，缺少跨分区卷的概念则DMIO驱动程序无法被定义。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "8.46GB问题",
+    "target": "INT 13服务扩展标准",
+    "type": "PREREQUISITE",
+    "description": "INT 13服务扩展标准的定义是专门为解决8.46GB寻址限制而引入的LBA寻址机制，缺乏8.46GB问题则该扩展标准失去存在意义。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "动态盘",
+    "target": "多分区卷",
+    "type": "PREREQUISITE",
+    "description": "多分区卷是动态盘支持的跨分区卷类型，其定义直接建立在动态盘提供的动态卷管理框架之上。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "动态盘",
+    "target": "安装管理器",
+    "type": "PREREQUISITE",
+    "description": "安装管理器是处理动态磁盘卷驱动器名分配的驱动程序，其操作对象动态磁盘卷由动态盘定义。",
+    "chapter": "6.磁盘管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页中断",
+    "target": "请求分页存储管理方式",
+    "type": "PREREQUISITE",
+    "description": "请求分页存储管理方式的请求调页功能直接依赖缺页中断机制，当所访问的页面不在内存时通过缺页中断实现调入。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页中断",
+    "target": "段页式虚拟存储器",
+    "type": "PREREQUISITE",
+    "description": "段页式虚拟存储器的请求调页功能依赖缺页中断机制来处理页面缺失。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页中断",
+    "target": "固定分配局部置换",
+    "type": "PREREQUISITE",
+    "description": "固定分配局部置换是在发生缺页中断时执行的页面置换策略，其定义中的“缺页”直接引用缺页中断事件。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺页中断",
+    "target": "可变分配全局置换",
+    "type": "PREREQUISITE",
+    "description": "可变分配全局置换是在发生缺页中断时执行的页面置换策略，其定义中的“缺页”直接引用缺页中断事件。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "页面置换算法",
+    "target": "请求分页存储管理方式",
+    "type": "PREREQUISITE",
+    "description": "请求分页存储管理方式的页面置换功能依赖页面置换算法，以决定在内存满时淘汰哪一页。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "页面置换算法",
+    "target": "段页式虚拟存储器",
+    "type": "PREREQUISITE",
+    "description": "段页式虚拟存储器的页面置换功能依赖页面置换算法来选择被淘汰的页面。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "页面置换算法",
+    "target": "固定分配局部置换",
+    "type": "PREREQUISITE",
+    "description": "固定分配局部置换在进行页面置换时需要依赖页面置换算法选择具体的淘汰页面。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "页面置换算法",
+    "target": "可变分配全局置换",
+    "type": "PREREQUISITE",
+    "description": "可变分配全局置换在进行页面置换时需要依赖页面置换算法选择具体的淘汰页面。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "缺段中断",
+    "target": "请求分段系统",
+    "type": "PREREQUISITE",
+    "description": "请求分段系统通过缺段中断机制实现所需分段的调入，缺段中断是其核心组成成分。",
+    "chapter": "4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "陷入",
+    "target": "系统调用号",
+    "type": "PREREQUISITE",
+    "description": "系统调用号的定义是'用于在陷入指令中标识具体系统调用'，如果不知道陷入指令，就无法理解系统调用号的作用域和存在意义。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "陷入",
+    "target": "库函数",
+    "type": "PREREQUISITE",
+    "description": "库函数的定义明确提到'隐藏访管指令细节'，这里的访管指令就是陷入。不先理解陷入，就无从理解库函数到底隐藏了什么。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "WIMP技术",
+    "target": "桌面",
+    "type": "PREREQUISITE",
+    "description": "桌面的定义是'用于显示窗口和图标'的屏幕空间，而窗口和图标正是WIMP技术的核心交互元素，脱离WIMP技术就无法表述桌面的基本构成。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "文件控制块",
+    "target": "单级目录结构",
+    "type": "PREREQUISITE",
+    "description": "单级目录结构是一张目录表，每个目录项就是一个文件控制块，定义单级目录结构必须直接使用文件控制块的概念。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件控制块",
+    "target": "两级目录结构",
+    "type": "PREREQUISITE",
+    "description": "两级目录结构的用户文件目录是由文件控制块构成的目录表，定义两级目录结构需要文件控制块作为基本目录项。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件控制块",
+    "target": "多级目录结构",
+    "type": "PREREQUISITE",
+    "description": "多级目录结构中的目录文件由文件控制块组成，实现层次目录必须依赖文件控制块作为目录项。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件控制块",
+    "target": "双份目录和双份文件分配表",
+    "type": "PREREQUISITE",
+    "description": "双份目录是对目录文件的备份，目录文件本质上是一组文件控制块，理解双份目录机制需要知道目录由文件控制块构成。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "多级目录结构",
+    "target": "路径名",
+    "type": "PREREQUISITE",
+    "description": "路径名定义为从根目录到数据文件的通路，其根目录与层次通路概念直接建立在多级目录结构的树形层次之上。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "多级目录结构",
+    "target": "绝对路径名",
+    "type": "PREREQUISITE",
+    "description": "绝对路径名是从树根开始的路径名，树根是多级目录结构的根目录，定义绝对路径名必须依赖多级目录结构的根概念。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "多级目录结构",
+    "target": "当前目录",
+    "type": "PREREQUISITE",
+    "description": "当前目录是为进程设置的工作目录，只有在多级目录结构的层次环境中才有工作目录和目录切换的概念，其定义依赖多级目录结构的存在。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "当前目录",
+    "target": "相对路径名",
+    "type": "PREREQUISITE",
+    "description": "相对路径名定义为从当前目录开始到数据文件的通路，直接使用当前目录作为路径起点，定义必须引用当前目录。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "热修复重定向",
+    "target": "写后读校验",
+    "type": "PREREQUISITE",
+    "description": "写后读校验操作在发现数据不一致时，将数据写入热修复重定向区，直接依赖热修复重定向提供的重定向区和映射机制。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "事务",
+    "target": "事务记录",
+    "type": "PREREQUISITE",
+    "description": "事务记录是用于记录事务运行时数据项修改信息的数据结构，其定义和内容完全围绕事务概念，没有事务则事务记录无法表述。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "事务",
+    "target": "并发控制",
+    "type": "PREREQUISITE",
+    "description": "并发控制技术用于保证多个事务的执行可串行化，其语义和操作完全建立在事务概念之上，没有事务则并发控制无从谈起。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "稳定存储器",
+    "target": "检查点",
+    "type": "PREREQUISITE",
+    "description": "检查点操作将事务记录和修改数据写入稳定存储器，如果缺少稳定存储器，检查点的持久化目标就无法定义。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "事务记录",
+    "target": "检查点",
+    "type": "PREREQUISITE",
+    "description": "检查点定期将内存中的事务记录写入稳定存储器，事务记录是检查点机制写入的基本数据单元，缺之则无法描述检查点的操作对象。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "重复数据的数据一致性",
+    "type": "PREREQUISITE",
+    "description": "重复数据的数据一致性问题是围绕文件系统中多个相同文件拷贝的一致性提出的，离开文件系统语境该问题无法定义。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "文件一致性",
+    "type": "PREREQUISITE",
+    "description": "文件一致性确保文件系统中重复文件、盘块号和链接数等数据保持一致，其作用域直接限定在文件系统内。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "盘块号一致性检查",
+    "type": "PREREQUISITE",
+    "description": "盘块号一致性检查通过比较文件系统中的空闲盘块表和数据盘块表实现，依赖文件系统的盘块管理数据结构。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "链接数一致性检查",
+    "type": "PREREQUISITE",
+    "description": "链接数一致性检查通过比较文件系统中目录的索引结点出现次数与索引结点链接计数实现，依赖文件系统的目录和索引结点管理机制。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "第一级容错技术",
+    "type": "PREREQUISITE",
+    "description": "第一级容错技术通过备份文件系统的双份目录、双份文件分配表等实现，直接作用于文件系统的核心数据结构。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "链接分配",
+    "type": "PREREQUISITE",
+    "description": "链接分配是文件系统管理外存的一种分配方式，属于文件系统的功能范畴，脱离文件系统则无法理解该分配方式的上下文与作用。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "盘块号一致性检查",
+    "type": "PREREQUISITE",
+    "description": "盘块号一致性检查是文件系统内部用于检查盘块分配一致性的机制，它操作的对象是文件系统中的盘块分配表，依赖文件系统定义的整体框架。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统",
+    "target": "链接数一致性检查",
+    "type": "PREREQUISITE",
+    "description": "链接数一致性检查是文件系统用来验证共享文件链接计数一致性的功能，它检查目录和索引结点，属于文件系统的维护机制，没有文件系统就无法定义该检查的目的。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件",
+    "target": "链接分配",
+    "type": "PREREQUISITE",
+    "description": "链接分配将文件分散的盘块通过链接指针连接，其操作对象和目标是文件本身，文件概念是链接分配组织的基本单位。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件",
+    "target": "链接分配",
+    "type": "PREREQUISITE",
+    "description": "链接分配的定义明确指出其操作对象是文件，通过链接指针将文件分散的盘块连接起来，无文件概念则无法表述分配目标。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "文件",
+    "target": "文件系统",
+    "type": "PREREQUISITE",
+    "description": "文件系统的定义明确提到管理外存上的文件，文件是文件系统管理的核心对象。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "目录查询技术",
+    "target": "打开文件",
+    "type": "PREREQUISITE",
+    "description": "打开文件系统调用的实现步骤必须先通过目录查询找到文件的磁盘索引结点，目录查询是打开文件操作中不可或缺的组成成分。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "目录查询技术",
+    "target": "文件目录管理",
+    "type": "PREREQUISITE",
+    "description": "文件目录管理的核心功能是按名存取，其基本操作依赖目录查询技术将文件名转换为物理地址的方法，缺少目录查询技术无法实现目录管理。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "目录查询技术",
+    "target": "目录路径查找",
+    "type": "PREREQUISITE",
+    "description": "目录路径查找将路径逐级分解并调用目录查询技术在各层目录中查找，目录查询技术是路径解析的基本操作，缺少则无法完成路径遍历。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件分配表",
+    "target": "显式链接分配",
+    "type": "PREREQUISITE",
+    "description": "显式链接分配的定义明确要求将文件物理块的链接指针显式存放在内存的FAT表中，文件分配表是其核心数据结构。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "一次间接地址",
+    "target": "单级索引分配",
+    "type": "PREREQUISITE",
+    "description": "单级索引分配正是使用一个索引块记录文件所有盘块号，这恰是一次间接地址的方式，其机制直接建立在一次间接地址概念之上。",
+    "chapter": "6.文件管理",
+    "reviewed": false
+  },
+  {
+    "source": "中断机制",
+    "target": "中断向量",
+    "type": "PREREQUISITE",
+    "description": "中断向量的定义中存放的是中断处理程序的入口地址，而中断处理程序是中断机制的核心组件，没有中断机制就无法理解中断处理程序的概念，进而无法解释中断向量的用途。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "中断机制",
+    "target": "陷入向量",
+    "type": "PREREQUISITE",
+    "description": "陷入向量存放陷入处理程序的入口地址，陷入是操作系统通过软中断实现系统调用的方式，属于中断机制的范畴，因此陷入向量的概念直接依赖中断机制。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "中断机制",
+    "target": "事件驱动控制方式",
+    "type": "PREREQUISITE",
+    "description": "事件驱动控制方式依赖于用户动作产生的事件，而事件的捕获和通知必须通过中断机制（如硬件中断）实现，没有中断机制，事件的产生和响应链路就无法解释。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "中断向量",
+    "target": "中断和陷入向量表",
+    "type": "PREREQUISITE",
+    "description": "中断和陷入向量表由所有中断向量和陷入向量组成，缺少中断向量就无法完整定义该表，因为表的内容项直接包含中断向量。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "陷入向量",
+    "target": "中断和陷入向量表",
+    "type": "PREREQUISITE",
+    "description": "中断和陷入向量表必须包含陷入向量，表的存在以所有类型的向量为前提，去掉陷入向量会导致表的定义不完整。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "命令语言",
+    "target": "输入输出重定向",
+    "type": "PREREQUISITE",
+    "description": "输入输出重定向是指将命令的输入或输出进行改向，其定义直接作用于命令，而命令语言是用户输入命令的集合和语法规则，没有命令语言就没有命令的概念，因此重定向无法表述。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "命令语言",
+    "target": "Shell",
+    "type": "PREREQUISITE",
+    "description": "Shell是一种命令级程序设计语言解释系统，其核心功能是解释并执行命令语言所描述的命令，没有命令语言则Shell的定义失去根本对象。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "参数传送",
+    "target": "参数表方式",
+    "type": "PREREQUISITE",
+    "description": "参数表方式是系统调用参数传送的一种具体实现，通过参数表传递参数，其作为参数传送方法的定义完全依赖于参数传送这一上层概念，否则无法理解其作用。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "CPU环境保护",
+    "target": "调用栈帧",
+    "type": "PREREQUISITE",
+    "description": "调用栈帧是系统调用时需要保存到核心栈的所有数据项集合，CPU环境保护定义了保存寄存器等状态的动作，栈帧的内容正是这些受保护的数据项，不理解CPU环境保护就无法解释栈帧的构成。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "系统调用定义表",
+    "target": "系统调用入口表",
+    "type": "PREREQUISITE",
+    "description": "系统调用入口表根据调用号查找处理程序入口地址，这些入口地址来源于系统调用定义表中存储的信息，没有定义表就没有入口数据的来源，入口表无法独立存在。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "窗口",
+    "target": "激活状态",
+    "type": "PREREQUISITE",
+    "description": "激活状态的定义为“窗口被用户选中并处于前台运行的状态”，其描述完全建立在窗口概念之上，去掉窗口则无法表述。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "窗口",
+    "target": "打开状态",
+    "type": "PREREQUISITE",
+    "description": "打开状态的定义为“窗口已打开但处于非激活状态”，其主体对象是窗口，脱离窗口概念无法定义该状态。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "窗口",
+    "target": "WIMP技术",
+    "type": "PREREQUISITE",
+    "description": "WIMP技术的定义是集成窗口、图标、菜单和鼠标的图形用户接口技术，窗口是其中的核心元素之一，没有窗口概念则WIMP技术无法完整表述。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "激活状态",
+    "target": "打开状态",
+    "type": "PREREQUISITE",
+    "description": "打开状态的定义明确使用了“非激活状态”，即对激活状态的否定，没有激活状态这个概念就无法表述打开状态。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "任务栏",
+    "target": "开始按钮",
+    "type": "PREREQUISITE",
+    "description": "开始按钮的定义为“位于任务栏左边，用于打开开始菜单…”，其位置描述直接依赖于任务栏的概念，去掉任务栏则无法定义其位置。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "图标",
+    "target": "WIMP技术",
+    "type": "PREREQUISITE",
+    "description": "WIMP技术的定义包含图标作为核心交互元素之一，去掉图标概念则WIMP技术无法完整定义。",
+    "chapter": "7.操作系统接口",
+    "reviewed": false
+  },
+  {
+    "source": "目录项",
+    "target": "顺序查寻法",
+    "type": "PREREQUISITE",
+    "description": "顺序查寻法定义为依次扫描目录项比较文件名，目录项是其操作和判断的基本对象，无目录项则查询过程无法定义。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "目录项",
+    "target": "二级文件目录",
+    "type": "PREREQUISITE",
+    "description": "二级文件目录的定义是在根目录下为每个用户建立一个目录，用户目录下存放用户文件，这些目录均由目录项构成，没有目录项则无法描述其目录结构。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "目录项",
+    "target": "空白文件目录",
+    "type": "PREREQUISITE",
+    "description": "空白文件目录的定义是将空闲块信息记录在目录中，该目录由目录项组成，空白文件目录的管理机制直接依赖目录项结构。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "目录项",
+    "target": "直接法目录实现",
+    "type": "PREREQUISITE",
+    "description": "直接法目录实现的定义是目录项直接包含文件名和文件控制块，该定义直接解释目录项的具体实现方式，没有目录项概念则直接法无法定义。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "目录项",
+    "target": "间接法目录实现",
+    "type": "PREREQUISITE",
+    "description": "间接法目录实现的定义是目录项包含文件名和FCB的地址，该定义直接依赖目录项概念，没有目录项则间接法无法描述。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "目录项",
+    "target": "文件系统挂装",
+    "type": "PREREQUISITE",
+    "description": "文件系统挂装的定义是将文件系统附加到目录树中的挂装点，挂装点就是一个目录项，没有目录项则挂装操作无法定义。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "VFS索引节点",
+    "target": "VFS超块",
+    "type": "PREREQUISITE",
+    "description": "VFS超块数据结构中包含指向VFS索引节点的指针(s_inode)，其类型直接引用VFS索引节点类型，缺少它无法定义超块中的索引节点关联字段。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "VFS超块",
+    "target": "文件系统类型",
+    "type": "PREREQUISITE",
+    "description": "文件系统类型定义中包含超块读取例程(get_sb)，该例程返回VFS超块类型，其接口和实现完全依赖VFS超块结构，无VFS超块则无法表述该例程。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "Ext2文件系统",
+    "target": "块组描述符",
+    "type": "PREREQUISITE",
+    "description": "块组描述符的定义直接指明它是Ext2文件系统中用于描述每个块组的数据结构，离开Ext2文件系统的上下文无法表述其含义。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "计算机网络",
+    "target": "网络操作系统",
+    "type": "PREREQUISITE",
+    "description": "网络操作系统定义为管理网络中共享资源的系统软件，其“网络”直接指代计算机网络，没有计算机网络则网络操作系统无从定义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "计算机网络",
+    "target": "网络拓扑结构",
+    "type": "PREREQUISITE",
+    "description": "网络拓扑结构定义为网络中计算机之间连接的几何形状，其“网络”直接指代计算机网络，离开计算机网络就无法描述拓扑结构的载体。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "计算机网络",
+    "target": "网络操作系统",
+    "type": "PREREQUISITE",
+    "description": "网络操作系统的定义中管理对象是“网络”，即计算机网络，缺失计算机网络概念则其操作对象无法定义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "逻辑设备名",
+    "type": "PREREQUISITE",
+    "description": "逻辑设备名定义为用户程序使用的设备名称，系统将其映射到实际物理设备，其定义直接引用物理设备概念，缺之则映射对象不明。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "设备控制表",
+    "type": "PREREQUISITE",
+    "description": "设备控制表是为每个物理设备配置的数据结构，其创建和管理基于物理设备的识别，没有物理设备则无法定义控制表对象。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "设备驱动程序",
+    "type": "PREREQUISITE",
+    "description": "设备驱动程序负责直接控制物理设备执行I/O操作，其操作目标和实现完全围绕物理设备，去掉物理设备则驱动程序失去对象。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "系统设备表",
+    "type": "PREREQUISITE",
+    "description": "系统设备表记录系统中所有物理设备及其驱动程序入口，物理设备是表中记录的主体，缺之则表内容无意义。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "设备队列",
+    "type": "PREREQUISITE",
+    "description": "设备队列是因请求同一物理设备而未得到满足的进程队列，队列围绕物理设备组织，缺之则队列组建依据丧失。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "单通路I/O系统",
+    "type": "PREREQUISITE",
+    "description": "单通路I/O系统定义中每个设备（即物理设备）只连接一个控制器，物理设备是构成该系统的关键组件，缺之则结构无法描述。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "输入井",
+    "type": "PREREQUISITE",
+    "description": "输入井定义提到磁盘暂存“从输入设备读入数据”，输入设备是物理设备的一种，理解输入井需先有物理设备概念。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "物理设备",
+    "target": "输出井",
+    "type": "PREREQUISITE",
+    "description": "输出井定义提到暂存“要输出到设备的数据”，输出设备是物理设备，缺之则无法明确数据的去向实体。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑设备名",
+    "target": "统一命名",
+    "type": "PREREQUISITE",
+    "description": "统一命名机制明确采用预先设计的统一逻辑名称（即逻辑设备名）对设备命名，缺少逻辑设备名，则统一命名失去其核心要素“逻辑名称”。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑设备名",
+    "target": "逻辑设备",
+    "type": "PREREQUISITE",
+    "description": "逻辑设备作为抽象设备在系统中通过逻辑设备名被引用和标识，逻辑设备名的概念是定义逻辑设备标识方式的前提。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "设备驱动程序",
+    "target": "系统设备表",
+    "type": "PREREQUISITE",
+    "description": "系统设备表需要记录每个设备的驱动程序入口地址，驱动程序入口是设备驱动程序的一部分，缺少设备驱动程序概念则系统设备表的“驱动程序入口”无从谈起。",
+    "chapter": "5.设备管理",
+    "reviewed": false
+  },
+  {
+    "source": "TCP/IP协议",
+    "target": "TCP/IP模型",
+    "type": "PREREQUISITE",
+    "description": "TCP/IP模型是TCP/IP协议的分层抽象，其定义直接基于TCP/IP协议族，若无此协议族则无法描述该模型的分层结构。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "主动攻击型感染",
+    "target": "诱饵文件",
+    "type": "PREREQUISITE",
+    "description": "诱饵文件通过引诱病毒主动感染自身来捕获病毒样本，其工作原理直接依赖病毒具有主动攻击型感染行为，若无此行为则诱饵文件无法被病毒攻击而失去捕获功能。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "IP协议",
+    "target": "分段和重新组装",
+    "type": "PREREQUISITE",
+    "description": "分段和重新组装的定义为'IP协议中处理不同网络帧长度差异的机制'，其机制说明直接依赖IP协议的存在。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "IP协议",
+    "target": "路由选择",
+    "type": "PREREQUISITE",
+    "description": "路由选择定义为'IP协议中确定数据报从源到目标路径的机制'，其机制本身作为IP协议的一部分而存在。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "传输控制协议",
+    "target": "确认和重发机制",
+    "type": "PREREQUISITE",
+    "description": "确认和重发机制的定义为'TCP中确保数据传输可靠性的机制'，其操作和语义直接建立在TCP协议之上。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "数据报服务",
+    "target": "路由选择",
+    "type": "PREREQUISITE",
+    "description": "路由选择定义为'确定数据报从源到目标路径的机制'，其操作对象'数据报'由数据报服务提供和定义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "保护域",
+    "target": "拷贝权",
+    "type": "PREREQUISITE",
+    "description": "拷贝权定义中的“域”直接指代保护域，其核心语义是将某个域中的访问权扩展到同一列的其他域，没有保护域概念则无法表述。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "保护域",
+    "target": "所有权",
+    "type": "PREREQUISITE",
+    "description": "所有权定义中的“域”直接指代保护域，描述域增加或删除其他域对同一对象的访问权，没有保护域概念则无法定义。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "保护域",
+    "target": "控制权",
+    "type": "PREREQUISITE",
+    "description": "控制权定义中的“域”直接指代保护域，描述域改变其他域内的各项访问权，没有保护域概念则无法表述。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "保护域",
+    "target": "访问控制表",
+    "type": "PREREQUISITE",
+    "description": "访问控制表按列划分访问矩阵，为每个对象列出有权访问的域及其权限，其描述中直接引用“域”即保护域，因此依赖保护域的定义。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "保护域",
+    "target": "访问权限表",
+    "type": "PREREQUISITE",
+    "description": "访问权限表按行划分访问矩阵，为每个域建立一张表列出其可访问的对象及权限，所述“域”直接指代保护域，无保护域则无法定义。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "超文本文件",
+    "target": "超文本标识语言",
+    "type": "PREREQUISITE",
+    "description": "超文本标识语言的定义是'用于创建超文本文件的编程语言'，直接引用了超文本文件概念，缺则无法表述自身。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "超文本文件",
+    "target": "环球网",
+    "type": "PREREQUISITE",
+    "description": "环球网是全球范围的超文本信息系统，超文本文件是其基本组成单元，没有超文本文件就无法构成该信息系统。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "超文本文件",
+    "target": "超文本传输协议",
+    "type": "PREREQUISITE",
+    "description": "超文本传输协议是'用于传输超文本和多媒体信息'的应用层协议，其传输对象直接引用超文本文件，缺则协议失去传输目标。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "统一资源定位符",
+    "target": "超文本传输协议",
+    "type": "PREREQUISITE",
+    "description": "超文本传输协议的请求消息中必须包含统一资源定位符来标识目标资源，URL是构成HTTP请求的不可或缺部分。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "统一资源定位符",
+    "target": "环球网",
+    "type": "PREREQUISITE",
+    "description": "环球网中的每个信息单元都通过统一资源定位符进行寻址和访问，URL是其资源定位机制的直接实现，缺则无法实现全球范围的信息定位。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "环球网",
+    "target": "Web服务",
+    "type": "PREREQUISITE",
+    "description": "Web服务是基于WWW的信息服务，WWW是其服务内容的载体和定义基础，去掉环球网则Web服务的概念完全无法表述。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "环球网",
+    "target": "Web服务",
+    "type": "PREREQUISITE",
+    "description": "Web服务是基于WWW（环球网）的信息服务，其核心功能直接建立在环球网提供的超文本信息浏览和发布机制上。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "Web服务",
+    "target": "浏览器/服务器模式",
+    "type": "PREREQUISITE",
+    "description": "浏览器/服务器模式通过Web服务器提供Web服务来访问数据库，Web服务是其核心交互方式，缺则B/S模式无从定义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "存储-转发",
+    "target": "报文交换方式",
+    "type": "PREREQUISITE",
+    "description": "报文交换方式的核心操作定义为“基于存储-转发方式”，其语义完全依赖存储-转发的机制。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "存储-转发",
+    "target": "分组交换方式",
+    "type": "PREREQUISITE",
+    "description": "分组交换方式明确要求“基于存储-转发方式传输”，缺少存储-转发无法解释其转发过程。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "分组交换方式",
+    "target": "分组交换网",
+    "type": "PREREQUISITE",
+    "description": "分组交换网的定义以“分组为传输基本单位”，分组的含义直接源于分组交换方式，缺之则无法理解其基本传输单元。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "网络体系结构",
+    "target": "网桥",
+    "type": "PREREQUISITE",
+    "description": "网桥的定义指明其“工作在MAC子层和物理层”，MAC子层和物理层是网络体系结构层次划分的组成部分。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "网络体系结构",
+    "target": "路由器",
+    "type": "PREREQUISITE",
+    "description": "路由器的定义明确“在网络层实现互连”，网络层是由网络体系结构定义的核心层次。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "网络体系结构",
+    "target": "网关",
+    "type": "PREREQUISITE",
+    "description": "网关的定义要求“进行网络层、数据链路层及物理层的协议转换”，这些层次的划分直接来自网络体系结构。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "交换技术",
+    "target": "交换式局域网",
+    "type": "PREREQUISITE",
+    "description": "交换式局域网通过“交换器”划分网段，交换器的概念源自交换技术，不掌握交换技术则无法理解交换式局域网的核心。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "虚拟文件系统",
+    "target": "文件系统注册",
+    "type": "PREREQUISITE",
+    "description": "文件系统注册的定义是将具体文件系统类型注册到虚拟文件系统链表中，直接依赖虚拟文件系统作为注册目标，没有虚拟文件系统则注册操作无法表述。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "虚拟文件系统",
+    "target": "文件系统注册",
+    "type": "PREREQUISITE",
+    "description": "文件系统注册是将具体文件系统类型注册到虚拟文件系统链表中，直接依赖虚拟文件系统的存在和其注册机制，没有虚拟文件系统概念则无法定义文件系统注册。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件名",
+    "target": "相对路径",
+    "type": "PREREQUISITE",
+    "description": "相对路径的定义是结合当前目录的路径表示，路径本身由一系列文件名组成，文件名是相对路径的基本构成元素，没有文件名则无法表示路径。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件名",
+    "target": "文件基本操作",
+    "type": "PREREQUISITE",
+    "description": "文件基本操作中的创建、删除等操作，其操作对象是文件，在用户层面通过文件名标识，创建操作必须指定文件名，没有文件名则创建操作无法表述。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "认证机构",
+    "target": "数字证书",
+    "type": "PREREQUISITE",
+    "description": "数字证书的定义明确指出它是由认证机构颁发的电子文档，缺少认证机构的概念无法表述数字证书的来源和可信基础。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "认证机构",
+    "target": "数字证书",
+    "type": "PREREQUISITE",
+    "description": "数字证书的定义是‘由认证机构颁发的电子文档’，直接引用认证机构作为其颁发主体。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "口令",
+    "target": "基于口令的身份认证",
+    "type": "PREREQUISITE",
+    "description": "基于口令的身份认证的基本操作是将用户输入的口令与系统存储的口令进行比对，没有口令这一核心比对对象，整个认证机制无法定义。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "口令",
+    "target": "自动断开连接",
+    "type": "PREREQUISITE",
+    "description": "自动断开连接的触发条件是用户输入不正确口令的次数超过限制，其语义直接作用于口令输入过程，没有口令概念就无法理解该机制。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "口令",
+    "target": "隐蔽回送显示",
+    "type": "PREREQUISITE",
+    "description": "隐蔽回送显示是指在用户输入口令时不回显或显示星号，其保护对象明确是口令字符串，离开口令则隐藏操作失去意义。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "磁卡",
+    "target": "磁卡认证技术",
+    "type": "PREREQUISITE",
+    "description": "磁卡认证技术利用磁卡上记录的用户信息进行身份识别，磁卡是该技术赖以实现的物理媒介，定义直接依赖于磁卡概念。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "IC卡",
+    "target": "IC卡认证技术",
+    "type": "PREREQUISITE",
+    "description": "IC卡认证技术基于集成电路卡进行身份认证，IC卡是其核心硬件组件，没有IC卡则无法定义该技术的基本要素。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "计算机病毒",
+    "target": "病毒预防",
+    "type": "PREREQUISITE",
+    "description": "病毒预防的定义中直接以计算机病毒为防护对象，不理解计算机病毒就无法理解病毒预防的目的和措施",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "计算机病毒",
+    "target": "病毒检测",
+    "type": "PREREQUISITE",
+    "description": "病毒检测的定义核心是将文件与病毒数据库样本匹配，检测对象就是计算机病毒，脱离计算机病毒概念则检测毫无意义",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "访问控制矩阵",
+    "target": "静态域",
+    "type": "PREREQUISITE",
+    "description": "静态域定义中的'域'概念直接来源于访问控制矩阵中的行定义，缺少访问控制矩阵则无法解释什么是域",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "明文",
+    "target": "加密算法",
+    "type": "PREREQUISITE",
+    "description": "加密算法的定义是‘实现从明文到密文转换的公式、规则或程序’，其中直接使用‘明文’作为转换的源数据。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "明文",
+    "target": "解密算法",
+    "type": "PREREQUISITE",
+    "description": "解密算法的定义直接使用‘明文’作为转换的输出数据。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "密文",
+    "target": "加密算法",
+    "type": "PREREQUISITE",
+    "description": "加密算法的定义直接使用‘密文’作为转换的结果数据。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "密文",
+    "target": "解密算法",
+    "type": "PREREQUISITE",
+    "description": "解密算法的定义是‘实现从密文到明文转换的公式、规则或程序’，其中直接使用‘密文’作为输入数据。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "加密算法",
+    "target": "密钥",
+    "type": "PREREQUISITE",
+    "description": "密钥的定义是‘加密和解密算法中的关键参数’，直接引用加密算法作为其应用场景之一。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "解密算法",
+    "target": "密钥",
+    "type": "PREREQUISITE",
+    "description": "密钥的定义直接引用解密算法作为其应用场景之一。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "分层",
+    "target": "网络协议",
+    "type": "PREREQUISITE",
+    "description": "网络协议的定义明确要求协议“局部于某层”，缺少分层概念则无法说明协议的层次属性。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "分层",
+    "target": "网络体系结构",
+    "type": "PREREQUISITE",
+    "description": "网络体系结构定义为“计算机网络的层次及其协议的集合”，其核心概念“层次”直接来自分层机制。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "网络协议",
+    "target": "协议数据单元",
+    "type": "PREREQUISITE",
+    "description": "协议数据单元的定义包括“协议控制信息”，该信息由网络协议规定，缺少网络协议概念则协议数据单元的组成无法解释。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "开放系统互连参考模型",
+    "target": "开放系统",
+    "type": "PREREQUISITE",
+    "description": "开放系统的定义是“能遵循OSI标准、与其他系统通信”，其“OSI标准”即指开放系统互连参考模型，缺失该模型则开放系统无从界定。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "开放系统互连参考模型",
+    "target": "协议数据单元",
+    "type": "PREREQUISITE",
+    "description": "协议数据单元是“OSI中对等实体之间传送的信息单元”，其存在域限定在OSI模型中，缺少开放系统互连参考模型则OSI对等实体概念无根基。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "应用层",
+    "target": "表示层",
+    "type": "PREREQUISITE",
+    "description": "表示层的职责是“确保应用层能理解数据”，直接引用应用层作为服务对象，不含应用层则功能目标无法表述。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "应用层",
+    "target": "会晤层",
+    "type": "PREREQUISITE",
+    "description": "会晤层负责“管理不同主机上应用程序之间的会话”，应用程序是应用层概念，缺少应用层则会话管理的对象不明确。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "数据链路层",
+    "target": "物理层",
+    "type": "PREREQUISITE",
+    "description": "物理层定义为“实现系统和通信介质的接口，为数据链路实体透明传输比特流”，明确引用数据链路实体作为服务对象，缺之则物理层的服务语义无法定义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "IEEE 802标准",
+    "target": "局域网参考模型LAN/RM",
+    "type": "PREREQUISITE",
+    "description": "局域网参考模型LAN/RM的定义直接指明由IEEE 802标准定义，缺少该标准则无法表述这一参考模型。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "IEEE 802标准",
+    "target": "介质访问控制子层",
+    "type": "PREREQUISITE",
+    "description": "介质访问控制子层的定义明确为IEEE 802标准中定义的子层，其含义直接依赖于该标准。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "IEEE 802标准",
+    "target": "逻辑链路控制子层",
+    "type": "PREREQUISITE",
+    "description": "逻辑链路控制子层的定义引用IEEE 802.2，该标准是IEEE 802系列的一部分，因此概念直接源于IEEE 802标准。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑链路控制子层LLC",
+    "target": "LLC 1型规程",
+    "type": "PREREQUISITE",
+    "description": "LLC 1型规程是LLC子层中支持无连接操作的规程，规程的定义直接建立在LLC子层提供的服务之上。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "逻辑链路控制子层LLC",
+    "target": "LLC 2型规程",
+    "type": "PREREQUISITE",
+    "description": "LLC 2型规程是LLC子层中支持面向连接操作的规程，规程的定义直接基于LLC子层的功能。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "IP地址",
+    "target": "域名",
+    "type": "PREREQUISITE",
+    "description": "域名是与IP地址一一对应的主机标识符，其核心作用是将名称映射为IP地址，缺少IP地址则域名概念失去根本意义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "Internet",
+    "target": "电子邮件服务",
+    "type": "PREREQUISITE",
+    "description": "电子邮件服务的定义明确为Internet上的信息服务，脱离Internet无法独立表述该服务的基本含义。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "Internet",
+    "target": "电子公告板系统",
+    "type": "PREREQUISITE",
+    "description": "电子公告板系统的定义指定为运行在Internet上的服务，其概念直接依赖于Internet的存在。",
+    "chapter": "8.网络操作系统",
+    "reviewed": false
+  },
+  {
+    "source": "非对称加密算法",
+    "target": "数字签名",
+    "type": "PREREQUISITE",
+    "description": "数字签名的定义直接使用发送者私钥加密报文、接收者公钥解密，私钥/公钥和解密操作完全依赖于非对称加密算法的概念。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "非对称加密算法",
+    "target": "保密数字签名",
+    "type": "PREREQUISITE",
+    "description": "保密数字签名的定义要求结合发送者私钥和接收者公钥进行双重加密，私钥/公钥及其加解密操作直接源自非对称加密算法。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "RSA体制",
+    "target": "密码卡",
+    "type": "PREREQUISITE",
+    "description": "密码卡的定义明确其功能是支持非对称加密体制RSA，RSA是描述密码卡核心能力的必要组成部分。",
+    "chapter": "9.系统安全性",
+    "reviewed": false
+  },
+  {
+    "source": "索引节点",
+    "target": "综合模式",
+    "type": "PREREQUISITE",
+    "description": "综合模式是索引节点中数据块指针的组织方式，其定义直接基于索引节点提供的索引表结构，没有索引节点概念则无法理解索引表的组织。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "索引节点",
+    "target": "文件一致性检查",
+    "type": "PREREQUISITE",
+    "description": "文件一致性检查包括检查文件引用计数，而引用计数是索引节点中的关键字段，没有索引节点概念则无法表述引用计数的来源和一致性检查的对象。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "系统打开文件表",
+    "target": "进程打开文件表",
+    "type": "PREREQUISITE",
+    "description": "进程打开文件表的核心定义是建立文件描述符到系统打开文件表项的映射，直接引用系统打开文件表，缺其则无法定义进程打开文件表。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件基本操作",
+    "target": "系统打开文件表",
+    "type": "PREREQUISITE",
+    "description": "系统打开文件表是为管理文件打开操作而维护的数据结构，其存在意义和设计目的源于文件打开操作，无法脱离文件打开操作来定义系统打开文件表。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件基本操作",
+    "target": "虚拟文件系统",
+    "type": "PREREQUISITE",
+    "description": "虚拟文件系统的核心功能是提供统一的文件操作接口，这些接口正是文件基本操作，若没有文件基本操作的定义，虚拟文件系统提供的操作无从表述。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件目录管理",
+    "target": "目录路径查找",
+    "type": "PREREQUISITE",
+    "description": "目录路径查找的过程是分解路径名并逐级进入目录进行查找，目录的层次结构由文件目录管理定义和维护，没有目录管理的概念就无法表述目录路径查找。",
+    "chapter": "7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "索引分配",
+    "target": "综合模式",
+    "type": "PREREQUISITE",
+    "description": "综合模式基于索引分配的外存分配方式，结合直接与间接索引组织索引表，索引分配是综合模式的底层机制，缺少则无法定义综合模式。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "位示图法",
+    "target": "块组",
+    "type": "PREREQUISITE",
+    "description": "块组中的块位图使用位示图法表示磁盘块占用状态，位示图法是块组内管理空闲块的核心方法，缺少则无法理解块组的空间管理。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "打开文件",
+    "target": "进程打开文件表",
+    "type": "PREREQUISITE",
+    "description": "进程打开文件表是打开文件系统调用创建并返回文件描述符后，在进程内维护的映射表，其表项由打开文件操作产生，无打开文件机制无法定义该表。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "打开文件",
+    "target": "系统打开文件表",
+    "type": "PREREQUISITE",
+    "description": "系统打开文件表是系统全局记录已打开文件的数据结构，由打开文件操作创建和填充，包含文件偏移等信息，无打开文件机制无法定义该表。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统模型",
+    "target": "虚拟文件系统",
+    "type": "PREREQUISITE",
+    "description": "虚拟文件系统的设计遵循文件系统模型的分层思想，将具体文件系统抽象为统一接口，文件系统模型是虚拟文件系统架构的理论基础，缺少则无法理解其抽象层定位。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "文件系统模型",
+    "target": "文件系统注册",
+    "type": "PREREQUISITE",
+    "description": "文件系统注册是实现文件系统模型中软件集合层的关键机制，通过注册使虚拟文件系统能管理多种具体系统，文件系统模型是注册操作的目的和依据，缺少则无法理解注册的必要性。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "隐式链接",
+    "target": "串联结构",
+    "type": "PREREQUISITE",
+    "description": "串联结构即隐式链接分配方式，文件数据通过盘块内的指针链接成链，其定义直接引用隐式链接的盘块指针机制，无隐式链接无法表述串联结构。",
+    "chapter": "6.文件管理→7.文件系统",
+    "reviewed": false
+  },
+  {
+    "source": "进程状态转换",
+    "target": "时间片轮转调度算法",
+    "type": "PREREQUISITE",
+    "description": "时间片轮转调度依赖进程在运行和就绪状态之间的切换，如时间片用完后进程从运行态变为就绪态，无状态转换机制则无法描述调度流程。",
+    "chapter": "4.进程与线程→3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "进程状态转换",
+    "target": "抢占式优先权调度算法",
+    "type": "PREREQUISITE",
+    "description": "抢占式调度需要剥夺当前进程的CPU，使其从运行态转为就绪态，进程状态转换是这一操作的基础。",
+    "chapter": "4.进程与线程→3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "进程状态转换",
+    "target": "多级反馈队列调度算法",
+    "type": "PREREQUISITE",
+    "description": "该算法中进程在不同优先级队列间迁移并可能被抢占，伴随多次状态转换，进程状态转换概念是算法操作的核心支撑。",
+    "chapter": "4.进程与线程→3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "进程状态转换",
+    "target": "死锁解除",
+    "type": "PREREQUISITE",
+    "description": "死锁解除通过撤消或挂起进程使系统脱离死锁，这些操作直接改变进程状态，依赖进程状态转换机制。",
+    "chapter": "4.进程与线程→3.处理机调度与死锁",
+    "reviewed": false
+  },
+  {
+    "source": "临界区管理准则",
+    "target": "同步机制准则",
+    "type": "PREREQUISITE",
+    "description": "同步机制准则直接复制了临界区管理准则的四条要求（空闲让进、忙则等待、有限等待、让权等待），其内容完全相同，无临界区管理准则则无法定义同步机制准则。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "临界区管理准则",
+    "target": "记录型信号量",
+    "type": "PREREQUISITE",
+    "description": "记录型信号量强调遵循让权等待准则，即进程进入不了临界区时主动释放处理器，这一特性直接引用自临界区管理准则的让权等待要求。",
+    "chapter": "4.进程同步→2.进程管理",
+    "reviewed": false
+  },
+  {
+    "source": "地址独立",
+    "target": "虚拟存储器",
+    "type": "PREREQUISITE",
+    "description": "虚拟存储器的定义核心是让应用程序认为拥有连续可用内存空间，这必须建立在地址独立（程序发出地址与物理地址无关）的前提下，无地址独立无法表述虚拟存储器概念。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "地址独立",
+    "target": "分段存储管理",
+    "type": "PREREQUISITE",
+    "description": "分段存储管理定义中每段拥有独立地址空间，这种虚拟地址空间建立在地址独立的基础上，没有地址独立无法理解段的逻辑地址与物理地址分离。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "地址独立",
+    "target": "基本分页存储管理方式",
+    "type": "PREREQUISITE",
+    "description": "基本分页存储管理将虚拟地址空间划分为页，虚拟地址的概念源于地址独立，无地址独立分页机制无从谈起。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "进程地址空间布局",
+    "target": "整体对换",
+    "type": "PREREQUISITE",
+    "description": "整体对换以进程为单位在内存与外存间交换，操作对象是进程，必须知道进程的代码、数据、堆栈等段在内存中的分布，这由进程地址空间布局定义。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "进程地址空间布局",
+    "target": "对换",
+    "type": "PREREQUISITE",
+    "description": "对换操作将进程整体在内存和外存间交换，需要明确进程在内存中的布局（代码段、数据段等），这由进程地址空间布局定义，无此布局无法执行换入换出。",
+    "chapter": "3.内存管理→4.存储器管理",
+    "reviewed": false
+  },
+  {
+    "source": "系统调用",
+    "target": "用户与操作系统接口",
+    "type": "PREREQUISITE",
+    "description": "用户与操作系统接口的定义中明确提到系统调用是接口的一种形式，没有系统调用则无法完整定义该接口。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "系统调用",
+    "target": "进程通信",
+    "type": "PREREQUISITE",
+    "description": "进程通信的定义明确说明是系统调用类型，没有系统调用概念无法定义进程通信。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "内核",
+    "target": "系统调用",
+    "type": "PREREQUISITE",
+    "description": "系统调用是内核提供的接口，其实现和定义直接依赖于内核。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "主存储器",
+    "target": "存储器管理",
+    "type": "PREREQUISITE",
+    "description": "存储器管理的对象是主存储器，其定义直接依赖于主存储器的存在。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "主存储器",
+    "target": "虚拟存储器",
+    "type": "PREREQUISITE",
+    "description": "虚拟存储器技术使应用程序认为拥有连续内存空间，而实际物理内存可能不连续，其定义直接涉及主存储器的使用和管理。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "主存储器",
+    "target": "多道程序设计技术",
+    "type": "PREREQUISITE",
+    "description": "多道程序设计技术的定义要求将多道程序同时装入内存，而主存储器是保存程序和数据的地方，没有主存储器就无法实现多道程序在内存中的并发执行。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "主存储器",
+    "target": "内存分配",
+    "type": "PREREQUISITE",
+    "description": "内存分配的定义直接涉及为主存储器分配空间，没有主存储器概念无法定义内存分配。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "主存储器",
+    "target": "物理地址",
+    "type": "PREREQUISITE",
+    "description": "物理地址的定义明确是内存中实际存储单元的地址，没有主存储器则无法定义物理地址。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "资源管理者",
+    "target": "资源管理",
+    "type": "PREREQUISITE",
+    "description": "资源管理的定义直接说明操作系统作为资源管理者，资源管理者是资源管理的主体。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "批处理系统",
+    "target": "多道批处理系统",
+    "type": "PREREQUISITE",
+    "description": "多道批处理系统是批处理系统的一种，其定义直接基于批处理系统，没有批处理系统就无法定义多道批处理系统。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "批处理系统",
+    "target": "监督程序",
+    "type": "PREREQUISITE",
+    "description": "监督程序是批处理系统中用于控制作业自动调入内存并运行的管理程序，其定义直接依赖于批处理系统的概念。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "并发执行",
+    "target": "多道批处理系统",
+    "type": "PREREQUISITE",
+    "description": "多道批处理系统的核心特征是并发执行，没有并发执行的概念就无法描述多道批处理系统的工作原理。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "并发执行",
+    "target": "异步性",
+    "type": "PREREQUISITE",
+    "description": "异步性的定义直接基于进程并发执行，没有并发执行就无法理解异步性",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "独占设备",
+    "target": "SPOOLing技术",
+    "type": "PREREQUISITE",
+    "description": "SPOOLing技术是为了解决独占设备的问题而提出的，其定义中隐含了独占设备的概念，没有独占设备就无法理解SPOOLing技术的必要性。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "存储器管理",
+    "target": "虚拟存储器",
+    "type": "PREREQUISITE",
+    "description": "虚拟存储器是存储器管理的一种技术，其定义直接依赖于存储器管理对内存空间分配和保护的基本概念。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "时间片",
+    "target": "分时系统",
+    "type": "PREREQUISITE",
+    "description": "分时系统的定义直接基于时间片轮转，没有时间片概念就无法定义分时系统。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "实时操作系统",
+    "target": "实时任务",
+    "type": "PREREQUISITE",
+    "description": "实时任务的定义直接引用实时系统，是实时系统中与外部设备相关的任务",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "实时任务",
+    "target": "硬实时任务",
+    "type": "PREREQUISITE",
+    "description": "硬实时任务的定义直接引用实时任务，是实时任务的一种类型",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "实时任务",
+    "target": "软实时任务",
+    "type": "PREREQUISITE",
+    "description": "软实时任务的定义直接引用实时任务，是实时任务的一种类型",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "截止时间",
+    "target": "软实时任务",
+    "type": "PREREQUISITE",
+    "description": "软实时任务的定义直接引用截止时间，说明其对截止时间要求不严格，没有截止时间概念无法定义软实时任务。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "资源共享",
+    "target": "互斥共享方式",
+    "type": "PREREQUISITE",
+    "description": "互斥共享方式的定义直接引用资源共享，没有资源共享概念无法定义互斥共享方式",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "共享",
+    "target": "互斥共享方式",
+    "type": "PREREQUISITE",
+    "description": "互斥共享方式是共享的一种具体方式，其定义直接基于共享概念，没有共享就无法定义互斥共享。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "共享",
+    "target": "同时访问方式",
+    "type": "PREREQUISITE",
+    "description": "同时访问方式是共享的一种具体方式，其定义直接基于共享概念，没有共享就无法定义同时访问。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "虚拟",
+    "target": "时分复用技术",
+    "type": "PREREQUISITE",
+    "description": "时分复用技术的定义直接引用虚拟概念，通过分时使用将物理信道虚拟为多条逻辑信道，没有虚拟就无法定义。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "虚拟",
+    "target": "虚拟处理机技术",
+    "type": "PREREQUISITE",
+    "description": "虚拟处理机技术的定义直接引用虚拟概念，把一台物理处理机虚拟为多台逻辑处理机，没有虚拟就无法定义。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "虚拟",
+    "target": "内存扩充",
+    "type": "PREREQUISITE",
+    "description": "内存扩充的定义中明确以虚拟存储技术为例，没有虚拟概念则无法理解内存扩充。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "并发",
+    "target": "异步性",
+    "type": "PREREQUISITE",
+    "description": "异步性的定义直接基于并发执行，没有并发就无法定义异步性",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程通信",
+    "target": "进程同步机制",
+    "type": "PREREQUISITE",
+    "description": "进程同步机制的定义直接引用进程通信，没有进程通信就无法定义同步机制",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "临界资源",
+    "target": "进程互斥",
+    "type": "PREREQUISITE",
+    "description": "进程互斥的定义直接基于临界资源，没有临界资源就无法定义互斥",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "进程同步与互斥",
+    "target": "信号量机制",
+    "type": "PREREQUISITE",
+    "description": "信号量机制的定义明确说明用于进程同步与互斥，没有该概念无法定义信号量机制。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "消息",
+    "target": "进程通信",
+    "type": "PREREQUISITE",
+    "description": "进程通信包括消息传递，消息是通信的基本单元，没有消息概念无法完整定义进程通信。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "就绪队列",
+    "target": "进程调度",
+    "type": "PREREQUISITE",
+    "description": "进程调度的定义直接引用就绪队列，从就绪队列中选取进程。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "装入",
+    "target": "静态分配",
+    "type": "PREREQUISITE",
+    "description": "静态分配的定义中明确提到'作业的内存空间在装入时确定'，装入是静态分配定义的核心操作。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "存储保护键方法",
+    "target": "内存保护",
+    "type": "PREREQUISITE",
+    "description": "内存保护的定义中明确将存储保护键方法作为常用实现方式之一，没有存储保护键方法的概念，内存保护的定义就不完整。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "物理地址",
+    "target": "地址映射",
+    "type": "PREREQUISITE",
+    "description": "地址映射的定义明确将物理地址作为转换的目标，没有物理地址则无法定义地址映射。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "程序",
+    "target": "逻辑地址",
+    "type": "PREREQUISITE",
+    "description": "逻辑地址的定义明确是程序中的地址，没有程序则无法定义逻辑地址。",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲技术",
+    "target": "单缓冲机制",
+    "type": "PREREQUISITE",
+    "description": "单缓冲机制是缓冲技术的一种具体实现，其定义直接基于缓冲区的概念，没有缓冲技术就无法定义单缓冲",
+    "chapter": "",
+    "reviewed": false
+  },
+  {
+    "source": "缓冲技术",
+    "target": "双缓冲机制",
+    "type": "PREREQUISITE",
+    "description": "双缓冲机制是缓冲技术的一种具体实现，其定义直接基于缓冲区的概念，没有缓冲技术就无法定义双缓冲",
+    "chapter": "",
+    "reviewed": false
+  }
+]
