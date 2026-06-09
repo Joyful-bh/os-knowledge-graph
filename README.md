@@ -13,7 +13,8 @@
 pip install openai python-dotenv networkx
 
 # 可选，Phase 2 需要
-pip install sentence-transformers chromadb
+pip install sentence-transformers chromadb ollama
+ollama pull bge-m3
 
 # 2. 配置 API Key
 cp .env.example .env    # 填入 DEEPSEEK_API_KEY
@@ -27,6 +28,10 @@ from src.retrieval.subgraph import get_subgraph
 r = get_subgraph(['记录型信号量'], hops=2)
 print(f'节点：{len(r[\"nodes\"])}，边：{len(r[\"edges\"])}')
 "
+
+# 5. 生成 Phase 2 多跳评测集并运行对比实验（会调用 Ollama + DeepSeek）
+python -m src.eval.multihop_set
+python -m src.eval.compare
 ```
 
 ---
@@ -38,6 +43,8 @@ print(f'节点：{len(r[\"nodes\"])}，边：{len(r[\"edges\"])}')
 ├── data/
 │   ├── concepts.json          # ✅ 1389 个概念（闭集）
 │   ├── edges.json             # ✅ 4978 条边（6 种类型）
+│   ├── multihop_questions.json     # ✅ Phase 2：75 条评测问题
+│   ├── phase2_compare_results.json # ✅ Phase 2：向量 RAG vs GraphRAG 结果
 │   └── candidates/
 │       └── problems_raw.json  # ✅ 306 道习题（Phase 3 精校后移至 data/problems.json）
 ├── src/
@@ -50,16 +57,16 @@ print(f'节点：{len(r[\"nodes\"])}，边：{len(r[\"edges\"])}')
 │   │   └── normalize.py       # ✅ 实体归一化
 │   ├── retrieval/
 │   │   ├── subgraph.py        # ✅ 子图召回（RAG + 诊断共用接口）
-│   │   ├── vector_rag.py      # 🔲 Phase 2：向量 RAG 基线
-│   │   └── graph_rag.py       # 🔲 Phase 2：GraphRAG
+│   │   ├── vector_rag.py      # ✅ Phase 2：向量 RAG 基线
+│   │   └── graph_rag.py       # ✅ Phase 2：GraphRAG
 │   ├── diagnosis/
 │   │   ├── trace.py           # 🔲 Phase 3：错题→先修链溯源
 │   │   └── mastery.py         # 🔲 Phase 3：掌握度模型
 │   ├── path/
 │   │   └── planner.py         # 🔲 Phase 3：学习路径规划
 │   └── eval/
-│       ├── multihop_set.py    # 🔲 Phase 2：多跳测试集
-│       └── compare.py         # 🔲 Phase 2：向量 RAG vs GraphRAG 对比
+│       ├── multihop_set.py    # ✅ Phase 2：多跳测试集
+│       └── compare.py         # ✅ Phase 2：向量 RAG vs GraphRAG 对比
 └── docs/
     ├── OS_KG_Schema.md        # Schema 权威文档
     └── collaboration_contract.md  # 双人协作接口约定
@@ -147,21 +154,33 @@ def resolve_concept_name(user_input: str) -> str | None:
 
 ---
 
-## Phase 2 开发指南（B 同学）
+## Phase 2 完成状态（B 同学）
 
-**你需要实现的三个文件：**
+Phase 2 已实现普通向量 RAG、GraphRAG、多跳评测集和对比实验。整体流程：
+
+```text
+用户问题
+  → vector_rag.query() 检索规范 Concept
+  → 普通向量 RAG：只使用 name + definition
+  → GraphRAG：调用 get_subgraph() 扩展图谱上下文
+  → llm_client.call() 生成答案
+  → llm_client.call_json() 判断答案是否覆盖标准答案
+```
 
 ### `src/retrieval/vector_rag.py`
 
 ```python
 def build_index(concepts: list[dict]) -> None:
-    """将 name + definition 编码存入 chromadb。"""
+    """使用 Ollama bge-m3 生成 embedding，并 upsert 到 chroma_db/os_concepts。"""
 
 def query(question: str, top_k: int = 5) -> list[dict]:
     """返回 [{"name": str, "definition": str, "score": float}, ...]"""
 ```
 
-推荐：`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`（支持中文，轻量）
+- Embedding 模型：本地 Ollama `bge-m3`
+- 向量库：ChromaDB，持久化目录 `chroma_db/`，collection 名 `os_concepts`
+- 索引文本包含 `name`、`definition`、`chapter`、`node_role`、`difficulty`、`aliases`，算法节点还会加入 `preemptive`、`starvation_free`、`complexity`、`scenario`
+- `query()` 在 collection 为空时会自动读取 `data/concepts.json` 并构建索引
 
 ### `src/retrieval/graph_rag.py`
 
@@ -175,10 +194,48 @@ def answer(question: str, top_k: int = 3, hops: int = 2) -> str:
     """
 ```
 
+GraphRAG 使用向量检索返回的规范 Concept 名称作为种子，调用共享接口：
+
+```python
+get_subgraph(
+    concept_names=seed_names,
+    edge_types=["PREREQUISITE", "RELATED", "SOLVES", "CONFUSABLE", "PART_OF"],
+    hops=hops,
+)
+```
+
+随后将概念字段和边描述格式化为中文上下文，要求 LLM 只基于图谱上下文回答；如果依据不足，需要明确说明“图谱中没有足够依据”。
+
 ### `src/eval/multihop_set.py` + `src/eval/compare.py`
 
-构建需要 2+ 跳推理的问题集，对比向量 RAG 和 GraphRAG 的准确率。
-多跳问题的素材来自 PREREQUISITE 链和 SOLVES 路径（`data/edges.json` 中）。
+多跳评测集从 `data/concepts.json` 和 `data/edges.json` 确定性生成，不调用 LLM。当前生成 75 条问题：
+
+| hops | 数量 | 用途 |
+|------|------|------|
+| 1 | 15 | 基础关系题 |
+| 2 | 45 | 核心多跳评测 |
+| 3 | 15 | 挑战题 |
+
+问题模板避免在 `question` 中暴露“几跳”“PREREQUISITE”“路径”等内部结构；标准答案和 `path` 字段保留完整图谱依据，便于自动评判。
+
+运行方式：
+
+```bash
+# 生成 data/multihop_questions.json，并打印 hops 分布
+python -m src.eval.multihop_set
+
+# 默认读取 75 条评测题，保存 data/phase2_compare_results.json
+python -m src.eval.compare
+```
+
+当前一次完整对比实验结果：
+
+| 方法 | 准确率 |
+|------|--------|
+| 向量 RAG | 58.67% |
+| GraphRAG | 70.67% |
+
+该结果支持项目主线：在需要中间节点和关系推理的问题上，GraphRAG 相比只看概念定义的向量 RAG 有更稳定的增益。
 
 ---
 
