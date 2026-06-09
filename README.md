@@ -29,7 +29,7 @@ r = get_subgraph(['记录型信号量'], hops=2)
 print(f'节点：{len(r[\"nodes\"])}，边：{len(r[\"edges\"])}')
 "
 
-# 5. 生成 Phase 2 多跳评测集并运行对比实验（会调用 Ollama + DeepSeek）
+# 5. 生成 Phase 2 多跳评测集并运行对比实验（默认会调用 Ollama + DeepSeek）
 python -m src.eval.multihop_set
 python -m src.eval.compare
 ```
@@ -171,16 +171,32 @@ Phase 2 已实现普通向量 RAG、GraphRAG、多跳评测集和对比实验。
 
 ```python
 def build_index(concepts: list[dict]) -> None:
-    """使用 Ollama bge-m3 生成 embedding，并 upsert 到 chroma_db/os_concepts。"""
+    """使用 bge-m3 生成 embedding，并 upsert 到 chroma_db/os_concepts。"""
 
 def query(question: str, top_k: int = 5) -> list[dict]:
     """返回 [{"name": str, "definition": str, "score": float}, ...]"""
 ```
 
-- Embedding 模型：本地 Ollama `bge-m3`
+- Embedding 模型：默认使用本地 Ollama `bge-m3`；也支持 SiliconFlow `BAAI/bge-m3`
 - 向量库：ChromaDB，持久化目录 `chroma_db/`，collection 名 `os_concepts`
 - 索引文本包含 `name`、`definition`、`chapter`、`node_role`、`difficulty`、`aliases`，算法节点还会加入 `preemptive`、`starvation_free`、`complexity`、`scenario`
 - `query()` 在 collection 为空时会自动读取 `data/concepts.json` 并构建索引
+
+Embedding provider 通过 `.env` 切换：
+
+```bash
+# 默认：本地 Ollama
+EMBEDDING_PROVIDER=ollama
+OLLAMA_EMBEDDING_MODEL=bge-m3
+
+# 跨平台验证：SiliconFlow
+EMBEDDING_PROVIDER=siliconflow
+SILICONFLOW_API_KEY=sk-...
+SILICONFLOW_BASE_URL=https://api.siliconflow.com/v1
+SILICONFLOW_EMBEDDING_MODEL=BAAI/bge-m3
+```
+
+切换 embedding provider 后，建议生成新的 `chroma_db_2/` 或重新调用 `build_index(load_concepts())`，确保索引和查询使用同一套 embedding 服务。
 
 ### `src/retrieval/graph_rag.py`
 

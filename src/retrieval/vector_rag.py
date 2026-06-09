@@ -1,24 +1,33 @@
 """
-向量 RAG 基线 —— Ollama bge-m3 编码 + ChromaDB 持久化检索。
+向量 RAG 基线 —— bge-m3 编码 + ChromaDB 持久化检索。
 
 本文件只负责“问题 -> 相关 Concept”的向量召回：
 1. 读取 data/concepts.json 中的闭集概念；
 2. 将符合 Schema 的概念字段拼成可检索文本；
-3. 使用本地 Ollama bge-m3 生成 embedding；
+3. 使用本地 Ollama 或 SiliconFlow BAAI/bge-m3 生成 embedding；
 4. 写入 chroma_db/os_concepts，查询时返回规范概念名。
 """
 
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CHROMA_DIR = PROJECT_ROOT / "chroma_db"
 COLLECTION_NAME = "os_concepts"
-EMBEDDING_MODEL = "bge-m3"
+EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "ollama").strip().lower()
+OLLAMA_EMBEDDING_MODEL = os.getenv("OLLAMA_EMBEDDING_MODEL", "bge-m3")
+SILICONFLOW_EMBEDDING_MODEL = os.getenv("SILICONFLOW_EMBEDDING_MODEL", "BAAI/bge-m3")
+SILICONFLOW_BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.com/v1")
+SILICONFLOW_BATCH_SIZE = 64
 
 
 def load_concepts(path: str = "data/concepts.json") -> list[dict]:
@@ -103,7 +112,7 @@ def _get_collection():
     )
 
 
-def _embed_texts(texts: list[str]) -> list[list[float]]:
+def _embed_texts_ollama(texts: list[str]) -> list[list[float]]:
     """
     使用本地 Ollama bge-m3 生成 embedding。
 
@@ -117,16 +126,62 @@ def _embed_texts(texts: list[str]) -> list[list[float]]:
 
     embed = getattr(ollama, "embed", None)
     if embed is not None:
-        response = embed(model=EMBEDDING_MODEL, input=texts)
+        response = embed(model=OLLAMA_EMBEDDING_MODEL, input=texts)
         embeddings = response.get("embeddings")
         if embeddings is not None:
             return embeddings
 
     embeddings: list[list[float]] = []
     for text in texts:
-        response = ollama.embeddings(model=EMBEDDING_MODEL, prompt=text)
+        response = ollama.embeddings(model=OLLAMA_EMBEDDING_MODEL, prompt=text)
         embeddings.append(response["embedding"])
     return embeddings
+
+
+def _embed_texts_siliconflow(texts: list[str]) -> list[list[float]]:
+    """
+    使用 SiliconFlow 的 OpenAI 兼容 embeddings API 生成 BAAI/bge-m3 向量。
+
+    需要在 .env 中配置：
+        EMBEDDING_PROVIDER=siliconflow
+        SILICONFLOW_API_KEY=...
+    """
+    from openai import OpenAI
+
+    if not texts:
+        return []
+
+    api_key = os.getenv("SILICONFLOW_API_KEY")
+    if not api_key:
+        raise RuntimeError("使用 SiliconFlow embedding 时需要设置 SILICONFLOW_API_KEY")
+
+    client = OpenAI(api_key=api_key, base_url=SILICONFLOW_BASE_URL)
+    embeddings: list[list[float]] = []
+
+    # 分批请求，避免一次性提交 1389 个概念时请求体过大。
+    for start in range(0, len(texts), SILICONFLOW_BATCH_SIZE):
+        batch = texts[start:start + SILICONFLOW_BATCH_SIZE]
+        response = client.embeddings.create(
+            model=SILICONFLOW_EMBEDDING_MODEL,
+            input=batch,
+            encoding_format="float",
+        )
+        embeddings.extend(item.embedding for item in response.data)
+
+    return embeddings
+
+
+def _embed_texts(texts: list[str]) -> list[list[float]]:
+    """根据 EMBEDDING_PROVIDER 选择本地或远端 embedding 服务。"""
+    if EMBEDDING_PROVIDER == "ollama":
+        return _embed_texts_ollama(texts)
+    if EMBEDDING_PROVIDER == "siliconflow":
+        return _embed_texts_siliconflow(texts)
+
+    raise ValueError(
+        "EMBEDDING_PROVIDER 只支持 'ollama' 或 'siliconflow'，"
+        f"当前值为：{EMBEDDING_PROVIDER}"
+    )
 
 
 def build_index(concepts: list[dict]) -> None:
