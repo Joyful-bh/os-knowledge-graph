@@ -1,0 +1,362 @@
+{
+  "wrong_pids": [
+    "CH3_Q2",
+    "CH4_Q7"
+  ],
+  "tested_concepts_by_problem": [
+    {
+      "pid": "CH3_Q2",
+      "stem": "何谓作业、作业步和作业流？",
+      "tested_concepts": [
+        "作业",
+        "作业步",
+        "作业流"
+      ]
+    },
+    {
+      "pid": "CH4_Q7",
+      "stem": "7. 在采用首次适应算法回收内存时，可能出现哪几种情况？应怎样处理这些情况？",
+      "tested_concepts": [
+        "首次适应算法",
+        "内存回收"
+      ]
+    }
+  ],
+  "weak_prerequisite_candidates": [
+    {
+      "name": "作业",
+      "depth": 0,
+      "node_role": "概念",
+      "difficulty": 1,
+      "chapter": "3.处理机调度与死锁",
+      "definition": "包含程序、数据和作业说明书的集合，是批处理系统中从外存调入内存的基本单位。",
+      "evidence_pid": "CH3_Q2",
+      "evidence_target_concept": "作业",
+      "reason": "该概念被 2 条错题证据命中，关联考查概念包括「作业、作业流」，建议优先排查。",
+      "hit_count": 2,
+      "evidences": [
+        {
+          "pid": "CH3_Q2",
+          "target_concept": "作业",
+          "depth": 0
+        },
+        {
+          "pid": "CH3_Q2",
+          "target_concept": "作业流",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "name": "作业步",
+      "depth": 0,
+      "node_role": "概念",
+      "difficulty": 1,
+      "chapter": "3.处理机调度与死锁",
+      "definition": "作业运行期间相对独立又相互关联的加工步骤，各步之间存在顺序依赖关系。",
+      "evidence_pid": "CH3_Q2",
+      "evidence_target_concept": "作业步",
+      "reason": "该概念被 1 条错题证据命中，关联考查概念包括「作业步」，建议优先排查。",
+      "hit_count": 1,
+      "evidences": [
+        {
+          "pid": "CH3_Q2",
+          "target_concept": "作业步",
+          "depth": 0
+        }
+      ]
+    },
+    {
+      "name": "作业流",
+      "depth": 0,
+      "node_role": "概念",
+      "difficulty": 1,
+      "chapter": "3.处理机调度与死锁",
+      "definition": "多个作业依次存放在外存上形成的输入流，以及在操作系统控制下逐个处理形成的处理流。",
+      "evidence_pid": "CH3_Q2",
+      "evidence_target_concept": "作业流",
+      "reason": "该概念被 1 条错题证据命中，关联考查概念包括「作业流」，建议优先排查。",
+      "hit_count": 1,
+      "evidences": [
+        {
+          "pid": "CH3_Q2",
+          "target_concept": "作业流",
+          "depth": 0
+        }
+      ]
+    },
+    {
+      "name": "内存回收",
+      "depth": 0,
+      "node_role": "机制",
+      "difficulty": 1,
+      "chapter": "4.存储器管理",
+      "definition": "进程释放内存时，系统将回收区插入空闲分区链表，并根据邻接情况进行合并。",
+      "evidence_pid": "CH4_Q7",
+      "evidence_target_concept": "内存回收",
+      "reason": "该概念被 1 条错题证据命中，关联考查概念包括「内存回收」，建议优先排查。",
+      "hit_count": 1,
+      "evidences": [
+        {
+          "pid": "CH4_Q7",
+          "target_concept": "内存回收",
+          "depth": 0
+        }
+      ]
+    },
+    {
+      "name": "首次适应算法",
+      "depth": 0,
+      "node_role": "算法",
+      "difficulty": 2,
+      "chapter": "4.存储器管理",
+      "definition": "从空闲分区链首开始顺序查找，将第一个满足要求的空闲分区分配给作业。",
+      "evidence_pid": "CH4_Q7",
+      "evidence_target_concept": "首次适应算法",
+      "reason": "该概念被 1 条错题证据命中，关联考查概念包括「首次适应算法」，建议优先排查。",
+      "hit_count": 1,
+      "evidences": [
+        {
+          "pid": "CH4_Q7",
+          "target_concept": "首次适应算法",
+          "depth": 0
+        }
+      ]
+    },
+    {
+      "name": "空闲分区链",
+      "depth": 1,
+      "node_role": "概念",
+      "difficulty": 1,
+      "chapter": "4.存储器管理",
+      "definition": "通过双向链表将空闲分区链接起来的数据结构，用于分配和回收。",
+      "evidence_pid": "CH4_Q7",
+      "evidence_target_concept": "内存回收",
+      "reason": "该概念被 1 条错题证据命中，关联考查概念包括「内存回收」，建议优先排查。",
+      "hit_count": 1,
+      "evidences": [
+        {
+          "pid": "CH4_Q7",
+          "target_concept": "内存回收",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "name": "连续分配方式",
+      "depth": 2,
+      "node_role": "概念",
+      "difficulty": 1,
+      "chapter": "4.存储器管理",
+      "definition": "为用户程序分配一个连续内存空间的存储管理方式。",
+      "evidence_pid": "CH4_Q7",
+      "evidence_target_concept": "内存回收",
+      "reason": "该概念被 1 条错题证据命中，关联考查概念包括「内存回收」，建议优先排查。",
+      "hit_count": 1,
+      "evidences": [
+        {
+          "pid": "CH4_Q7",
+          "target_concept": "内存回收",
+          "depth": 2
+        }
+      ]
+    }
+  ],
+  "mastery": [
+    {
+      "name": "作业",
+      "mastery": 0.0,
+      "risk": "high",
+      "weakness": 1.7,
+      "evidence_pids": [
+        "CH3_Q2"
+      ],
+      "evidence_target_concepts": [
+        "作业",
+        "作业流"
+      ],
+      "reason": "概念「作业」由错题 CH3_Q2 命中，关联考查概念包括「作业、作业流」，weakness=1.7，风险等级为 high。"
+    },
+    {
+      "name": "作业步",
+      "mastery": 0.4118,
+      "risk": "medium",
+      "weakness": 1.0,
+      "evidence_pids": [
+        "CH3_Q2"
+      ],
+      "evidence_target_concepts": [
+        "作业步"
+      ],
+      "reason": "概念「作业步」由错题 CH3_Q2 命中，关联考查概念包括「作业步」，weakness=1.0，风险等级为 medium。"
+    },
+    {
+      "name": "作业流",
+      "mastery": 0.4118,
+      "risk": "medium",
+      "weakness": 1.0,
+      "evidence_pids": [
+        "CH3_Q2"
+      ],
+      "evidence_target_concepts": [
+        "作业流"
+      ],
+      "reason": "概念「作业流」由错题 CH3_Q2 命中，关联考查概念包括「作业流」，weakness=1.0，风险等级为 medium。"
+    },
+    {
+      "name": "内存回收",
+      "mastery": 0.4118,
+      "risk": "medium",
+      "weakness": 1.0,
+      "evidence_pids": [
+        "CH4_Q7"
+      ],
+      "evidence_target_concepts": [
+        "内存回收"
+      ],
+      "reason": "概念「内存回收」由错题 CH4_Q7 命中，关联考查概念包括「内存回收」，weakness=1.0，风险等级为 medium。"
+    },
+    {
+      "name": "首次适应算法",
+      "mastery": 0.4118,
+      "risk": "medium",
+      "weakness": 1.0,
+      "evidence_pids": [
+        "CH4_Q7"
+      ],
+      "evidence_target_concepts": [
+        "首次适应算法"
+      ],
+      "reason": "概念「首次适应算法」由错题 CH4_Q7 命中，关联考查概念包括「首次适应算法」，weakness=1.0，风险等级为 medium。"
+    },
+    {
+      "name": "空闲分区链",
+      "mastery": 0.5882,
+      "risk": "medium",
+      "weakness": 0.7,
+      "evidence_pids": [
+        "CH4_Q7"
+      ],
+      "evidence_target_concepts": [
+        "内存回收"
+      ],
+      "reason": "概念「空闲分区链」由错题 CH4_Q7 命中，关联考查概念包括「内存回收」，weakness=0.7，风险等级为 medium。"
+    },
+    {
+      "name": "连续分配方式",
+      "mastery": 0.7059,
+      "risk": "low",
+      "weakness": 0.5,
+      "evidence_pids": [
+        "CH4_Q7"
+      ],
+      "evidence_target_concepts": [
+        "内存回收"
+      ],
+      "reason": "概念「连续分配方式」由错题 CH4_Q7 命中，关联考查概念包括「内存回收」，weakness=0.5，风险等级为 low。"
+    }
+  ],
+  "learning_path": [
+    {
+      "step": 1,
+      "concept": "作业",
+      "reason": "「作业」是诊断出的薄弱概念，需要直接复习。 当前风险等级为 high。 估计掌握度为 0.0。",
+      "difficulty": 1,
+      "chapter": "3.处理机调度与死锁",
+      "node_role": "概念",
+      "risk": "high",
+      "practice_pids": [
+        "CH3_Q2"
+      ],
+      "mastery": 0.0,
+      "prerequisite_of": [
+        "作业流"
+      ]
+    },
+    {
+      "step": 2,
+      "concept": "作业步",
+      "reason": "「作业步」是诊断出的薄弱概念，需要直接复习。 当前风险等级为 medium。 估计掌握度为 0.4118。",
+      "difficulty": 1,
+      "chapter": "3.处理机调度与死锁",
+      "node_role": "概念",
+      "risk": "medium",
+      "practice_pids": [
+        "CH3_Q2"
+      ],
+      "mastery": 0.4118
+    },
+    {
+      "step": 3,
+      "concept": "作业流",
+      "reason": "「作业流」是诊断出的薄弱概念，需要直接复习。 当前风险等级为 medium。 估计掌握度为 0.4118。",
+      "difficulty": 1,
+      "chapter": "3.处理机调度与死锁",
+      "node_role": "概念",
+      "risk": "medium",
+      "practice_pids": [
+        "CH3_Q2"
+      ],
+      "mastery": 0.4118
+    },
+    {
+      "step": 4,
+      "concept": "连续分配方式",
+      "reason": "「连续分配方式」是「空闲分区链」的先修概念，应先补齐基础。 当前风险等级为 low。 估计掌握度为 0.7059。",
+      "difficulty": 1,
+      "chapter": "4.存储器管理",
+      "node_role": "概念",
+      "risk": "low",
+      "practice_pids": [
+        "CH4_Q18"
+      ],
+      "mastery": 0.7059,
+      "prerequisite_of": [
+        "空闲分区链"
+      ]
+    },
+    {
+      "step": 5,
+      "concept": "空闲分区链",
+      "reason": "「空闲分区链」是诊断出的薄弱概念，需要直接复习。 当前风险等级为 medium。 估计掌握度为 0.5882。",
+      "difficulty": 1,
+      "chapter": "4.存储器管理",
+      "node_role": "概念",
+      "risk": "medium",
+      "practice_pids": [
+        "CH4_Q5"
+      ],
+      "mastery": 0.5882,
+      "prerequisite_of": [
+        "内存回收"
+      ]
+    },
+    {
+      "step": 6,
+      "concept": "内存回收",
+      "reason": "「内存回收」是诊断出的薄弱概念，需要直接复习。 当前风险等级为 medium。 估计掌握度为 0.4118。",
+      "difficulty": 1,
+      "chapter": "4.存储器管理",
+      "node_role": "机制",
+      "risk": "medium",
+      "practice_pids": [
+        "CH4_Q7"
+      ],
+      "mastery": 0.4118
+    },
+    {
+      "step": 7,
+      "concept": "首次适应算法",
+      "reason": "「首次适应算法」是诊断出的薄弱概念，需要直接复习。 当前风险等级为 medium。 估计掌握度为 0.4118。",
+      "difficulty": 2,
+      "chapter": "4.存储器管理",
+      "node_role": "算法",
+      "risk": "medium",
+      "practice_pids": [
+        "CH4_Q7",
+        "CH4_Q9"
+      ],
+      "mastery": 0.4118
+    }
+  ]
+}
