@@ -345,9 +345,3 @@ data/phase3_demo_result.json
 - 对 GraphRAG 的召回、上下文压缩和评测指标做更细粒度分析。
 
 ---
-
-## 相关文档
-
-- `docs/OS_KG_Schema.md`：Schema 权威定义。
-- `docs/collaboration_contract.md`：数据格式、接口约定和协作说明。
-- `CLAUDE.md`：项目目标、开发约定和阶段说明。
