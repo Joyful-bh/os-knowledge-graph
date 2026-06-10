@@ -9,14 +9,11 @@
 ## 快速开始
 
 ```bash
-# 1. 安装依赖（Phase 1 只需前两行）
-pip install openai python-dotenv networkx
-
-# 可选，Phase 2 需要
-pip install sentence-transformers chromadb ollama
+# 1. 安装依赖
+pip install -r requirements.txt
 ollama pull bge-m3
 
-# 2. 配置 API Key
+# 2. 配置 API Key（GraphRAG 问答需要 DEEPSEEK_API_KEY）
 cp .env.example .env    # 填入 DEEPSEEK_API_KEY
 
 # 3. 验证图谱质量
@@ -32,7 +29,12 @@ print(f'节点：{len(r[\"nodes\"])}，边：{len(r[\"edges\"])}')
 # 5. 生成 Phase 2 多跳评测集并运行对比实验（默认会调用 Ollama + DeepSeek）
 python -m src.eval.multihop_set
 python -m src.eval.compare
+
+# 6. 启动 Web 端
+streamlit run web/app.py
 ```
+
+如果只使用子图检索、错题诊断、掌握度估计和学习路径规划，可以不调用大模型，也不需要配置 `DEEPSEEK_API_KEY`。如果要使用 GraphRAG 问答，需要在 `.env` 中配置 `DEEPSEEK_API_KEY`，并确保向量检索依赖和 embedding 服务可用。
 
 ---
 
