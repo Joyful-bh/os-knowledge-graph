@@ -2184,7 +2184,8 @@
     "node_role": "机制",
     "difficulty": 1,
     "aliases": [
-      "CPU调度"
+      "CPU调度",
+      "调度"
     ],
     "chapter": "3.处理机调度与死锁"
   },
@@ -2349,7 +2350,8 @@
       "抢占调度",
       "Preemptive Mode",
       "抢占式调度",
-      "preemptive scheduling"
+      "preemptive scheduling",
+      "抢占"
     ],
     "chapter": "3.处理机调度与死锁"
   },
@@ -4452,7 +4454,8 @@
       "device driver",
       "设备处理程序",
       "驱动进程",
-      "核心态设备驱动程序"
+      "核心态设备驱动程序",
+      "驱动程序"
     ],
     "chapter": "5.设备管理"
   },
@@ -4464,7 +4467,8 @@
     "aliases": [
       "ISR",
       "中断服务程序",
-      "中断服务例程"
+      "中断服务例程",
+      "中断处理"
     ],
     "chapter": "5.设备管理"
   },
@@ -14116,5 +14120,28 @@
     "difficulty": 2,
     "aliases": [],
     "chapter": "6.文件管理"
+  },
+  {
+    "name": "竞态条件",
+    "definition": "多个进程并发访问共享资源时，执行结果依赖于进程的执行顺序而产生不确定性的现象。",
+    "chapter": "4.进程同步",
+    "difficulty": 2,
+    "node_role": "问题",
+    "aliases": [
+      "race condition",
+      "竞争条件"
+    ]
+  },
+  {
+    "name": "套接字",
+    "definition": "网络通信的端点抽象，由IP地址与端口号唯一标识，是进程间网络通信的基本接口。",
+    "chapter": "8.网络操作系统",
+    "difficulty": 2,
+    "node_role": "机制",
+    "aliases": [
+      "socket",
+      "Socket",
+      "套接口"
+    ]
   }
 ]

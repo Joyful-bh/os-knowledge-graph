@@ -35380,5 +35380,30 @@
     "description": "双缓冲机制是缓冲技术的一种具体实现，其定义直接基于缓冲区的概念，没有缓冲技术就无法定义双缓冲",
     "chapter": "",
     "reviewed": false
+  },
+  {
+    "type": "PREREQUISITE",
+    "source": "并发",
+    "target": "竞态条件",
+    "description": "竞态条件是多个进程并发执行时才会出现的问题，理解并发是理解竞态条件的前提。",
+    "reviewed": true
+  },
+  {
+    "type": "RELATED",
+    "source": "临界区",
+    "target": "竞态条件",
+    "description": "临界区是竞态条件的核心现场——多个进程争用临界区正是竞态条件的典型表现。"
+  },
+  {
+    "type": "SOLVES",
+    "source": "信号量机制",
+    "target": "竞态条件",
+    "description": "信号量机制通过对临界区的互斥访问控制解决竞态条件问题。"
+  },
+  {
+    "type": "PART_OF",
+    "source": "套接字",
+    "target": "进程通信",
+    "description": "套接字是进程间网络通信的实现机制，属于进程通信的范畴。"
   }
 ]
