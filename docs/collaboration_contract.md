@@ -321,25 +321,29 @@ def resolve_concept_name(user_input: str, concepts: list[dict]) -> str | None:
 
 ---
 
-## 7. 当前进度与 B 的接入点
+## 7. 当前进度
 
-| 阶段 | 状态 | B 的行动 |
+| 阶段 | 状态 | 关键产出 |
 |------|------|---------|
-| **Phase 1：KG 构建** | **✅ 完成** | 直接读取 `data/concepts.json` / `data/edges.json` |
-| 数据规模 | 1389 Concept + 306 Problem，4978 条边 | 无需等待，数据已就绪 |
-| `src/kg/load.py` | **✅ 已实现** | `from src.kg.load import get_graph` 即可 |
-| `src/retrieval/subgraph.py` | **✅ 已实现** | `from src.retrieval.subgraph import get_subgraph` |
-| **Phase 2：RAG** | **🔲 待 B 实现** | 见下表 |
-| **Phase 3：诊断 + 路径** | **🔲 待实现** | 依赖 Phase 2 完成 |
+| **Phase 1：KG 构建** | **✅ 完成** | `data/concepts.json`、`data/edges.json`、`load.py`、`subgraph.py` |
+| 数据规模 | 1391 Concept + 306 Problem，4982 条边 | DAG 已验证 |
+| **Phase 2：RAG** | **✅ 完成** | `vector_rag.py`、`chunk_store.py`、`graph_rag.py`、`multihop_set.py`、`compare.py` |
+| **Phase 3：诊断 + 路径** | **✅ 完成** | `trace.py`、`mastery.py`、`planner.py`、Streamlit Web |
+| **Phase 4：报告 + PPT** | **🔲 待完成** | — |
 
-**B 需要实现的文件（Phase 2）：**
+**Phase 2/3 模块依赖关系：**
 
 | 文件 | 功能 | 依赖 |
 |------|------|------|
-| `src/retrieval/vector_rag.py` | 向量 RAG 基线 | `data/concepts.json` |
-| `src/retrieval/graph_rag.py` | GraphRAG（子图 + LLM） | `get_subgraph()` |
+| `src/retrieval/vector_rag.py` | 向量 RAG 基线（bge-m3 + ChromaDB） | `data/concepts.json` |
+| `src/retrieval/chunk_store.py` | 原文 chunk 反查（子图节点 → 教材片段） | `data/candidates/chunks.json` + `concepts.json`（别名表） |
+| `src/retrieval/graph_rag.py` | GraphRAG（三段式上下文） | `get_subgraph()` + `chunk_store` |
 | `src/eval/multihop_set.py` | 多跳测试集构建 | `data/edges.json` |
-| `src/eval/compare.py` | 两套系统对比实验 | 上两项 |
+| `src/eval/compare.py` | Vector RAG vs GraphRAG 对比 | 上两项 |
+| `src/diagnosis/trace.py` | 错题 pid → 薄弱先修概念 | `get_prereq_ancestors()` |
+| `src/diagnosis/mastery.py` | 概念掌握度估计 | `trace.py` |
+| `src/path/planner.py` | 学习路径规划 | `mastery.py` + `get_prereq_ancestors()` |
+| `web/app.py` + `web/services.py` | Streamlit 交互界面 | 以上全部 |
 
 ---
 

@@ -50,7 +50,8 @@
 │   ├── concepts.json          # 概念白名单(闭集,1389 个)
 │   ├── edges.json             # 各类边(4978 条,DAG 已验证)
 │   └── candidates/
-│       └── problems_raw.json  # 习题原始数据(306 道)
+│       ├── problems_raw.json  # 习题原始数据(306 道)
+│       └── chunks.json        # 教材原文段落(276 块,GraphRAG 答题时反查)
 ├── src/
 │   ├── llm_client.py          # LLM 调用统一封装(温度、JSON解析、重试)
 │   ├── kg/
@@ -59,9 +60,10 @@
 │   │   ├── load.py            # NetworkX 图加载(默认) + Neo4j 懒加载
 │   │   └── validate.py        # 环检测/孤立点/覆盖度自检
 │   ├── retrieval/
-│   │   ├── vector_rag.py      # 向量 RAG 基线
+│   │   ├── vector_rag.py      # 向量 RAG 基线(bge-m3 + ChromaDB)
 │   │   ├── subgraph.py        # 子图召回(共享接口,见下)
-│   │   └── graph_rag.py       # KG 增强 RAG
+│   │   ├── chunk_store.py     # 原文 chunk 反查(子图节点→相关教材片段)
+│   │   └── graph_rag.py       # KG 增强 RAG(子图 + 原文片段三段式上下文)
 │   ├── diagnosis/
 │   │   ├── trace.py           # 错题→TESTS→PREREQUISITE 反向溯源
 │   │   └── mastery.py         # 掌握度模型(简化 DINA)
@@ -112,9 +114,9 @@ B 直接调用即可。改动此签名需双方同步。
 
 - [x] 方案设计、Schema v2.0 定稿
 - [x] 阶段0:基建(llm_client + 接口约定 + 项目骨架)
-- [x] 阶段1:KG 构建(1389 概念 / 4978 边 / DAG 验证 / subgraph.py)
-- [ ] 阶段2:RAG 双系统 + 多跳对比实验
-- [ ] 阶段3:认知诊断 + 学习路径
+- [x] 阶段1:KG 构建(1391 概念 / 4982 边 / DAG 验证 / subgraph.py)
+- [x] 阶段2:RAG 双系统(vector_rag + graph_rag) + 多跳对比实验 + chunk_store 原文增强
+- [x] 阶段3:认知诊断(trace + mastery) + 学习路径(planner) + Streamlit Web 界面
 - [ ] 阶段4:集成 + 报告 + 答辩 PPT
 
 > 开始新任务前,先确认当前所处阶段,并检查依赖的上游产物是否就绪(如阶段2的 GraphRAG、阶段3均依赖阶段1的图谱)。

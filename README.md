@@ -17,7 +17,7 @@
 - **知识图谱加载与验证**：默认使用 NetworkX 内存图，无需启动外部图数据库；Neo4j 写入为可选能力。
 - **子图检索**：根据一个或多个概念召回指定边类型和跳数范围内的局部知识图谱。
 - **Vector RAG**：使用向量检索从概念库中召回相关概念，作为普通 RAG 基线。
-- **GraphRAG**：先向量召回种子概念，再扩展图谱邻域，将节点定义和边描述作为上下文交给 LLM 回答。
+- **GraphRAG**：先向量召回种子概念，再扩展图谱邻域，并按子图节点反查教材原文 chunk，形成"概念定义 + 边描述 + 原文片段"三段式上下文交给 LLM 回答。设计参考 LightRAG 的多源上下文与 token 预算思路。
 - **多跳评测与对比实验**：生成基于图谱关系的多跳问题，比较 Vector RAG 与 GraphRAG 的表现。
 - **错题诊断**：输入错题 pid，通过 `TESTS` 边定位考查概念，再沿 `PREREQUISITE` 反向追溯薄弱先修点。
 - **掌握度估计**：根据错题诊断结果为概念计算 weakness、mastery 和风险等级。
@@ -48,7 +48,8 @@ Phase 1 完成了课程知识图谱的基础数据和共享接口：
 Phase 2 完成了两套问答系统和实验验证：
 
 - `src/retrieval/vector_rag.py`：向量 RAG 基线。
-- `src/retrieval/graph_rag.py`：图谱增强 RAG。
+- `src/retrieval/chunk_store.py`：教材原文 chunk 反查（子图节点 → 包含该节点的原文段落，按命中概念数排序）。
+- `src/retrieval/graph_rag.py`：图谱增强 RAG（子图上下文 + 原文片段三段式拼接）。
 - `src/eval/multihop_set.py`：从图谱中确定性生成多跳评测集。
 - `src/eval/compare.py`：运行 Vector RAG 与 GraphRAG 对比实验。
 
@@ -83,7 +84,15 @@ src.kg.load.get_graph()  ->  NetworkX MultiDiGraph
         |
         +--> src.retrieval.subgraph.get_subgraph()
         |       |
-        |       +--> GraphRAG 上下文扩展
+        |       +--> GraphRAG 上下文扩展 ─┐
+        |                                  v
+        |                          三段式 prompt：概念 + 关系 + 原文
+        |                                  ^
+        |       data/candidates/chunks.json |
+        |                |                  |
+        |                v                  |
+        |       src.retrieval.chunk_store ──┘
+        |       （按子图节点反查教材原文片段，命中越多越优先）
         |
         +--> src.retrieval.subgraph.get_prereq_ancestors()
                 |
@@ -231,8 +240,15 @@ print(result["edges"])
 ```python
 from src.retrieval.graph_rag import answer
 
-text = answer("为什么学习临界区有助于理解信号量？", top_k=3, hops=2)
+# 默认启用原文 chunk 增强（concepts + edges + chunks 三段式上下文）
+text = answer("银行家算法如何判断系统是否处于安全状态？", top_k=3, hops=2)
 print(text)
+
+# A/B 对比：关闭 chunk 退化为纯图谱上下文
+text_no_chunks = answer("...", use_chunks=False)
+
+# 调整 chunk 预算
+text = answer("...", max_chunks=2, max_chunk_chars=400)
 ```
 
 ### 错题诊断
